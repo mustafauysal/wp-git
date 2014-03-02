@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Wp-Github Theme</title>
+		
+		<meta name="description" content="Wordpress Github Theme">
+		<meta name="keywords" content="Wordpress, Github, Theme, Open Source">
+		<meta name="author" content="Mustafa Uysal, Said Özcan">
+		<meta charset="UTF-8">		
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/shared.css">		
+		<link rel="stylesheet" href="assets/css/index.css">		
+		<link rel="stylesheet" href="assets/css/cal-heatmap.css">		
+	</head>
+	<body>
+		
+		<div id="wrap">
+			<header class="navbar navbar-static-top" role="navigation">
+				<div class="container">
+					<div class="col-xs-12 no-padding-left no-padding-right">
+						<div class="col-xs-3 no-padding-left navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">Wp-GitHub</a>
+						</div>
+
+						<div class="col-xs-5 navbar-header">
+							<form class="navbar-form" role="search" action="search.html" method="post">
+							    <div class="input-group add-on">
+							    	<input type="text" class="form-control" placeholder="Search blog or page" name="q" id="q" autocomplete="off">
+									<div class="input-group-btn">
+										<button class="btn btn-default" type="submit">
+											<i class="glyphicon glyphicon-search"></i>
+										</button>
+									</div>
+							    </div>
+							</form>
+						</div>
+
+						<div class="col-xs-4 pull-right collapse navbar-collapse">						
+							<ul class="nav navbar-nav navbar-right">
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-3">
+						<a href="assets/img/test.jpeg">
+							<img src="assets/img/test.jpeg" class="img-responsive img-rounded" alt="User Name" height="220" width="220">
+						</a>
+
+						<h1 class="user-names">
+							<span class="user-fullname">Said Özcan</span>
+							<span class="user-username">s</span>
+						</h1>
+
+						<div class="row">
+
+							<ul class="user-details col-xs-12">
+								<li class="user-detail">
+									<span class="glyphicon glyphicon-briefcase"></span>
+									Ubit							
+								</li>
+
+								<li class="user-detail">							
+									<span class="glyphicon glyphicon-map-marker"></span>
+									İstanbul							
+								</li>
+
+								<li class="user-detail">
+									<span class="glyphicon glyphicon-envelope"></span>
+									<a href="mailto:said@ozcan.co">
+										said@ozcan.co
+									</a>
+								</li>
+
+								<li class="user-detail">
+									<span class="glyphicon glyphicon-link"></span>
+									<a href="http://said.ozcan.co">
+										http://said.ozcan.co
+									</a>
+								</li>
+
+								<li class="user-detail">
+									<span class="glyphicon glyphicon-time"></span>
+									Started on Jul 13, 2012				
+								</li>
+							</ul>
+						</div>
+
+						<div class="user-stats" >
+							
+							<a class="user-stat">
+								<strong class="user-stat-count">4</strong>
+								posts
+							</a>
+											
+							<a class="user-stat">
+								<strong class="user-stat-count">9</strong>
+								comments
+							</a>
+						
+							<a class="user-stat">
+								<strong class="user-stat-count">93</strong>
+								stars gotten
+							</a>
+							
+						</div>
+					</div>
+
+					<div class="col-xs-9">
+						<ul class="nav nav-tabs">
+							<li class="active">
+								<a href="#summary" data-toggle="tab">
+									<span class="glyphicon glyphicon-stats"></span>
+									&nbsp;Summary
+								</a>
+							</li>
+							<li>
+								<a href="#posts" data-toggle="tab">
+									<span class="glyphicon glyphicon-list-alt"></span>
+									&nbsp;Posts
+								</a>
+							</li>
+							<li>
+								<a href="#latest-feed" data-toggle="tab">
+									<span class="glyphicon glyphicon-fire"></span>
+									&nbsp;Latest Feed
+								</a>
+							</li>						
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="summary">
+								
+								<div class="row">
+
+									<div class="col-xs-6">	
+										
+										<div class="summary-box">
+
+											<div class="summary-box-header">
+												<h3 class="box-title">Popular Writings</h3>
+											</div>
+
+											<div class="summary-box-content	">
+
+												<ul class="blogs row">
+													
+													<li class="blog col-xs-12">
+														<a href="#">
+															<div class="row">
+																<div class="col-xs-1">
+																	<span class="glyphicon glyphicon-pencil"></span>
+																</div>
+
+																<div class="col-xs-7">
+																	<span class="blog-name">
+																		Working Life versus..
+																	</span>
+																	<div class="clearfix"></div>
+																	<span class="blog-description">
+																		Everyone has been a...
+																	</span>
+																</div>
+
+																<div class="col-xs-3 pull-right blog-star_count">
+																3 <span class="glyphicon glyphicon-star"></span>
+																</div>
+															</div>
+														</a>
+													</li>
+
+													<li class="blog col-xs-12">
+														<div class="row">
+															<a href="#">
+																<div class="col-xs-1">
+																	<span class="glyphicon glyphicon-pencil"></span>
+																</div>
+
+																<div class="col-xs-7">
+																	<span class="blog-name">
+																		İki Bin On Üç
+																	</span>
+																	<div class="clearfix"></div>
+																	<span class="blog-description">
+																		Bu yazıya başlamayı...
+																	</span>
+																</div>
+
+																<div class="col-xs-3 pull-right blog-star_count">
+																1 <span class="glyphicon glyphicon-star"></span>
+																</div>
+															</a>
+														</div>
+													</li>
+
+													<li class="blog col-xs-12">
+														<div class="row">
+															<a href="#">
+																<div class="col-xs-1">
+																	<span class="glyphicon glyphicon-pencil"></span>
+																</div>
+
+																<div class="col-xs-7">
+																	<span class="blog-name">
+																		Ne Kullanıyorum?
+																	</span>
+																	<div class="clearfix"></div>
+																	<span class="blog-description">
+																		Kendimi tanıtacak olursam...
+																	</span>
+																</div>
+
+																<div class="col-xs-3 pull-right blog-star_count">
+																0 <span class="glyphicon glyphicon-star"></span>
+																</div>
+															</a>
+														</div>
+													</li>
+
+													<li class="blog col-xs-12">
+														<div class="row">
+															<a href="#">
+																<div class="col-xs-1">
+																	<span class="glyphicon glyphicon-pencil"></span>
+																</div>
+
+																<div class="col-xs-7">
+																	<span class="blog-name">
+																		iOS Dünyası - II
+																	</span>
+																	<div class="clearfix"></div>
+																	<span class="blog-description">
+																		Daha önceki yazıda iOS gelişt...
+																	</span>
+																</div>
+
+																<div class="col-xs-3 pull-right blog-star_count">
+																1333 <span class="glyphicon glyphicon-star"></span>
+																</div>
+															</a>
+														</div>
+													</li>
+
+													<li class="blog col-xs-12">
+														<div class="row">
+															<a href="#">
+																<div class="col-xs-1">
+																	<span class="glyphicon glyphicon-pencil"></span>
+																</div>
+
+																<div class="col-xs-7">
+																	<span class="blog-name">
+																		iOS Dünyası - I
+																	</span>
+																	<div class="clearfix"></div>
+																	<span class="blog-description">
+																		Merhabalar, Çevremden çokça...
+																	</span>
+																</div>
+
+																<div class="col-xs-3 pull-right blog-star_count">
+																100 <span class="glyphicon glyphicon-star"></span>
+																</div>
+															</a>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+									</div>
+
+									<div class="col-xs-6">	
+										
+										<div class="summary-box">
+
+											<div class="summary-box-header">
+												<h3 class="box-title">Latest Writings</h3>
+											</div>
+
+											<div class="summary-box-content	">
+
+												<ul class="blogs row">
+													
+													<li class="blog col-xs-12">
+														<a href="#">
+															<div class="row">
+																<div class="col-xs-1">
+																	<span class="glyphicon glyphicon-pencil"></span>
+																</div>
+
+																<div class="col-xs-7">
+																	<span class="blog-name">
+																		Working Life versus..
+																	</span>
+																	<div class="clearfix"></div>
+																	<span class="blog-description">
+																		Everyone has been a...
+																	</span>
+																</div>
+
+																<div class="col-xs-3 pull-right blog-star_count">
+																3 <span class="glyphicon glyphicon-star"></span>
+																</div>
+															</div>
+														</a>
+													</li>
+
+													<li class="blog col-xs-12">
+														<div class="row">
+															<a href="#">
+																<div class="col-xs-1">
+																	<span class="glyphicon glyphicon-pencil"></span>
+																</div>
+
+																<div class="col-xs-7">
+																	<span class="blog-name">
+																		İki Bin On Üç
+																	</span>
+																	<div class="clearfix"></div>
+																	<span class="blog-description">
+																		Bu yazıya başlamayı...
+																	</span>
+																</div>
+
+																<div class="col-xs-3 pull-right blog-star_count">
+																1 <span class="glyphicon glyphicon-star"></span>
+																</div>
+															</a>
+														</div>
+													</li>
+
+													<li class="blog col-xs-12">
+														<div class="row">
+															<a href="#">
+																<div class="col-xs-1">
+																	<span class="glyphicon glyphicon-pencil"></span>
+																</div>
+
+																<div class="col-xs-7">
+																	<span class="blog-name">
+																		Ne Kullanıyorum?
+																	</span>
+																	<div class="clearfix"></div>
+																	<span class="blog-description">
+																		Kendimi tanıtacak olursam...
+																	</span>
+																</div>
+
+																<div class="col-xs-3 pull-right blog-star_count">
+																0 <span class="glyphicon glyphicon-star"></span>
+																</div>
+															</a>
+														</div>
+													</li>
+
+													<li class="blog col-xs-12">
+														<div class="row">
+															<a href="#">
+																<div class="col-xs-1">
+																	<span class="glyphicon glyphicon-pencil"></span>
+																</div>
+
+																<div class="col-xs-7">
+																	<span class="blog-name">
+																		iOS Dünyası - II
+																	</span>
+																	<div class="clearfix"></div>
+																	<span class="blog-description">
+																		Daha önceki yazıda iOS...
+																	</span>
+																</div>
+
+																<div class="col-xs-3 pull-right blog-star_count">
+																1333 <span class="glyphicon glyphicon-star"></span>
+																</div>
+															</a>
+														</div>
+													</li>
+
+													<li class="blog col-xs-12">
+														<div class="row">
+															<a href="#">
+																<div class="col-xs-1">
+																	<span class="glyphicon glyphicon-pencil"></span>
+																</div>
+
+																<div class="col-xs-7">
+																	<span class="blog-name">
+																		iOS Dünyası - I
+																	</span>
+																	<div class="clearfix"></div>
+																	<span class="blog-description">
+																		Merhabalar, Çevremden çokça...
+																	</span>
+																</div>
+
+																<div class="col-xs-3 pull-right blog-star_count">
+																100 <span class="glyphicon glyphicon-star"></span>
+																</div>
+															</a>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-xs-12">									
+										<div class="summary-box calendar-activity">
+
+											<div class="summary-box-header">
+												<h3 class="box-title">Calendar Activity</h3>
+											</div>
+
+											<div class="summary-box-content" id="cal-heatmap">
+												
+											</div>
+											
+										</div>									
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="posts">
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="row filter-form">
+											
+											<div class="col-xs-6">
+
+												<div class="row">
+
+													<div class="col-xs-10">
+														<input class="form-control filter-blogs search" name="filter" id="filter" type="text" placeholder="Filter Blogs"/>
+													</div>
+
+													<div class="col-xs-2">
+														<button type="button" class="btn btn-info filter-blogs-button search">Search</button>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-xs-2 filter-by-categories-dropdown">
+
+												<div class="btn-group">
+													<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+													All Categories <span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu" role="menu">
+														<li><a href="#">All Categories</a></li>
+														<li><a href="#">General</a></li>
+														<li><a href="#">iOS</a></li>
+														<li><a href="#">Technology</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<hr/>
+								<div class="row">
+									<div class="col-xs-12">
+										<ul class="all-posts list"></ul>
+									</div>
+								</div>
+							</div>						
+							<div class="tab-pane" id="latest-feed">
+								<div class="row">
+									<div class="col-xs-12">
+										<ul class="latest-activities">
+											
+
+
+											<li class="latest-activity">
+												<div class="row">
+													<div class="col-xs-1 latest-activity-icon">
+														<span class="glyphicon glyphicon-pencil"></span>
+													</div>
+													<div class="col-xs-11 latest-activity-text">
+														<span class="latest-activity-ago">
+															3 days ago
+														</span>
+														<div class="clearfix"></div>
+														<div>
+															<span class="latest-activity-photo pull-left">
+																<a href="assets/img/test.jpeg">
+																	<img src="assets/img/test.jpeg" class="" alt="User Name" height="30" width="30">
+																</a>
+															</span>
+
+															<span class="latest-activity-subject pull-left">
+																<a href="#">
+																	Said Özcan
+																</a> wrote a blog post: 
+																<a href="#">
+																	Testing life versus Fuckingship
+																</a>
+															</span>
+														</div>
+													</div>		
+												</div>
+											</li>
+
+											<li class="latest-activity">
+												<div class="row">
+													<div class="col-xs-1 latest-activity-icon">
+														<span class="glyphicon glyphicon-file"></span>
+													</div>
+													<div class="col-xs-11 latest-activity-text">
+														<span class="latest-activity-ago">
+															2 weeks ago
+														</span>
+														<div class="clearfix"></div>
+														<div>
+															<span class="latest-activity-photo pull-left">
+																<a href="assets/img/test.jpeg">
+																	<img src="assets/img/test.jpeg" class="" alt="User Name" height="30" width="30">
+																</a>
+															</span>
+
+															<span class="latest-activity-subject pull-left">
+																<a href="#">
+																	Said Özcan
+																</a> created a page: 
+																<a href="#">
+																	Contact to me
+																</a>
+															</span>
+														</div>
+													</div>		
+												</div>
+											</li>
+
+											<li class="latest-activity">
+												<div class="row">
+													<div class="col-xs-1 latest-activity-icon">
+														<span class="glyphicon glyphicon-comment"></span>
+													</div>
+													<div class="col-xs-11 latest-activity-text">
+														<span class="latest-activity-ago">
+															1 hour ago
+														</span>
+														<div class="clearfix"></div>
+														<div>
+															<span class="latest-activity-photo pull-left">
+																<a href="assets/img/mustafa.jpeg">
+																	<img src="assets/img/mustafa.jpeg" class="" alt="User Name" height="30" width="30">
+																</a>
+															</span>
+
+															<span class="latest-activity-subject pull-left">
+																<a href="#">
+																	Mustafa Uysal
+																</a> left a comment at a post:
+																<a href="#">
+																	Nice blog bro..
+																</a>
+															</span>
+														</div>
+													</div>		
+												</div>
+											</li>
+
+											<li class="latest-activity">
+												<div class="row">
+													<div class="col-xs-1 latest-activity-icon">
+														<span class="glyphicon glyphicon-pencil"></span>
+													</div>
+													<div class="col-xs-11 latest-activity-text">
+														<span class="latest-activity-ago">
+															3 days ago
+														</span>
+														<div class="clearfix"></div>
+														<div>
+															<span class="latest-activity-photo pull-left">
+																<a href="assets/img/test.jpeg">
+																	<img src="assets/img/test.jpeg" class="" alt="User Name" height="30" width="30">
+																</a>
+															</span>
+
+															<span class="latest-activity-subject pull-left">
+																<a href="#">
+																	Said Özcan
+																</a> wrote a blog post: 
+																<a href="#">
+																	Testing life versus Fuckingship
+																</a>
+															</span>
+														</div>
+													</div>		
+												</div>
+											</li>
+
+											<li class="latest-activity">
+												<div class="row">
+													<div class="col-xs-1 latest-activity-icon">
+														<span class="glyphicon glyphicon-file"></span>
+													</div>
+													<div class="col-xs-11 latest-activity-text">
+														<span class="latest-activity-ago">
+															2 weeks ago
+														</span>
+														<div class="clearfix"></div>
+														<div>
+															<span class="latest-activity-photo pull-left">
+																<a href="assets/img/test.jpeg">
+																	<img src="assets/img/test.jpeg" class="" alt="User Name" height="30" width="30">
+																</a>
+															</span>
+
+															<span class="latest-activity-subject pull-left">
+																<a href="#">
+																	Said Özcan
+																</a> created a page: 
+																<a href="#">
+																	Contact to me
+																</a>
+															</span>
+														</div>
+													</div>		
+												</div>
+											</li>
+
+											<li class="latest-activity">
+												<div class="row">
+													<div class="col-xs-1 latest-activity-icon">
+														<span class="glyphicon glyphicon-comment"></span>
+													</div>
+													<div class="col-xs-11 latest-activity-text">
+														<span class="latest-activity-ago">
+															1 hour ago
+														</span>
+														<div class="clearfix"></div>
+														<div>
+															<span class="latest-activity-photo pull-left">
+																<a href="assets/img/mustafa.jpeg">
+																	<img src="assets/img/mustafa.jpeg" class="" alt="User Name" height="30" width="30">
+																</a>
+															</span>
+
+															<span class="latest-activity-subject pull-left">
+																<a href="#">
+																	Mustafa Uysal
+																</a> left a comment at a post:
+																<a href="#">
+																	Nice blog bro..
+																</a>
+															</span>
+														</div>
+													</div>		
+												</div>
+											</li>
+
+											<li class="latest-activity">
+												<div class="row">
+													<div class="col-xs-1 latest-activity-icon">
+														<span class="glyphicon glyphicon-pencil"></span>
+													</div>
+													<div class="col-xs-11 latest-activity-text">
+														<span class="latest-activity-ago">
+															3 days ago
+														</span>
+														<div class="clearfix"></div>
+														<div>
+															<span class="latest-activity-photo pull-left">
+																<a href="assets/img/test.jpeg">
+																	<img src="assets/img/test.jpeg" class="" alt="User Name" height="30" width="30">
+																</a>
+															</span>
+
+															<span class="latest-activity-subject pull-left">
+																<a href="#">
+																	Said Özcan
+																</a> wrote a blog post: 
+																<a href="#">
+																	Testing life versus Fuckingship
+																</a>
+															</span>
+														</div>
+													</div>		
+												</div>
+											</li>
+
+											<li class="latest-activity">
+												<div class="row">
+													<div class="col-xs-1 latest-activity-icon">
+														<span class="glyphicon glyphicon-file"></span>
+													</div>
+													<div class="col-xs-11 latest-activity-text">
+														<span class="latest-activity-ago">
+															2 weeks ago
+														</span>
+														<div class="clearfix"></div>
+														<div>
+															<span class="latest-activity-photo pull-left">
+																<a href="assets/img/test.jpeg">
+																	<img src="assets/img/test.jpeg" class="" alt="User Name" height="30" width="30">
+																</a>
+															</span>
+
+															<span class="latest-activity-subject pull-left">
+																<a href="#">
+																	Said Özcan
+																</a> created a page: 
+																<a href="#">
+																	Contact to me
+																</a>
+															</span>
+														</div>
+													</div>		
+												</div>
+											</li>
+
+											<li class="latest-activity">
+												<div class="row">
+													<div class="col-xs-1 latest-activity-icon">
+														<span class="glyphicon glyphicon-comment"></span>
+													</div>
+													<div class="col-xs-11 latest-activity-text">
+														<span class="latest-activity-ago">
+															1 hour ago
+														</span>
+														<div class="clearfix"></div>
+														<div>
+															<span class="latest-activity-photo pull-left">
+																<a href="assets/img/mustafa.jpeg">
+																	<img src="assets/img/mustafa.jpeg" class="" alt="User Name" height="30" width="30">
+																</a>
+															</span>
+
+															<span class="latest-activity-subject pull-left">
+																<a href="#">
+																	Mustafa Uysal
+																</a> left a comment at a post:
+																<a href="#">
+																	Nice blog bro..
+																</a>
+															</span>
+														</div>
+													</div>		
+												</div>
+											</li>
+
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-4 ">					
+						2014 <a href="http://github.com/path/to/repo">Wp-Github-Theme</a>
+					</div>
+
+					<div class="col-xs-4 footer-center footer-brand-logo">
+						<i class="fa fa-bolt"></i>
+					</div>
+
+					<div class="col-xs-4  pull-right">
+						<ul class="footer-menu pull-right no-padding-right">
+							<li>
+								<a href="#">
+									Home
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									About
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Contact
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+      		</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery-1.7.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/list.min.js"></script>	
+		<script src="assets/js/d3.v3.min.js"></script>	
+		<script src="assets/js/cal-heatmap.min.js"></script>
+		<script>
+			posts = [
+				{
+					'all_posts_one_blog_name': 'Working Life versus Studentship',
+					'all-posts-one_blog_permalink':'post.html',
+					'all_posts_one_blog_description': 'Everyone has been a student in their life. Probably most of us...',
+					'all_posts_one_blog_ago':'Last updated 3 days ago.',
+					'all_posts_one_category':'General',
+					'star_count':3
+				},
+				{
+					'all_posts_one_blog_name': 'İki Bin On Üç',
+					'all-posts-one_blog_permalink':'post.html',
+					'all_posts_one_blog_description': 'Bu yazıya başlamayı Mayıs 2013\'te düşünmüştüm ilk defa fakat...',
+					'all_posts_one_blog_ago':'Last updated 1 week ago.',
+					'all_posts_one_category':'General',
+					'star_count':1
+				},
+				{
+					'all_posts_one_blog_name': 'Ne Kullanıyorum?',
+					'all-posts-one_blog_permalink':'post.html',
+					'all_posts_one_blog_description': 'Kendimi tanıtacak olursam,Ben Said Özcan. Ubit..',
+					'all_posts_one_blog_ago':'Last updated 2 months ago.',
+					'all_posts_one_category':'General',
+					'star_count':0
+				},
+				{
+					'all_posts_one_blog_name': 'iOS Dünyası - II',
+					'all-posts-one_blog_permalink':'post.html',
+					'all_posts_one_blog_description': 'Daha önceki yazıda iOS geliştirmek için başlangıç niteliğinde olan bir...',
+					'all_posts_one_blog_ago':'Last updated 1 hour ago.',
+					'all_posts_one_category':'iOS',
+					'star_count':1333
+				},
+				{
+					'all_posts_one_blog_name': 'iOS Dünyası - I',
+					'all-posts-one_blog_permalink':'post.html',
+					'all_posts_one_blog_description': 'Merhabalar, Çevremden çokça aldığım mesajlardan gördüğüm kadarıyla insanla...',
+					'all_posts_one_blog_ago':'Last updated 3 days ago.',
+					'all_posts_one_category':'iOS',
+					'star_count':100
+				},
+				{
+					'all_posts_one_blog_name': 'kod.io',
+					'all-posts-one_blog_permalink':'post.html',
+					'all_posts_one_blog_description': 'Bu haftasonu, şimdiye kadar katıldığım en iyi etkinliklerden birine katıldım...',
+					'all_posts_one_blog_ago':'Last updated 2 days ago.',
+					'all_posts_one_category':'Technology',
+					'star_count':200
+				},
+				{
+					'all_posts_one_blog_name': 'My Development Area',
+					'all-posts-one_blog_permalink':'post.html',
+					'all_posts_one_blog_description': 'I will tell you a story of a part time student and a part time software developer from Istanbul...',
+					'all_posts_one_blog_ago':'Last updated 3 days ago.',
+					'all_posts_one_category':'General',
+					'star_count':500
+				},
+				{
+					'all_posts_one_blog_name': 'Yüzüklerin Efendisi',
+					'all-posts-one_blog_permalink':'post.html',
+					'all_posts_one_blog_description': 'Aylar önce başlayabildiğim J.R.R Tolkien\'in efsane üçlemesi Yüzüklerin Efendisi\'ni geçtiğimiz gün bitirdim....',
+					'all_posts_one_blog_ago':'Last updated 3 years ago.',
+					'all_posts_one_category':'General',
+					'star_count':800
+				},
+				{
+					'all_posts_one_blog_name': 'iOS Dünyası - I',
+					'all-posts-one_blog_permalink':'post.html',
+					'all_posts_one_blog_description': 'Merhabalar, Çevremden çokça aldığım mesajlardan gördüğüm kadarıyl...',
+					'all_posts_one_blog_ago':'Last updated 2 months ago.',
+					'all_posts_one_category':'Technology',
+					'star_count':90
+				}
+			];			
+		</script>
+		<script src="assets/js/index.js"></script>
+	</body>
+</html>

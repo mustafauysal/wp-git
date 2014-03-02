@@ -1,0 +1,109 @@
+html,
+body {
+	height: 100%;
+}
+#wrap {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -60px;
+	padding: 0 0 60px;
+}
+#footer {
+	margin-top: 30px;
+	height: 100px;
+}
+#footer .container{
+	border-top: 1px solid #ccc;
+	padding-top: 30px;
+}
+@font-face {
+	font-family: "Octicons Regular";
+	src: url("../fonts/octicons-regular-webfont.eot");
+	src: url("../fonts/octicons-regular-webfont.eot") format("embedded-opentype"), url("../fonts/octicons-regular-webfont.woff") format("woff"), url("../fonts/octicons-regular-webfont.ttf") format("truetype"), url("../fonts/octicons-regular-webfont.svg") format("svg");
+	style: normal;
+	weight: normal;
+}
+
+@font-face {
+	font-family: "Collegiate";
+	src: url("../fonts/Collegiate.eot");
+	src: url("../fonts/Collegiate.eot") format("embedded-opentype"), url("../fonts/Collegiate.woff") format("woff"), url("../fonts/Collegiate.ttf") format("truetype"), url("../fonts/Collegiate.svg") format("svg");
+	style: normal;
+	weight: normal;
+}
+.navbar-static-top{
+	border-bottom: 1px solid #e5e5e5;
+	height: 68px;
+}
+.navbar-header a {
+	line-height: 40px;
+}
+.navbar-nav li a {
+	line-height: 40px;
+	color: #000000;
+	font-weight: 400;
+}
+.navbar-brand{
+	font-size: 25px;
+	color: #000000;
+	font-weight: 400;
+}
+.navbar-brand:link,
+.navbar-brand:visited,
+.navbar-brand:hover,
+.navbar-brand:active{
+	color:#000000;
+}
+@media (min-width: 1200px) {
+    .container{
+        max-width: 990px;
+    }
+}
+.footer-center{
+	text-align: center;
+}
+.footer-menu{
+	list-style-type: none;
+	text-align: right;
+}
+.footer-menu li{
+	float: left;
+	text-align: right;
+	margin-left: 20px;
+}
+.no-padding-left{
+	padding-left: 0px !important;
+}
+.no-padding-top{
+	padding-top: 0px !important;
+}
+.no-padding-right{
+	padding-right: 0px !important;
+}
+.no-padding-bottom{
+	padding-bottom: 0px !important;
+}
+.bold{
+	font-weight: bold;
+}
+.add-on .input-group-btn > .btn {
+  border-left-width:0;left:-2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* stop the glowing blue shadow */
+.add-on .form-control:focus {
+ box-shadow:none;
+ -webkit-box-shadow:none; 
+ border-color:#cccccc; 
+}
+.add-on{
+	margin-top: 15px;
+}
+.ml15{
+	margin-left: 15px;
+}
+.footer-brand-logo{
+	font-size: 30px;
+	margin-top: -15px;
+}

@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Wp-Github Theme</title>
+
+	<meta name="description" content="Wordpress Github Theme">
+	<meta name="keywords" content="Wordpress, Github, Theme, Open Source">
+	<meta name="author" content="Mustafa Uysal, Said Özcan">
+	<meta charset="UTF-8">		
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/shared.css">
+	<link rel="stylesheet" href="assets/css/search.css">
+	<link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+
+	<div id="wrap">
+		<header class="navbar navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="col-xs-12 no-padding-left no-padding-right">
+					<div class="col-xs-3 no-padding-left navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Wp-GitHub</a>
+					</div>						
+
+					<div class="col-xs-4 pull-right collapse navbar-collapse">						
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="row">
+
+				<div class="col-xs-12 no-padding-left no-padding-right">
+
+					<!-- Post Owner Username / Post Title -->
+					<div class="col-xs-3 post-meta-info">
+						<div class="search-title pull-left no-padding-left">
+							Search
+						</div>
+					</div>
+
+					<!-- Star / Unstar Post -->
+					<div class="col-xs-9 no-padding-right no-padding-left">
+
+						<form role="form" action="search.html" method="post">
+							<div class="col-xs-10">
+								<input type="text" class="form-control" name="q" autocomplete="off" value="kod.io">
+							</div>
+							<div class="col-xs-2 pull-right">
+								<button class="btn btn-success search-button" type="submit">
+									<i class="glyphicon glyphicon-search"></i> Search
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<hr/>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 no-padding-left no-padding-right">
+					<div class="col-xs-3">
+						<ul class="search-result-menus">
+							<li class="search-result-menu" id="search_results_blogs">
+								<a href="search.html?type=blogs">
+									<i class="glyphicon glyphicon-pencil"></i> 	Blogs									
+								</a>
+								<div class="pull-right search-result-menu-count">
+									<span class="label label-default">123</span>
+								</div>
+							</li>
+
+							<li class="search-result-menu" id="search_results_pages">
+								<a href="search.html?type=pages">
+									<i class="glyphicon glyphicon-file"></i>  Pages
+								</a>
+								<div class="pull-right search-result-menu-count">
+									<span class="label label-default">1,200,300</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-xs-9 tab-content no-padding-left no-padding-right">
+
+						<div class="col-xs-9 search-result-heading pull-left">
+							<h4>We've found 12,000 results for your search</h4>
+						</div>
+
+						<div class="col-xs-3 no-padding-right">
+							<div class="btn-group pull-right">
+								<button type="button" class="btn btn-default sort-dropdown-toggle dropdown-toggle" data-toggle="dropdown">
+									Sort: <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu sort-dropdown" role="menu">
+									<li id="sort_date_asc">
+										<a href="#">Date</a>
+									</li>
+									<li id="sort_date_desc">
+										<a href="#">Reverse Date</a>
+									</li>
+									<li id="sort_star_asc">
+										<a href="#">Star</a>
+									</li>
+									<li id="sort_star_desc">
+										<a href="#">Reverse Star</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<hr class="ml15"/>
+
+						<div class="col-xs-12">
+							<ul class="all-posts list">
+								<li class="all-posts-one">
+									<a href="post.html" class="all-posts-one_blog_permalink_real">
+										<div class="all-posts-one_blog_permalink hide">
+											post.html
+										</div>
+										<div class="row">
+											<div class="col-xs-1 pull-left pencil-icon">
+												<span class="glyphicon glyphicon-pencil">
+												</span>
+											</div>
+											<div class="col-xs-8 pull-left">
+												<span class="all_posts_one_blog_name">
+													Working Life versus Studentship
+												</span>
+
+												<div class="clearfix">
+												</div>
+												<span class="all_posts_one_blog_description">
+													Everyone has been a student in their life. Probably most of us...
+												</span>
+												<div class="clearfix">
+												</div>
+												<span class="all_posts_one_blog_ago">
+													Last updated 3 days ago.
+												</span>
+											</div>
+											<div class="col-xs-3 blog-star_count">
+												<span class="all_posts_one_category">
+													General
+												</span>
+												<span class="glyphicon glyphicon-star">
+												</span>
+
+												<span class="star_count">
+													3
+												</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="all-posts-one">
+									<a href="post.html" class="all-posts-one_blog_permalink_real">
+										<div class="all-posts-one_blog_permalink hide">
+											post.html
+										</div>
+										<div class="row">
+											<div class="col-xs-1 pull-left pencil-icon">
+												<span class="glyphicon glyphicon-pencil">
+												</span>
+											</div>
+											<div class="col-xs-8 pull-left">
+												<span class="all_posts_one_blog_name">
+													İki Bin On Üç
+												</span>
+
+												<div class="clearfix">
+												</div>
+												<span class="all_posts_one_blog_description">
+													Bu yazıya başlamayı Mayıs 2013'te düşünmüştüm ilk defa fakat...
+												</span>
+												<div class="clearfix">
+												</div>
+												<span class="all_posts_one_blog_ago">
+													Last updated 1 week ago.
+												</span>
+											</div>
+											<div class="col-xs-3 blog-star_count">
+												<span class="all_posts_one_category">
+													General
+												</span>
+												<span class="glyphicon glyphicon-star">
+												</span>
+
+												<span class="star_count">
+													1
+												</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="all-posts-one">
+									<a href="post.html" class="all-posts-one_blog_permalink_real">
+										<div class="all-posts-one_blog_permalink hide">
+											post.html
+										</div>
+										<div class="row">
+											<div class="col-xs-1 pull-left pencil-icon">
+												<span class="glyphicon glyphicon-pencil">
+												</span>
+											</div>
+											<div class="col-xs-8 pull-left">
+												<span class="all_posts_one_blog_name">
+													Ne Kullanıyorum?
+												</span>
+
+												<div class="clearfix">
+												</div>
+												<span class="all_posts_one_blog_description">
+													Kendimi tanıtacak olursam,Ben Said Özcan. Ubit..
+												</span>
+												<div class="clearfix">
+												</div>
+												<span class="all_posts_one_blog_ago">
+													Last updated 2 months ago.
+												</span>
+											</div>
+											<div class="col-xs-3 blog-star_count">
+												<span class="all_posts_one_category">
+													General
+												</span>
+												<span class="glyphicon glyphicon-star">
+												</span>
+
+												<span class="star_count">
+													0
+												</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="all-posts-one">
+									<a href="post.html" class="all-posts-one_blog_permalink_real">
+										<div class="all-posts-one_blog_permalink hide">
+											post.html
+										</div>
+										<div class="row">
+											<div class="col-xs-1 pull-left pencil-icon">
+												<span class="glyphicon glyphicon-pencil">
+												</span>
+											</div>
+											<div class="col-xs-8 pull-left">
+												<span class="all_posts_one_blog_name">
+													iOS Dünyası - II
+												</span>
+
+												<div class="clearfix">
+												</div>
+												<span class="all_posts_one_blog_description">
+													Daha önceki yazıda iOS geliştirmek için başlangıç niteliğinde olan bir...
+												</span>
+												<div class="clearfix">
+												</div>
+												<span class="all_posts_one_blog_ago">
+													Last updated 1 hour ago.
+												</span>
+											</div>
+											<div class="col-xs-3 blog-star_count">
+												<span class="all_posts_one_category">
+													iOS
+												</span>
+												<span class="glyphicon glyphicon-star">
+												</span>
+
+												<span class="star_count">
+													1333
+												</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="all-posts-one">
+									<a href="post.html" class="all-posts-one_blog_permalink_real">
+										<div class="all-posts-one_blog_permalink hide">
+											post.html
+										</div>
+										<div class="row">
+											<div class="col-xs-1 pull-left pencil-icon">
+												<span class="glyphicon glyphicon-pencil">
+												</span>
+											</div>
+											<div class="col-xs-8 pull-left">
+												<span class="all_posts_one_blog_name">
+													iOS Dünyası - I
+												</span>
+
+												<div class="clearfix">
+												</div>
+												<span class="all_posts_one_blog_description">
+													Merhabalar, Çevremden çokça aldığım mesajlardan gördüğüm kadarıyla insanla...
+												</span>
+												<div class="clearfix">
+												</div>
+												<span class="all_posts_one_blog_ago">
+													Last updated 3 days ago.
+												</span>
+											</div>
+											<div class="col-xs-3 blog-star_count">
+												<span class="all_posts_one_category">
+													iOS
+												</span>
+												<span class="glyphicon glyphicon-star">
+												</span>
+
+												<span class="star_count">
+													100
+												</span>
+											</div>
+										</div>
+									</a>
+								</li>								
+							</ul>
+							<div class="text-center">
+							    <ul class="pagination">
+							    	<li>
+							    		<a href="?p=0" data-original-title="" title="">
+							    			<i class="fa fa-angle-double-left"></i> İlk
+							    		</a>
+							    	</li> 
+							    	<li>
+							    		<a href="?p=0" data-original-title="" title="">
+							    			<i class="fa fa-angle-left"></i> Önceki
+							    		</a>
+							    	</li>
+							    	<li>
+							    		<a href="?p=0" data-original-title="" title="" class="actıve">
+							    			1
+							    		</a>
+							    	</li> 
+							    	<li>
+							    		<a href="?p=0" data-original-title="" title="">
+							    			2
+							    		</a>
+							    	</li>
+							    	<li>
+							    		<a href="?p=0" data-original-title="" title="">
+							    			3
+							    		</a>
+							    	</li>
+							    	<li>
+							    		<a href="?p=0" data-original-title="" title="">
+							    			4
+							    		</a>
+							    	</li>
+							    	<li>
+							    		<a href="?p=0" data-original-title="" title="">
+							    			5
+							    		</a>
+							    	</li>
+							    	<li>
+							    		<a href="?p=0" data-original-title="" title="">
+							    			6
+							    		</a>
+							    	</li>
+							        <li>
+							        	<a href="?p=0" data-original-title="" title="">
+							        	Sonraki <i class="fa fa-angle-right"></i>
+							        	</a>
+							        </li> 
+							        <li>
+							        	<a href="?p=1" data-original-title="" title="">
+							        	Son <i class="fa fa-angle-double-right"></i>
+							        	</a>
+							        </li> 
+							    </ul>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>				
+
+		</div>
+	</div>
+
+
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4">					
+					2014 <a href="http://github.com/path/to/repo">Wp-Github-Theme</a>
+				</div>
+
+				<div class="col-xs-4 footer-center footer-brand-logo">
+					<i class="fa fa-bolt"></i>
+				</div>
+
+				<div class="col-xs-4 pull-right">
+					<ul class="footer-menu pull-right no-padding-right">
+						<li>
+							<a href="#">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								About
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery-1.7.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>			
+	<script src="assets/js/search.js"></script>
+	</body>
+	</html>
