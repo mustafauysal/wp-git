@@ -2,7 +2,7 @@ wp-github-html
 ==============
 
 To render all posts in the "Posts" Tab, you should render a javasciprt object like this:
-	```javascript
+	```
 	posts = [
 				{
 					'all_posts_one_blog_name': 'Working Life versus Studentship',
