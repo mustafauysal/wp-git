@@ -2,7 +2,7 @@ wp-github-html
 ==============
 
 To render all posts in the "Posts" Tab, you should render a javasciprt object like this:
-	```
+	```javascript
 	posts = [
 				{
 					'all_posts_one_blog_name': 'Working Life versus Studentship',
@@ -28,7 +28,7 @@ To render all posts in the "Posts" Tab, you should render a javasciprt object li
 		]
 	 ```
 To show posts on the heat-map called "Calendar Activity", you should specify a timestamp value and a post count corresponds to that date. For example:
-	```
+	```javascript
 	calendar.init({
 		displayLegend: true,
 		tooltip: true,
