@@ -24,6 +24,14 @@ function wp_github_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	if( is_single()){
+		wp_enqueue_script( 'wp-github-post', get_template_directory_uri() . '/assets/js/post.js', array(), false, true );
+		wp_enqueue_style( 'wp-github-post', get_template_directory_uri() . '/assets/css/post.css' );
+
+	}
+
+
 }
 
 add_action( 'wp_enqueue_scripts', 'wp_github_scripts' );
@@ -34,3 +42,37 @@ function get_gravatar_url( $email , $size) {
 	$hash = md5( strtolower( trim ( $email ) ) ).'?s='. $size;
 	return 'http://gravatar.com/avatar/' . $hash;
 }
+
+
+function custom_excerpt($limit) {
+	$excerpt = explode(' ', get_the_excerpt(), $limit);
+	if (count($excerpt)>=$limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ",$excerpt).'...';
+	} else {
+		$excerpt = implode(" ",$excerpt);
+	}
+	$excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+	return $excerpt;
+}
+
+add_filter('comment_form_default_fields', 'unset_url_field');
+function unset_url_field($fields){
+	if(isset($fields['url']))
+		unset($fields['url']);
+	return $fields;
+}
+
+
+function excerpt($limit) {
+	$excerpt = explode(' ', get_the_excerpt(), $limit);
+	if (count($excerpt)>=$limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ",$excerpt).'...';
+	} else {
+		$excerpt = implode(" ",$excerpt);
+	}
+	$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+	return $excerpt;
+}
+
