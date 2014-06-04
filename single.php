@@ -147,115 +147,53 @@
 	<div class="tab-pane" id="comments">
 		<div class="row no-padding-left all-comments">
 			<div class="col-xs-12">
+				<?php
+				$comments = get_comments( 'post_id=' . $wp_query->post->ID );
+				foreach ( $comments as $comment ) :
+					echo( $comment->comment_author );
+					?>
+					<div class="any-comment">
 
-				<div class="any-comment">
-
-					<div class="col-xs-1 no-padding-left any-comment-image">
-						<img class="img-rounded" alt="Said Özcan" src="<?php echo get_gravatar_url( 'saidozcn@gmail.com', 80 ); ?>" width="40">
-					</div>
-
-					<div class="col-xs-11 no-padding-right any-comment-right no-padding-left">
-						<div class="any-comment-header">
-
-							<a href="#" class="bold any-comment-username">s</a> commented 4 days ago
-
+						<div class="col-xs-1 no-padding-left any-comment-image">
+							<img class="img-rounded" alt="Said Özcan" src="<?php echo get_gravatar_url( $comment->comment_author_email, 80 ); ?>" width="40">
 						</div>
-						<div class="any-comment-content">
-							Phasellus et neque nec elit varius ultrices. Nunc aliquam, neque sit amet congue ultrices, quam ligula gravida turpis, at mollis est ligula sit amet tellus. Nam tempus tortor eget porttitor rhoncus. Integer dapibus feugiat magna, sed tristique tellus pulvinar at. Donec vel orci eu nisl vehicula lacinia. Maecenas posuere consequat odio, eu vehicula purus interdum eget. Mauris pretium porttitor odio id rhoncus.
+
+						<div class="col-xs-11 no-padding-right any-comment-right no-padding-left">
+							<div class="any-comment-header">
+
+								<a href="#" class="bold any-comment-username"><?php echo $comment->comment_author; ?> </a> <?php echo human_time_diff( strtotime($comment->comment_date_gmt), current_time( 'timestamp' ) ) . ' ago'; ?>
+
+							</div>
+							<div class="any-comment-content">
+								<?php echo $comment->comment_content; ?>
+							</div>
 						</div>
-					</div>
 
-					<div class="clearfix"></div>
-
-				</div>
-
-				<div class="any-comment">
-
-					<div class="col-xs-1 no-padding-left any-comment-image">
-						<img class="img-rounded" alt="Said Özcan" src="assets/img/mustafa.jpeg" width="40">
-					</div>
-
-					<div class="col-xs-11 no-padding-right any-comment-right no-padding-left">
-						<div class="any-comment-header">
-
-							<a href="#" class="bold any-comment-username">s</a> commented 4 days ago
-
-						</div>
-						<div class="any-comment-content">
-							Nam tempus tortor eget porttitor rhoncus. Integer dapibus feugiat magna, sed tristique tellus pulvinar at. Donec vel orci eu nisl vehicula lacinia.
-						</div>
-					</div>
-
-					<div class="clearfix"></div>
-
-				</div>
-
-				<div class="any-comment">
-
-					<div class="col-xs-1 no-padding-left any-comment-image">
-						<img class="img-rounded" alt="Said Özcan" src="assets/img/test.jpeg" width="40">
-					</div>
-
-					<div class="col-xs-11 no-padding-right any-comment-right no-padding-left">
-						<div class="any-comment-header">
-
-							<a href="#" class="bold any-comment-username">mustafauysal</a> commented 4 days ago
-
-						</div>
-						<div class="any-comment-content">
-							Maecenas posuere consequat odio, eu vehicula purus interdum eget. Mauris pretium porttitor odio id rhoncus.
-						</div>
-					</div>
-
-					<div class="clearfix"></div>
-
-				</div>
-
-				<div class="any-comment">
-
-					<div class="col-xs-1 no-padding-left any-comment-image">
-						<img class="img-rounded" alt="Said Özcan" src="assets/img/test.jpeg" width="40">
-					</div>
-
-					<div class="col-xs-11 no-padding-right any-comment-right no-padding-left">
-						<div class="any-comment-header">
-
-							Write a comment
-
-						</div>
-						<div class="any-comment-content">
-							<form method="post" action="#">
-
-
-								<button type="submit" class="btn btn-success pull-right">
-									<span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;Comment
-								</button>
-							</form>
-							<div class="clearfix"></div>
-						</div>
+						<div class="clearfix"></div>
 
 					</div>
 
-					<div class="clearfix"></div>
-
-				</div>
-
+				<?php endforeach; ?>
 				<?php
 				$commenter = wp_get_current_commenter();
 				$req = get_option( 'require_name_email' );
 
 				$arg = array(
 					'comment_notes_before' => "",
-					'fields' => array(
-					'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" /></p>',
-					'email' => '<p class="comment-form-email"><label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" /></p>',
-				),
-					'comment_field' => '<textarea name="comment" class="form-group col-xs-12 leave-comment" rows="5" placeholder="Leave a comment"></textarea>',
-					'comment_notes_after' => '',
-					'id_submit' => 'comment_submit',
+					'logged_in_as'         => false,
+					'title_reply'          => "",
+					'label_submit'         => __( 'Comment' ),
+					'fields'               => array(
+
+						'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" />',
+						'email'  => '<label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" /></p>',
+					),
+					'comment_field'        => '<textarea name="comment" class="form-group col-xs-12 leave-comment" rows="5" placeholder="Leave a comment"></textarea>',
+					'comment_notes_after'  => '<button type="submit" class="btn btn-success pull-right"> <span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;Comment </button>',
+					'id_submit'            => 'comment_submit',
 
 				);
-				comment_form($arg); ?>
+				comment_form( $arg ); ?>
 
 			</div>
 		</div>

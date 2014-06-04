@@ -426,3 +426,12 @@
 .first-share{
     margin-top: 30px !important;
 }
+
+
+.comment-form-author{
+	text-align: center;
+	padding: 10px;
+}
+#comment_submit{
+	display: none;
+}
