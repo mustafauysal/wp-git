@@ -86,7 +86,7 @@
 
 				<div class="col-xs-4">
 					<span class="glyphicon glyphicon-comment"></span>
-					<span class="post-basic-stat-count">20</span> <span class="post-basic-stat-text">comments</span>
+					<span class="post-basic-stat-count"><?php echo get_comments_number();?></span> <span class="post-basic-stat-text">comments</span>
 				</div>
 
 				<div class="col-xs-4">
@@ -126,9 +126,9 @@
 					<div class="col-xs-4 post-owner-latest-update pull-right">
 						<a href="#">
 							latest update
-													<span class="commit">
-														#343515
-													</span>
+							<span class="commit">
+							<?php echo substr(sha1(get_the_date()),0,7);?>
+							</span>
 						</a>
 					</div>
 				</div>
