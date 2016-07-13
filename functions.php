@@ -85,9 +85,11 @@ function excerpt( $limit ) {
 
 
 function get_post_revision_count() {
-	global $post;
+	global $post, $wpdb;
 	if ( is_single() ) {
-		return count( wp_get_post_revisions( intval( get_the_ID() ) ) );
+		$result = $wpdb->get_results( $wpdb->prepare( "select id from $wpdb->posts where post_parent=%d and post_type=%s", get_the_ID(), 'revision' ) );
+
+		return count( $result );
 	}
 
 	return 0;
