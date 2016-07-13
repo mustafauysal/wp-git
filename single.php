@@ -81,7 +81,7 @@
 
 				<div class="col-xs-4">
 					<span class="glyphicon glyphicon-time"></span>
-					<span class="post-basic-stat-count">80</span> <span class="post-basic-stat-text">versions</span>
+					<span class="post-basic-stat-count"><?php echo get_post_revision_count();?></span> <span class="post-basic-stat-text">versions</span>
 				</div>
 
 				<div class="col-xs-4">

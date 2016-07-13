@@ -83,3 +83,12 @@ function excerpt( $limit ) {
 	return $excerpt;
 }
 
+
+function get_post_revision_count() {
+	global $post;
+	if ( is_single() ) {
+		return count( wp_get_post_revisions( intval( get_the_ID() ) ) );
+	}
+
+	return 0;
+}
