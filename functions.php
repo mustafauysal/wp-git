@@ -102,3 +102,21 @@ function wp_github_word_count() {
 
 	return $word_count;
 }
+
+function wp_github_post_revisions() {
+	if ( is_single() ) {
+		global $post;
+
+		$revisions      = wp_get_post_revisions( $post );
+		$revision_group = array();
+		foreach ( $revisions as $rev_item ) {
+			//date based group
+			$rev_date = substr( $rev_item->post_date, 0, 10 );
+
+			$revision_group[ $rev_date ][] = $rev_item;
+		}
+
+		return $revision_group;
+	}
+	return false;
+}

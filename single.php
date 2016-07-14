@@ -200,211 +200,50 @@
 	<div class="row no-padding-left all-revisions">
 	<div class="col-xs-12">
 
-	<div class="revision-group">
-		<div class="revision-group-header">
-			Feb 26, 2014
-		</div>
+		<?php if(!empty($revisions = wp_github_post_revisions())):?>
+			<?php foreach($revisions as $rev_group => $revisions_by_date):?>
+				<div class="revision-group">
+					<div class="revision-group-header">
 
-		<div class="any-revision">
+					 <?php echo date_i18n( get_option( 'date_format' ), strtotime( $rev_group ) ); ?>
 
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="col-xs-1 no-padding-left any-revision-image">
-						<img class="img-rounded img-revision" alt="Said Özcan" src="assets/img/test.jpeg" width="40">
 					</div>
+				<?php foreach($revisions_by_date as $revision):?>
+					<div class="any-revision">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="col-xs-1 no-padding-left any-revision-image">
+									<img class="img-rounded img-revision" alt="Said Özcan" src="assets/img/test.jpeg" width="40">
+								</div>
 
-					<div class="col-xs-9 no-padding-left any-revision-right-group">
-						<div class="any-revision-message no-padding-left">
-							Phasellus et neque nec elit varius ultrices. Nunc aliquam, neque sit.
+								<div class="col-xs-9 no-padding-left any-revision-right-group">
+									<div class="any-revision-message no-padding-left">
+										Phasellus et neque nec elit varius ultrices. Nunc aliquam, neque sit.
+									</div>
+									<div class="any-revision-author">
+										<a href="#">s</a> authored today.
+									</div>
+								</div>
+
+								<div class="col-xs-2 pull-right no-padding-right">
+									<div class="post-owner-latest-update pull-right">
+										<a href="#">
+																				<span class="commit">
+																					#343515
+																				</span>
+										</a>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="any-revision-author">
-							<a href="#">s</a> authored today.
-						</div>
+					<div class="clearfix"></div>
 					</div>
+				<?php endforeach;?>
+							</div>
+			<?php endforeach;?>
 
-					<div class="col-xs-2 pull-right no-padding-right">
-						<div class="post-owner-latest-update pull-right">
-							<a href="#">
-																	<span class="commit">
-																		#343515
-																	</span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
+		<?php endif;?>
 
-		</div>
-
-		<div class="any-revision">
-
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="col-xs-1 no-padding-left any-revision-image">
-						<img class="img-rounded img-revision" alt="Said Özcan" src="assets/img/test.jpeg" width="40">
-					</div>
-
-					<div class="col-xs-9 no-padding-left any-revision-right-group">
-						<div class="any-revision-message no-padding-left">
-							Phasellus et neque nec elit varius ultrices. Nunc aliquam, neque sit.
-						</div>
-						<div class="any-revision-author">
-							<a href="#">s</a> authored today.
-						</div>
-					</div>
-
-					<div class="col-xs-2 pull-right no-padding-right">
-						<div class="post-owner-latest-update pull-right">
-							<a href="#">
-																	<span class="commit">
-																		#343515
-																	</span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-
-		</div>
-
-		<div class="any-revision">
-
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="col-xs-1 no-padding-left any-revision-image">
-						<img class="img-rounded img-revision" alt="Said Özcan" src="assets/img/test.jpeg" width="40">
-					</div>
-
-					<div class="col-xs-9 no-padding-left any-revision-right-group">
-						<div class="any-revision-message no-padding-left">
-							Phasellus et neque nec elit varius ultrices. Nunc aliquam, neque sit.
-						</div>
-						<div class="any-revision-author">
-							<a href="#">s</a> authored today.
-						</div>
-					</div>
-
-					<div class="col-xs-2 pull-right no-padding-right">
-						<div class="post-owner-latest-update pull-right">
-							<a href="#">
-																	<span class="commit">
-																		#343515
-																	</span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-
-		</div>
-
-	</div>
-
-	<div class="revision-group">
-		<div class="revision-group-header">
-			Feb 23, 2014
-		</div>
-
-		<div class="any-revision">
-
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="col-xs-1 no-padding-left any-revision-image">
-						<img class="img-rounded img-revision" alt="Said Özcan" src="assets/img/mustafa.jpeg" width="40">
-					</div>
-
-					<div class="col-xs-9 no-padding-left any-revision-right-group">
-						<div class="any-revision-message no-padding-left">
-							Phasellus et neque nec elit varius ultrices. Nunc aliquam, neque sit.
-						</div>
-						<div class="any-revision-author">
-							<a href="#">mustafa uysal</a> authored today.
-						</div>
-					</div>
-
-					<div class="col-xs-2 pull-right no-padding-right">
-						<div class="post-owner-latest-update pull-right">
-							<a href="#">
-																	<span class="commit">
-																		#343511
-																	</span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-
-		</div>
-
-		<div class="any-revision">
-
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="col-xs-1 no-padding-left any-revision-image">
-						<img class="img-rounded img-revision" alt="Said Özcan" src="assets/img/mustafa.jpeg" width="40">
-					</div>
-
-					<div class="col-xs-9 no-padding-left any-revision-right-group">
-						<div class="any-revision-message no-padding-left">
-							Phasellus et neque nec elit varius ultrices. Nunc aliquam, neque sit.
-						</div>
-						<div class="any-revision-author">
-							<a href="#">mustafa uysal</a> authored today.
-						</div>
-					</div>
-
-					<div class="col-xs-2 pull-right no-padding-right">
-						<div class="post-owner-latest-update pull-right">
-							<a href="#">
-																	<span class="commit">
-																		#343512
-																	</span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-
-		</div>
-
-		<div class="any-revision">
-
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="col-xs-1 no-padding-left any-revision-image">
-						<img class="img-rounded img-revision" alt="Said Özcan" src="assets/img/mustafa.jpeg" width="40">
-					</div>
-
-					<div class="col-xs-9 no-padding-left any-revision-right-group">
-						<div class="any-revision-message no-padding-left">
-							Phasellus et neque nec elit varius ultrices. Nunc aliquam, neque sit.
-						</div>
-						<div class="any-revision-author">
-							<a href="#">mustafa uysal</a> authored today.
-						</div>
-					</div>
-
-					<div class="col-xs-2 pull-right no-padding-right">
-						<div class="post-owner-latest-update pull-right">
-							<a href="#">
-																	<span class="commit">
-																		#343513
-																	</span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-
-		</div>
-
-	</div>
 	</div>
 	</div>
 	</div>
