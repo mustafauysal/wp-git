@@ -110,22 +110,25 @@
 					<div class="col-xs-4 pull-left post-owner-ago-content">
 
 						<a href="assets/img/test.jpeg" class="post-owner-img pull-left">
-							<img src="<?php echo wp_github_get_gravatar_url( 'saidozcn@gmail.com', 80 ); ?>" class="" alt="User Name" height="20" width="20">
+							<img src="<?php echo wp_github_get_author_gravatar_url( array('size' => 20)); ?>" class="" alt="User Name" height="20" width="20">
 						</a>
 
 						<div class="post-owner-ago-text pull-left">
 							<a href="#">
-								s
+								<?php echo get_the_author();?>
 							</a>
-							authored 1 hour ago
+							<?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-github' ), human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
 						</div>
 					</div>
-
 					<div class="col-xs-4 post-owner-latest-update pull-right">
-						<a href="#">
+					<?php $last_rev = wp_github_get_latest_revision(get_the_ID());
+					$diff_url = get_permalink().'?rev='.$last_rev->ID;
+					?>
+
+						<a href="<?php echo esc_url($diff_url);?>">
 							latest update
 							<span class="commit">
-							<?php echo substr(sha1(get_the_date()),0,7);?>
+							<?php echo wp_github_get_post_hash(get_the_date());?>
 							</span>
 						</a>
 					</div>
@@ -133,7 +136,11 @@
 
 
 				<div class="row post-content">
+					<?php if(isset($_REQUEST['rev']) && intval($_REQUEST['rev'])>0):?>
+					<?php echo wp_github_compare_revision(get_the_ID(),$_REQUEST['rev'],$_REQUEST['to']);?>
+					<?php else:?>
 					<?php the_content(); ?>
+					<?php endif;?>
 				</div>
 
 			</div>
@@ -153,7 +160,7 @@
 					<div class="any-comment">
 
 						<div class="col-xs-1 no-padding-left any-comment-image">
-							<img class="img-rounded" alt="Said Özcan" src="<?php echo wp_github_get_gravatar_url( $comment->comment_author_email, 80 ); ?>" width="40">
+							<img class="img-rounded" alt="<?php echo get_the_author();?>" src="<?php echo wp_github_get_gravatar_url( $comment->comment_author_email, 80 ); ?>" width="40">
 						</div>
 
 						<div class="col-xs-11 no-padding-right any-comment-right no-padding-left">
@@ -213,23 +220,27 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="col-xs-1 no-padding-left any-revision-image">
-									<img class="img-rounded img-revision" alt="Said Özcan" src="assets/img/test.jpeg" width="40">
+									<img class="img-rounded img-revision" alt="Said Özcan" src="<?php echo wp_github_get_author_gravatar_url(array('size'=>40));?>" width="40">
 								</div>
 
 								<div class="col-xs-9 no-padding-left any-revision-right-group">
 									<div class="any-revision-message no-padding-left">
-										Phasellus et neque nec elit varius ultrices. Nunc aliquam, neque sit.
+										<?php echo $revision->post_title;?>
 									</div>
 									<div class="any-revision-author">
-										<a href="#">s</a> authored today.
+										<a href=""><?php
+										$user_info = get_userdata($revision->post_author);
+										echo $user_info->display_name;
+										?></a> authored <?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-github' ), human_time_diff( strtotime($revision->post_date), current_time( 'timestamp' ) ) ); ?>
+
 									</div>
 								</div>
 
 								<div class="col-xs-2 pull-right no-padding-right">
 									<div class="post-owner-latest-update pull-right">
-										<a href="#">
+										<a href="<?php echo  get_permalink().'?rev='.$last_rev->ID.'&to='.$revision->ID;?>">
 																				<span class="commit">
-																					#343515
+																					#<?php echo wp_github_get_post_hash($revision->post_date);?>
 																				</span>
 										</a>
 									</div>

@@ -26,4 +26,6 @@ jQuery(function ($) {
 
 	count_element.html(_cur);
 });
+
+
 });

@@ -43,6 +43,20 @@ function wp_github_get_gravatar_url( $email, $size ) {
 	return 'http://gravatar.com/avatar/' . $hash;
 }
 
+function wp_github_get_author_gravatar_url( $args = array() ) {
+	global $post;
+
+	$params = wp_parse_args( $args, array(
+		'size'      => '80',
+		'author_id' => $post->post_author,
+	) );
+
+	$email = get_the_author_meta('user_email', $params['author_id']);
+	$hash = md5( strtolower( trim( $email ) ) ) . '?s=' . $params['size'];
+
+	return 'http://gravatar.com/avatar/' . $hash;
+}
+
 
 function wp_github_custom_excerpt( $limit ) {
 	$excerpt = explode( ' ', get_the_excerpt(), $limit );
@@ -115,8 +129,57 @@ function wp_github_post_revisions() {
 
 			$revision_group[ $rev_date ][] = $rev_item;
 		}
-
 		return $revision_group;
 	}
 	return false;
+}
+
+function wp_github_get_post_hash( $context ) {
+	return substr( sha1( $context ), 0, 7 );
+}
+
+function wp_github_get_latest_revision( $post_id ) {
+	$revisions = wp_get_post_revisions( $post_id );
+
+	if ( is_array( $revisions ) && ! empty( $revisions ) ) {
+		return array_shift( array_values( $revisions ) );
+	}
+
+	return false;
+}
+
+function wp_github_compare_revision($post_id, $revision_id, $to = false ) {
+	$revision_id = absint( $revision_id );
+	if ( false !== $to ) {
+		$to = absint( $to );
+	}
+
+	if ( $revision_id == $to ) {
+		$to = false;
+	}
+
+	$revisions = wp_get_post_revisions( $post_id );
+	if(false!==$to){
+		$prev_revision = $revisions[$to];
+	}
+
+
+	foreach ( $revisions as $rev_id => $revision ) {
+
+		if ( $rev_id == $revision_id ) {
+			$base_revision = $revision;
+		}
+
+		if ( $rev_id < $revision_id && empty( $prev_revision ) ) {
+			$prev_revision = $revision;
+			break;
+		}
+
+	}
+
+	if ( ! empty( $diff = wp_text_diff( $prev_revision->post_content, $base_revision->post_content ) ) ) {
+		return $diff;
+	}
+
+	return __( "the content unchanged between these revisions. Other part of post data might be changed.", 'wp-github' );
 }
