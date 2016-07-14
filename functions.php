@@ -94,3 +94,11 @@ function wp_github_get_post_revision_count() {
 
 	return 0;
 }
+
+function wp_github_word_count() {
+	global $post;
+	$content    = get_post_field( 'post_content', $post->ID );
+	$word_count = str_word_count( strip_tags( $content ) );
+
+	return $word_count;
+}

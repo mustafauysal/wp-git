@@ -81,17 +81,17 @@
 
 				<div class="col-xs-4">
 					<span class="glyphicon glyphicon-time"></span>
-					<span class="post-basic-stat-count"><?php echo wp_github_get_post_revision_count();?></span> <span class="post-basic-stat-text">versions</span>
+					<span class="post-basic-stat-count"><?php echo wp_github_get_post_revision_count();?></span> <span class="post-basic-stat-text"><?php _e('versions','wp-github');?></span>
 				</div>
 
 				<div class="col-xs-4">
 					<span class="glyphicon glyphicon-comment"></span>
-					<span class="post-basic-stat-count"><?php echo get_comments_number();?></span> <span class="post-basic-stat-text">comments</span>
+					<span class="post-basic-stat-count"><?php echo get_comments_number();?></span> <span class="post-basic-stat-text"><?php _e('comments','wp-github');?></span>
 				</div>
 
 				<div class="col-xs-4">
 					<span class="glyphicon glyphicon-align-left"></span>
-					<span class="post-basic-stat-count">350</span> <span class="post-basic-stat-text">lines</span>
+					<span class="post-basic-stat-count"><?php echo wp_github_word_count();?></span> <span class="post-basic-stat-text"><?php _e('words','wp-github');?></span>
 				</div>
 
 			</div>
