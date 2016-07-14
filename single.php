@@ -61,7 +61,7 @@
 
 		<div class="col-xs-12">
 			<div class="post-excerpt-info">
-				<span class="post-excerpt"><?php echo custom_excerpt( 25 ); ?></span>
+				<span class="post-excerpt"><?php echo wp_github_custom_excerpt( 25 ); ?></span>
 										<span class="post-permalink">
 											<a href="<?php the_permalink(); ?>">
 												<?php the_permalink(); ?>
@@ -81,7 +81,7 @@
 
 				<div class="col-xs-4">
 					<span class="glyphicon glyphicon-time"></span>
-					<span class="post-basic-stat-count"><?php echo get_post_revision_count();?></span> <span class="post-basic-stat-text">versions</span>
+					<span class="post-basic-stat-count"><?php echo wp_github_get_post_revision_count();?></span> <span class="post-basic-stat-text">versions</span>
 				</div>
 
 				<div class="col-xs-4">
@@ -112,7 +112,7 @@
 					<div class="col-xs-4 pull-left post-owner-ago-content">
 
 						<a href="assets/img/test.jpeg" class="post-owner-img pull-left">
-							<img src="<?php echo get_gravatar_url( 'saidozcn@gmail.com', 80 ); ?>" class="" alt="User Name" height="20" width="20">
+							<img src="<?php echo wp_github_get_gravatar_url( 'saidozcn@gmail.com', 80 ); ?>" class="" alt="User Name" height="20" width="20">
 						</a>
 
 						<div class="post-owner-ago-text pull-left">
@@ -155,7 +155,7 @@
 					<div class="any-comment">
 
 						<div class="col-xs-1 no-padding-left any-comment-image">
-							<img class="img-rounded" alt="Said Özcan" src="<?php echo get_gravatar_url( $comment->comment_author_email, 80 ); ?>" width="40">
+							<img class="img-rounded" alt="Said Özcan" src="<?php echo wp_github_get_gravatar_url( $comment->comment_author_email, 80 ); ?>" width="40">
 						</div>
 
 						<div class="col-xs-11 no-padding-right any-comment-right no-padding-left">

@@ -8,8 +8,8 @@
 
 ?>
 <div class="col-xs-3">
-	<a href="<?php echo get_gravatar_url( 'saidozcn@gmail.com', 256 ); ?>">
-		<img src="<?php echo get_gravatar_url( 'saidozcn@gmail.com', 256 ); ?>" class="img-responsive img-rounded" alt="User Name" height="220" width="220">
+	<a href="<?php echo wp_github_get_gravatar_url( 'saidozcn@gmail.com', 256 ); ?>">
+		<img src="<?php echo wp_github_get_gravatar_url( 'saidozcn@gmail.com', 256 ); ?>" class="img-responsive img-rounded" alt="User Name" height="220" width="220">
 	</a>
 
 	<h1 class="user-names">

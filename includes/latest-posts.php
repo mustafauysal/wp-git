@@ -31,7 +31,7 @@
 									<div class="clearfix"></div>
 
 									<span class="blog-description">
-										<?php echo excerpt( 5 ); ?>
+										<?php echo wp_github_excerpt( 5 ); ?>
 									</span>
 
 								</div>

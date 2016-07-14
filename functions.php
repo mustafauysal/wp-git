@@ -37,14 +37,14 @@ function wp_github_scripts() {
 add_action( 'wp_enqueue_scripts', 'wp_github_scripts' );
 
 
-function get_gravatar_url( $email, $size ) {
+function wp_github_get_gravatar_url( $email, $size ) {
 	$hash = md5( strtolower( trim( $email ) ) ) . '?s=' . $size;
 
 	return 'http://gravatar.com/avatar/' . $hash;
 }
 
 
-function custom_excerpt( $limit ) {
+function wp_github_custom_excerpt( $limit ) {
 	$excerpt = explode( ' ', get_the_excerpt(), $limit );
 	if ( count( $excerpt ) >= $limit ) {
 		array_pop( $excerpt );
@@ -58,8 +58,8 @@ function custom_excerpt( $limit ) {
 	return $excerpt;
 }
 
-add_filter( 'comment_form_default_fields', 'unset_comment_fields' );
-function unset_comment_fields( $fields ) {
+add_filter( 'comment_form_default_fields', 'wp_github_unset_comment_fields' );
+function wp_github_unset_comment_fields( $fields ) {
 	if ( isset( $fields['url'] ) ) {
 		unset( $fields['url'] );
 	}
@@ -69,7 +69,7 @@ function unset_comment_fields( $fields ) {
 }
 
 
-function excerpt( $limit ) {
+function wp_github_excerpt( $limit ) {
 	$excerpt = explode( ' ', get_the_excerpt(), $limit );
 	if ( count( $excerpt ) >= $limit ) {
 		array_pop( $excerpt );
@@ -84,7 +84,7 @@ function excerpt( $limit ) {
 }
 
 
-function get_post_revision_count() {
+function wp_github_get_post_revision_count() {
 	global $post, $wpdb;
 	if ( is_single() ) {
 		$result = $wpdb->get_results( $wpdb->prepare( "select id from $wpdb->posts where post_parent=%d and post_type=%s", get_the_ID(), 'revision' ) );
