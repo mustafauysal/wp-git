@@ -24,7 +24,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Wp-GitHub</a>
+					<a class="navbar-brand" href="<?php echo home_url();?>">Wp-GitHub</a>
 				</div>
 
 				<div class="col-xs-5 navbar-header">

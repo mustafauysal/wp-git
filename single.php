@@ -9,13 +9,11 @@
 		<span class="glyphicon glyphicon-pencil pull-left"></span>
 
 		<div class="post-left-info pull-left">
-			<a href="#">
-								<span class="post-owner-username">
-									<?php the_author(); ?>
-								</span>
+			<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
+				<span class="post-owner-username"><?php the_author(); ?></span>
 			</a>
 			<span class="slash-divider">/</span>
-			<a href="#">
+			<a href="<?php echo get_the_permalink();?>">
 								<span class="post-title">
 									<?php the_title(); ?>
 								</span>
