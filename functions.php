@@ -183,3 +183,8 @@ function wp_github_compare_revision($post_id, $revision_id, $to = false ) {
 
 	return __( "the content unchanged between these revisions. Other part of post data might be changed.", 'wp-github' );
 }
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
