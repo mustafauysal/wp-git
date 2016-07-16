@@ -107,7 +107,7 @@
 	line-height: 1.429;
 	color: #555;
 }
-.summary-box-content{
+#summary-box-wrapper{
 	background-color: #fff;
 	border: solid #d5d5d5;
 	border-width: 0 1px 1px;	
@@ -238,7 +238,14 @@
 .latest-activity-photo{
 	margin-right: 10px;
 }
-.calendar-activity .summary-box-content{
+/*.calendar-activity .summary-box-content{*/
+	/*padding-left: 35px;*/
+	/*padding-top: 20px;*/
+/*}*/
+
+#summary-box-wrapper{
+	display: block;
+	position:relative;
 	padding-left: 35px;
 	padding-top: 20px;
 }

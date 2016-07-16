@@ -38,9 +38,10 @@
 				<div class="summary-box-header">
 					<h3 class="box-title"><?php _e( 'Calendar Activity', 'wp-github' ); ?></h3>
 				</div>
-
+				<div id="summary-box-wrapper">
 				<div class="summary-box-content" id="cal-heatmap" >
 
+				</div>
 				</div>
 
 			</div>
