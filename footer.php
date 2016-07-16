@@ -32,7 +32,7 @@
 	</div>
 </div>
 
-<?php get_template_part('includes/post','feed');?>
+<?php get_template_part('template-parts/post','feed');?>
 <?php wp_footer();?>
 
 </body>

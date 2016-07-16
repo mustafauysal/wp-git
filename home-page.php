@@ -1,6 +1,6 @@
 <div class="container">
 <div class="row">
-<?php get_template_part( 'includes/profile' ); ?>
+<?php get_template_part( 'template-parts/profile' ); ?>
 
 <div class="col-xs-9">
 <ul class="nav nav-tabs">
@@ -27,8 +27,8 @@
 <div class="tab-pane active" id="summary">
 
 	<div class="row">
-		<?php get_template_part( 'includes/popular', 'posts' ); ?>
-		<?php get_template_part( 'includes/latest', 'posts' ); ?>
+		<?php get_template_part( 'template-parts/popular', 'posts' ); ?>
+		<?php get_template_part( 'template-parts/latest', 'posts' ); ?>
 	</div>
 
 	<div class="row">
@@ -39,7 +39,7 @@
 					<h3 class="box-title"><?php _e( 'Calendar Activity', 'wp-github' ); ?></h3>
 				</div>
 
-				<div class="summary-box-content" id="cal-heatmap">
+				<div class="summary-box-content" id="cal-heatmap" >
 
 				</div>
 

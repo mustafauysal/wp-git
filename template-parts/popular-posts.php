@@ -3,7 +3,7 @@
 	<div class="summary-box">
 
 		<div class="summary-box-header">
-			<h3 class="box-title"><?php _e( '>Popular Posts', 'wp-github' ); ?></h3>
+			<h3 class="box-title"><?php _e( 'Popular Posts', 'wp-github' ); ?></h3>
 		</div>
 
 		<div class="summary-box-content	">
@@ -14,7 +14,7 @@
 					<a href="#">
 						<div class="row">
 							<div class="col-xs-1">
-								<span class="glyphicon glyphicon-pencil"></span>
+								<span class="glyphicon glyphicon-star"></span>
 							</div>
 
 							<div class="col-xs-7">

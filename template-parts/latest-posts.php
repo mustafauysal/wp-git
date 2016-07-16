@@ -20,7 +20,7 @@
 						<a href="#">
 							<div class="row">
 								<div class="col-xs-1">
-									<span class="glyphicon glyphicon-pencil"></span>
+									<span class="glyphicon glyphicon-fire"></span>
 								</div>
 
 								<div class="col-xs-7">
