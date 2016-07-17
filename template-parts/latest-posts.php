@@ -7,17 +7,13 @@
 		</div>
 
 		<div class="summary-box-content	">
-			<?php
-			$query = new WP_Query( array(
-				'posts_per_page' => 5,
-			) );
-
-			while ( $query->have_posts() ): $query->the_post(); ?>
 
 				<ul class="blogs row">
-
+					<?php $latest_posts = wp_github_get_lastest_posts(5); ?>
+					<?php if ( false !== $latest_posts ): ?>
+					<?php foreach($latest_posts as $latest_post):?>
 					<li class="blog col-xs-12">
-						<a href="#">
+						<a href="<?php echo esc_url( get_the_permalink( $latest_post->ID ) ); ?>">
 							<div class="row">
 								<div class="col-xs-1">
 									<span class="glyphicon glyphicon-fire"></span>
@@ -25,25 +21,27 @@
 
 								<div class="col-xs-7">
 									<span class="blog-name">
-										<?php the_title(); ?>
+										<?php echo get_the_title( $latest_post->ID ) ?>
 									</span>
 
 									<div class="clearfix"></div>
 
 									<span class="blog-description">
-										<?php echo wp_github_excerpt( 5 ); ?>
+										<?php echo wp_github_excerpt( null, 5 ); ?>
 									</span>
 
 								</div>
 
 								<div class="col-xs-3 pull-right blog-star_count">
-									3 <span class="glyphicon glyphicon-star"></span>
+									<?php echo wp_github_get_starred_count( $latest_post->ID ); ?>
+									<span class="glyphicon glyphicon-star"></span>
 								</div>
 							</div>
 						</a>
 					</li>
+						<?php endforeach;?>
+					<?php endif;?>
 				</ul>
-			<?php endwhile; ?>
 		</div>
 	</div>
 
