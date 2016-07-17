@@ -15,7 +15,7 @@ function wp_github_scripts() {
 	wp_enqueue_style( 'wp-github-cal-heatmap', get_template_directory_uri() . '/assets/css/cal-heatmap.css' );
 
 	wp_enqueue_script( 'wp-github-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), false, true );
-	wp_enqueue_script( 'wp-github-list', get_template_directory_uri() . '/assets/js/list.min.js', array(), false, true );
+	wp_enqueue_script( 'wp-github-list', get_template_directory_uri() . '/assets/js/list.min.js', array('jquery'), false, true );
 	wp_enqueue_script( 'wp-github-d3', get_template_directory_uri() . '/assets/js/d3.v3.min.js', array(), false, true );
 	wp_enqueue_script( 'wp-github-cal-heatmap', get_template_directory_uri() . '/assets/js/cal-heatmap.min.js', array(), false, true );
 	wp_enqueue_script( 'wp-github-index', get_template_directory_uri() . '/assets/js/index.js', array(), false, true );
@@ -31,10 +31,19 @@ function wp_github_scripts() {
 
 	}
 
+	if ( is_archive() ) {
+		wp_localize_script( 'wp-github-contributions', 'wp_github_contribution_vars', array(
+				'ajaxurl'   => admin_url( 'admin-ajax.php' ),
+				'nonce'     => wp_create_nonce( 'love-it-nonce' ),
+				'is_logged' => is_user_logged_in(),
+			) );
+	}
+
 
 }
 
 add_action( 'wp_enqueue_scripts', 'wp_github_scripts' );
+
 
 
 function wp_github_get_gravatar_url( $email, $size ) {
@@ -188,3 +197,5 @@ function wp_github_compare_revision($post_id, $revision_id, $to = false ) {
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+require get_template_directory() . '/inc/stargazer.php';

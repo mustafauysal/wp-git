@@ -22,27 +22,8 @@
 	</div>
 
 	<!-- Star / Unstar Post -->
-	<div class="col-xs-2">
-		<div class="post-action-star pull-right">
+	<?php echo wp_github_star_it_btn();?>
 
-			<!-- If not starred -->
-			<div class="btn post-action-star-left-button pull-left">
-				<span class="glyphicon glyphicon-star"></span> <span id="span_status">Star</span>
-			</div>
-			<!-- Endif -->
-			<!--
-				*** : Differences
-				If already starred
-					<div class="btn post-action-star-left-button ***unstar*** pull-left">
-						<span class="glyphicon glyphicon-star"></span> <span id="span_status">***Unstar***</span>
-					</div>
-				Endif
-			-->
-			<div class="post-action-star-right-count pull-left">
-				4
-			</div>
-		</div>
-	</div>
 
 
 	</div>
