@@ -26,6 +26,7 @@ userList.add(posts,function(){
 	$('.all-posts-one_blog_permalink_real').each(function(){
 		href = $(this).find('.all-posts-one_blog_permalink').html();
 
+
 		$(this).attr('href',href);
 	});
 });

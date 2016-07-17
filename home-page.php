@@ -59,7 +59,7 @@
 
 						<div class="col-xs-10">
 							<input class="form-control filter-blogs search" name="filter" id="filter" type="text"
-								   placeholder="Filter Blogs" />
+							       placeholder="<?php _e( 'Filter Blogs', 'wp-github' ); ?>" />
 						</div>
 
 						<div class="col-xs-2">
