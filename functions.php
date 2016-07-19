@@ -19,7 +19,12 @@ function wp_github_scripts() {
 	wp_enqueue_script( 'wp-github-d3', get_template_directory_uri() . '/assets/js/d3.v3.min.js', array(), false, true );
 	wp_enqueue_script( 'wp-github-cal-heatmap', get_template_directory_uri() . '/assets/js/cal-heatmap.min.js', array(), false, true );
 	wp_enqueue_script( 'wp-github-index', get_template_directory_uri() . '/assets/js/index.js', array(), false, true );
-
+	wp_localize_script( 'wp-github-index', 'wp_github_vars', array(
+			'data' => wp_github_prepare_contribution_data(),
+			'item_name' => array(__('blog post','wp-github'),__('blog posts','wp-github')),
+			'cell' => array('filled' => __("{count} blog posts {name} a {date}","wp-github")  )
+		)
+	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -227,6 +232,25 @@ function wp_github_get_lastest_posts($count){
 	return false;
 }
 
+
+function wp_github_prepare_contribution_data() {
+	global $wpdb;
+	$current_year = date( 'Y', current_time( 'timestamp' ) );
+	$date         = $current_year . '-01-01';
+	$post_types   = "'" . implode( "','", apply_filters( 'wp_github_post_types', array( 'post', 'page', 'revision' ) ) ) . "'";
+
+	$query = $wpdb->prepare( "select * from $wpdb->posts where post_date >= %s and post_type in($post_types) ", $date );
+
+	$posts = $wpdb->get_results( $query );
+
+	$data = array();
+	foreach ( $posts as $post ) {
+		$key = strtotime( date( 'Y-m-d', strtotime( $post->post_date ) ) );
+		$data[ $key ] += 1;
+	}
+
+	return $data;
+}
 
 /**
  * Customizer additions.

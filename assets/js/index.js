@@ -65,38 +65,21 @@ var calendar = new CalHeatMap();
 calendar.init({
 	displayLegend: true,
 	tooltip: true,
-	data: {
-		"1392508226":5,
-		"1392594626":4,
-		"1392421826":12,
-		"1392391826":100,
-		"1392508226":5,
-		"1392594626":4,
-		"1392421826":12,
-		"1392391826":100,
-		"1392208226":5,
-		"1392194626":4,
-		"1392021826":12,
-		"1391991826":100,
-		"1391808226":5,
-		"1391794626":4,
-		"1391621826":12,
-		"1391591826":100
-	},
+	data: wp_github_vars.data,
 	domain: "month",
 	range: 10,
 	cellSize:10,
-	start : new Date(2014, 0,1),
+	start : new Date(new Date().getFullYear(), 0,1),
 	label: {
 		position: "top"
 	},
 	legendCellSize: 10,
 	legendCellPadding: 3,
 	legendHorizontalPosition:'right',
-	itemName: ["blog post", "blog posts"],
+	itemName: wp_github_vars.item_name,
 	cellLabel: {
 		empty: "{date}",
-		filled: "{count} blog posts {name} a {date}"
+		filled: wp_github_vars.cell.filled
 	}
 });
 });
