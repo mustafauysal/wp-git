@@ -258,40 +258,42 @@
 
 		<ul class="social-share">
 			<li class="any-social-share first-share">
-				<button class="btn btn-default social-share-button">
+				<a class="btn btn-default social-share-button" href="https://www.facebook.com/sharer/sharer.php?u=<?php  the_permalink();?>" target="_blank">
 					<i class="fa fa-facebook"></i> <span class="social-share-text"> Facebook</span>
-				</button>
+				</a>
 			</li>
 
 			<li class="any-social-share">
-				<button class="btn btn-default social-share-button">
+				<a class="btn btn-default social-share-button" href="https://twitter.com/share?url=<?php the_permalink();?>" target="_blank">
 					<i class="fa fa-twitter"></i> <span class="social-share-text"> Twitter</span>
-				</button>
+				</a>
 			</li>
 
 			<li class="any-social-share">
-				<button class="btn btn-default social-share-button">
+				<a class="btn btn-default social-share-button" href="https://plus.google.com/share?url=<?php the_permalink();?>" target="_blank">
 					<i class="fa fa-google-plus"></i> <span class="social-share-text"> Google+</span>
-				</button>
+				</a>
 			</li>
 
 			<li class="any-social-share">
-				<button class="btn btn-default social-share-button">
+				<a class="btn btn-default social-share-button" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink();?>" target="_blank">
 					<i class="fa fa-linkedin"></i> <span class="social-share-text"> LinkedIn</span>
-				</button>
+				</a>
 			</li>
 
-			<li class="any-social-share">
-				<button class="btn btn-default social-share-button">
-					<i class="fa fa-pinterest"></i> <span class="social-share-text"> Pinterest</span>
-				</button>
-			</li>
 
 			<li class="any-social-share">
-				<button class="btn btn-default social-share-button">
+				<a class="btn btn-default social-share-button" href="http://www.tumblr.com/share/link?url=<?php the_permalink();?>" target="_blank">
 					<i class="fa fa-tumblr"></i> <span class="social-share-text"> Tumblr</span>
-				</button>
+				</a>
 			</li>
+			<li class="any-social-share">
+				<a class="btn btn-default social-share-button" href="http://reddit.com/submit?url=<?php the_permalink();?>&amp;text=<?php echo get_the_title();?>" target="_blank">
+					<i class="fa fa-reddit"></i> <span class="social-share-text"> Reddit</span>
+				</a>
+			</li>
+
+
 		</ul>
 	</div>
 </div>
