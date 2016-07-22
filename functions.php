@@ -239,15 +239,20 @@ function wp_github_prepare_contribution_data() {
 	$date         = $current_year . '-01-01';
 	$post_types   = "'" . implode( "','", apply_filters( 'wp_github_post_types', array( 'post', 'page', 'revision' ) ) ) . "'";
 
-	$query = $wpdb->prepare( "select * from $wpdb->posts where post_date >= %s and post_type in($post_types) ", $date );
 
-	$posts = $wpdb->get_results( $query );
 
 	$data = array();
-	foreach ( $posts as $post ) {
-		$key = strtotime( date( 'Y-m-d', strtotime( $post->post_date ) ) );
-		$data[ $key ] += 1;
+	$start = 0;
+	$step = apply_filters( 'wp_github_contribution_cal_query_limit', 5000 );
+	while ( $posts = $wpdb->get_results( $wpdb->prepare( "select * from $wpdb->posts where post_date >= %s and post_type in($post_types) limit $start,$step", $date ) ) ) {
+		foreach ( $posts as $post ) {
+			$key = strtotime( date( 'Y-m-d', strtotime( $post->post_date ) ) );
+			$data[ $key ] += 1;
+		}
+		$start += $step;
+		$step += $step;
 	}
+
 
 	return $data;
 }
@@ -264,6 +269,14 @@ add_action( 'init', 'wp_github_register_menus' );
 
 
 function wp_github_get_logo() {
+	global $wp_query;
+
+	if ( is_author() ) {
+		$current = $wp_query->get_queried_object();
+
+		return wp_github_get_gravatar_url( $current->data->user_email, '220' );
+	}
+
 	$custom_logo_id = get_theme_mod( 'custom_logo' );
 
 	$image = wp_get_attachment_image_src( $custom_logo_id, 'full', false );
