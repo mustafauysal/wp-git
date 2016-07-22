@@ -252,8 +252,6 @@ function wp_github_prepare_contribution_data() {
 	return $data;
 }
 
-
-
 function wp_github_register_menus() {
 	register_nav_menus(
 		array(
@@ -263,6 +261,27 @@ function wp_github_register_menus() {
 	);
 }
 add_action( 'init', 'wp_github_register_menus' );
+
+
+function wp_github_get_logo() {
+	$custom_logo_id = get_theme_mod( 'custom_logo' );
+
+	$image = wp_get_attachment_image_src( $custom_logo_id, 'full', false );
+	list( $src, $width, $height ) = $image;
+
+	// custom logo
+	if ( ! empty( $src ) ) {
+		return $src;
+	}
+
+	return wp_github_get_gravatar_url( get_bloginfo( 'admin_email' ), '220' );
+}
+
+
+add_theme_support( 'custom-logo', array(
+	'height'     => 220,
+	'width'      => 220,
+) );
 
 
 /**
