@@ -10,23 +10,7 @@
 			</div>
 
 			<div class="col-xs-4  pull-right">
-				<ul class="footer-menu pull-right no-padding-right">
-					<li>
-						<a href="#">
-							Home
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							About
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Contact
-						</a>
-					</li>
-				</ul>
+				<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'items_wrap' => '<ul class="footer-menu pull-right no-padding-right">%3$s'  ) ); ?>
 			</div>
 		</div>
 	</div>

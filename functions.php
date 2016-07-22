@@ -252,6 +252,19 @@ function wp_github_prepare_contribution_data() {
 	return $data;
 }
 
+
+
+function wp_github_register_menus() {
+	register_nav_menus(
+		array(
+			'header-menu' => __( 'Header Menu' ),
+			'footer-menu' => __( 'Footer Menu' )
+		)
+	);
+}
+add_action( 'init', 'wp_github_register_menus' );
+
+
 /**
  * Customizer additions.
  */

@@ -24,7 +24,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="<?php echo home_url();?>">Wp-GitHub</a>
+					<a class="navbar-brand" href="<?php echo home_url();?>"><?php echo get_bloginfo('name');?></a>
 				</div>
 
 				<div class="col-xs-5 navbar-header">
@@ -41,11 +41,13 @@
 				</div>
 
 				<div class="col-xs-4 pull-right collapse navbar-collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
+					<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'items_wrap' => '<ul class="nav navbar-nav navbar-right">%3$s'  ) ); ?>
+
+<!--					<ul class="nav navbar-nav navbar-right">-->
+<!--						<li class="active"><a href="#">Home</a></li>-->
+<!--						<li><a href="#about">About</a></li>-->
+<!--						<li><a href="#contact">Contact</a></li>-->
+<!--					</ul>-->
 				</div>
 			</div>
 		</div>
