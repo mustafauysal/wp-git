@@ -42,12 +42,6 @@
 
 				<div class="col-xs-4 pull-right collapse navbar-collapse">
 					<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'items_wrap' => '<ul class="nav navbar-nav navbar-right">%3$s'  ) ); ?>
-
-<!--					<ul class="nav navbar-nav navbar-right">-->
-<!--						<li class="active"><a href="#">Home</a></li>-->
-<!--						<li><a href="#about">About</a></li>-->
-<!--						<li><a href="#contact">Contact</a></li>-->
-<!--					</ul>-->
 				</div>
 			</div>
 		</div>
