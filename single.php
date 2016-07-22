@@ -95,7 +95,7 @@
 						</a>
 
 						<div class="post-owner-ago-text pull-left">
-							<a href="#">
+							<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
 								<?php echo get_the_author();?>
 							</a>
 							<?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-github' ), human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
