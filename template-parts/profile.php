@@ -21,33 +21,33 @@
 	<div class="row">
 
 		<ul class="user-details col-xs-12">
-			<li class="user-detail">
-				<span class="glyphicon glyphicon-briefcase"></span>
-				Ubit
+			<li class="user-detail ">
+				<span class="glyphicon icon glyphicon-briefcase"></span>
+				<span class="wp_github_company">Ubit</span>
 			</li>
 
 			<li class="user-detail">
-				<span class="glyphicon glyphicon-map-marker"></span>
-				İstanbul
+				<span class="glyphicon icon glyphicon-map-marker"></span>
+				<span class="wp_github_location">İstanbul</span>
 			</li>
 
 			<li class="user-detail">
-				<span class="glyphicon glyphicon-envelope"></span>
-				<a href="mailto:said@ozcan.co">
+				<span class="glyphicon icon glyphicon-envelope"></span>
+				<a href="mailto:said@ozcan.co" class="wp_github_email">
 					said@ozcan.co
 				</a>
 			</li>
 
 			<li class="user-detail">
-				<span class="glyphicon glyphicon-link"></span>
-				<a href="http://said.ozcan.co">
+				<span class="glyphicon icon glyphicon-link"></span>
+				<a href="http://said.ozcan.co" class="wp_github_url">
 					http://said.ozcan.co
 				</a>
 			</li>
 
 			<li class="user-detail">
-				<span class="glyphicon glyphicon-time"></span>
-				Started on Jul 13, 2012
+				<span class="glyphicon icon glyphicon-time"></span>
+				<span class="wp_github_date">Started on Jul 13, 2012</span>
 			</li>
 		</ul>
 	</div>

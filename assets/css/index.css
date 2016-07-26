@@ -57,7 +57,7 @@
 	font-size: 14px;
 	text-overflow: ellipsis;	
 }
-.user-detail span, .user-detail i{
+.user-detail span.icon, .user-detail i{
 	width: 20px;
 	text-align: center;
 	margin-top: 2px;
