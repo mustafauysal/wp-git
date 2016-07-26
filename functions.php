@@ -240,10 +240,9 @@ function wp_github_prepare_contribution_data() {
 	$post_types   = "'" . implode( "','", apply_filters( 'wp_github_post_types', array( 'post', 'page', 'revision' ) ) ) . "'";
 
 
-
-	$data = array();
+	$data  = array();
 	$start = 0;
-	$step = apply_filters( 'wp_github_contribution_cal_query_limit', 5000 );
+	$step  = apply_filters( 'wp_github_contribution_cal_query_limit', 5000 );
 	while ( $posts = $wpdb->get_results( $wpdb->prepare( "select * from $wpdb->posts where post_date >= %s and post_type in($post_types) limit $start,$step", $date ) ) ) {
 		foreach ( $posts as $post ) {
 			$key = strtotime( date( 'Y-m-d', strtotime( $post->post_date ) ) );
@@ -303,3 +302,7 @@ add_theme_support( 'custom-logo', array(
 require get_template_directory() . '/inc/customizer.php';
 
 require get_template_directory() . '/inc/stargazer.php';
+/**
+ * Extra profile fields
+ */
+require get_template_directory() . '/inc/profile-fields.php';
