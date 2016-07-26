@@ -31,6 +31,18 @@
 	color: #666;
 	text-overflow: ellipsis;
 }
+
+.user-bio{
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	font-size: 14px;
+	color: #767676;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 16px;
+	text-overflow: ellipsis;
+}
 .user-details{
 	list-style: none;
 	padding-top: 15px;

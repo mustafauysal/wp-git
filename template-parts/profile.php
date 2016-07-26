@@ -15,6 +15,7 @@
 	<h1 class="user-names">
 		<span class="user-fullname">Said Özcan</span>
 		<span class="user-username">s</span>
+		<span class="user-bio"> Example bio </span>
 	</h1>
 
 	<div class="row">
