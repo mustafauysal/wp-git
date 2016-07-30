@@ -264,8 +264,8 @@ function wp_github_prepare_contribution_data() {
 function wp_github_register_menus() {
 	register_nav_menus(
 		array(
-			'header-menu' => __( 'Header Menu' ),
-			'footer-menu' => __( 'Footer Menu' )
+			'header-menu' => __( 'Header Menu', 'wp-github' ),
+			'footer-menu' => __( 'Footer Menu', 'wp-github' ),
 		)
 	);
 }
