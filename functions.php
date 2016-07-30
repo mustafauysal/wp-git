@@ -201,11 +201,16 @@ function wp_github_compare_revision($post_id, $revision_id, $to = false ) {
 
 function wp_github_popular_posts( $count ) {
 	$args = array(
-		'post_type' => 'any',
+		'post_type'   => 'any',
 		'numberposts' => $count,
-		'meta_key' => 'wp_github_starred_count',
-		'orderby' => 'meta_value',
-		'order' => 'DESC'
+		'meta_key'    => 'wp_github_starred_count',
+		'meta_query'  => array(
+			'key'     => 'wp_github_starred_count',
+			'value'   => '0',
+			'compare' => '>',
+		),
+		'orderby'     => 'meta_value',
+		'order'       => 'DESC',
 	);
 
 	$most_starred = get_posts( $args );
