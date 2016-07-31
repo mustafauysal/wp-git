@@ -190,8 +190,8 @@ function wp_github_compare_revision($post_id, $revision_id, $to = false ) {
 		}
 
 	}
-
-	if ( ! empty( $diff = wp_text_diff( $prev_revision->post_content, $base_revision->post_content ) ) ) {
+	$diff = wp_text_diff( $prev_revision->post_content, $base_revision->post_content);
+	if ( ! empty( $diff ) ) {
 		return $diff;
 	}
 

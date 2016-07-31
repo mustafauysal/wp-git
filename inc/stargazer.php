@@ -1,10 +1,10 @@
 <?php
 
 // outputs the love it link
-function wp_github_star_it_btn($love_text = null, $loved_text = null) {
+function wp_github_star_it_btn( ) {
 
 	global $user_ID, $post;
-	$ip_address = $_SERVER['HTTP_CLIENT_IP'] ?: sanitize_text_field( $_SERVER['HTTP_X_FORWARDE‌​D_FOR'] ) ?: sanitize_text_field( $_SERVER['REMOTE_ADDR'] );
+	$ip_address = $_SERVER['HTTP_CLIENT_IP'] ? $_SERVER['HTTP_CLIENT_IP'] : $_SERVER['HTTP_X_FORWARDE‌​D_FOR'] ? sanitize_text_field( $_SERVER['HTTP_X_FORWARDE‌​D_FOR'] ) : sanitize_text_field( $_SERVER['REMOTE_ADDR'] );
 
 	$star_count = wp_github_get_starred_count( get_the_ID() );
 	$is_starred = wp_github_has_starred_post( get_the_ID() );
@@ -40,7 +40,7 @@ function wp_github_has_starred_post( $post_id ) {
 	if ( is_user_logged_in() ) {
 		$meta_value = get_current_user_id();
 	} else {
-		$meta_value = $_SERVER['HTTP_CLIENT_IP'] ?: sanitize_text_field( $_SERVER['HTTP_X_FORWARDE‌​D_FOR'] ) ?: sanitize_text_field( $_SERVER['REMOTE_ADDR'] );
+		$meta_value = $_SERVER['HTTP_CLIENT_IP'] ? $_SERVER['HTTP_CLIENT_IP'] : $_SERVER['HTTP_X_FORWARDE‌​D_FOR'] ? sanitize_text_field( $_SERVER['HTTP_X_FORWARDE‌​D_FOR'] ) : sanitize_text_field( $_SERVER['REMOTE_ADDR'] );
 	}
 
 	$stargazers = get_post_meta( $post_id, 'wp_github_stargazer', true );
