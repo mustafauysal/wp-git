@@ -11,7 +11,7 @@
 			<ul class="blogs row">
 
 			<?php
-			$popular_posts = wp_github_popular_posts(5);
+			$popular_posts =  wp_github_data('popular_posts');
 			?>
 				<?php if ( false !== $popular_posts ): ?>
 					<?php foreach($popular_posts as $starred_post):?>

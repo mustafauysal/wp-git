@@ -20,7 +20,7 @@ function wp_github_scripts() {
 	wp_enqueue_script( 'wp-github-cal-heatmap', get_template_directory_uri() . '/assets/js/cal-heatmap.min.js', array(), false, true );
 	wp_enqueue_script( 'wp-github-index', get_template_directory_uri() . '/assets/js/index.js', array(), false, true );
 	wp_localize_script( 'wp-github-index', 'wp_github_vars', array(
-			'data' => wp_github_prepare_contribution_data(),
+			'data' => wp_github_data('contribution_data'),
 			'item_name' => array(__('blog post','wp-github'),__('blog posts','wp-github')),
 			'cell' => array('filled' => __("{count} blog posts {name} a {date}","wp-github")  )
 		)
@@ -36,13 +36,6 @@ function wp_github_scripts() {
 
 	}
 
-	if ( is_archive() ) {
-		wp_localize_script( 'wp-github-contributions', 'wp_github_contribution_vars', array(
-				'ajaxurl'   => admin_url( 'admin-ajax.php' ),
-				'nonce'     => wp_create_nonce( 'love-it-nonce' ),
-				'is_logged' => is_user_logged_in(),
-			) );
-	}
 
 
 }
@@ -199,68 +192,6 @@ function wp_github_compare_revision($post_id, $revision_id, $to = false ) {
 }
 
 
-function wp_github_popular_posts( $count ) {
-	$args = array(
-		'post_type'   => 'any',
-		'numberposts' => $count,
-		'meta_key'    => 'wp_github_starred_count',
-		'meta_query'  => array(
-			'key'     => 'wp_github_starred_count',
-			'value'   => '0',
-			'compare' => '>',
-		),
-		'orderby'     => 'meta_value',
-		'order'       => 'DESC',
-	);
-
-	$most_starred = get_posts( $args );
-
-	if ( $most_starred ) {
-		return $most_starred;
-	}
-
-	return false;
-
-}
-
-function wp_github_get_lastest_posts($count){
-	$args = new WP_Query( array(
-		'posts_per_page' => $count,
-	) );
-
-	$latest_posts = get_posts( $args );
-
-	if ( $latest_posts ) {
-		return $latest_posts;
-	}
-
-	return false;
-}
-
-
-function wp_github_prepare_contribution_data() {
-	global $wpdb;
-	$current_year = date( 'Y', current_time( 'timestamp' ) );
-	$date         = $current_year . '-01-01';
-	$post_types   = "'" . implode( "','", apply_filters( 'wp_github_post_types', array( 'post', 'page', 'revision' ) ) ) . "'";
-
-
-	$data  = array();
-	$start = 0;
-	$step  = apply_filters( 'wp_github_contribution_cal_query_limit', 5000 );
-	while ( $posts = $wpdb->get_results( $wpdb->prepare( "select * from $wpdb->posts where post_date >= %s and post_type in($post_types) limit $start,$step", $date ) ) ) {
-		foreach ( $posts as $post ) {
-			$key = strtotime( date( 'Y-m-d', strtotime( $post->post_date ) ) );
-			$data[ $key ] += 1;
-		}
-		$start += $step;
-		$step += $step;
-	}
-
-
-	return $data;
-}
-
 function wp_github_register_menus() {
 	register_nav_menus(
 		array(
@@ -272,27 +203,6 @@ function wp_github_register_menus() {
 add_action( 'init', 'wp_github_register_menus' );
 
 
-function wp_github_get_logo() {
-	global $wp_query;
-
-	if ( is_author() ) {
-		$current = $wp_query->get_queried_object();
-
-		return wp_github_get_gravatar_url( $current->data->user_email, '220' );
-	}
-
-	$custom_logo_id = get_theme_mod( 'custom_logo' );
-
-	$image = wp_get_attachment_image_src( $custom_logo_id, 'full', false );
-	list( $src, $width, $height ) = $image;
-
-	// custom logo
-	if ( ! empty( $src ) ) {
-		return $src;
-	}
-
-	return wp_github_get_gravatar_url( get_bloginfo( 'admin_email' ), '220' );
-}
 
 
 add_theme_support( 'custom-logo', array(
@@ -311,3 +221,6 @@ require get_template_directory() . '/inc/stargazer.php';
  * Extra profile fields
  */
 require get_template_directory() . '/inc/profile-fields.php';
+
+require get_template_directory() . '/inc/data-provider.php';
+

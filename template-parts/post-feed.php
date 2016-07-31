@@ -1,7 +1,7 @@
 <script>
 	posts = [
 <?php
-$latest_posts = new WP_Query( 'post_type=post&posts_per_page=10' );
+$latest_posts = wp_github_data('posts_page');
 if ( $latest_posts->have_posts() ) {
 	while ( $latest_posts->have_posts() ) {
 		$latest_posts->the_post();

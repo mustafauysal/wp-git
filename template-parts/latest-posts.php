@@ -9,7 +9,7 @@
 		<div class="summary-box-content	">
 
 				<ul class="blogs row">
-					<?php $latest_posts = wp_github_get_lastest_posts(5); ?>
+					<?php $latest_posts = wp_github_data('latest_posts'); ?>
 					<?php if ( false !== $latest_posts ): ?>
 					<?php foreach($latest_posts as $latest_post):?>
 					<li class="blog col-xs-12">

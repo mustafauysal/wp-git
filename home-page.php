@@ -39,9 +39,9 @@
 					<h3 class="box-title"><?php _e( 'Calendar Activity', 'wp-github' ); ?></h3>
 				</div>
 				<div id="summary-box-wrapper">
-				<div class="summary-box-content" id="cal-heatmap" >
+					<div class="summary-box-content" id="cal-heatmap">
 
-				</div>
+					</div>
 				</div>
 
 			</div>
@@ -64,7 +64,7 @@
 
 						<div class="col-xs-2">
 							<button type="button"
-									class="btn btn-info filter-blogs-button search"><?php _e( 'Search', 'wp-github' ); ?></button>
+							        class="btn btn-info filter-blogs-button search"><?php _e( 'Search', 'wp-github' ); ?></button>
 						</div>
 					</div>
 				</div>
@@ -96,27 +96,27 @@
 	</div>
 </div>
 <div class="tab-pane" id="latest-feed">
-<div class="row">
-<div class="col-xs-12">
-<ul class="latest-activities">
-
-
-<li class="latest-activity">
 	<div class="row">
-		<div class="col-xs-1 latest-activity-icon">
-			<span class="glyphicon glyphicon-pencil"></span>
-		</div>
-		<div class="col-xs-11 latest-activity-text">
+		<div class="col-xs-12">
+			<ul class="latest-activities">
+
+
+				<li class="latest-activity">
+					<div class="row">
+						<div class="col-xs-1 latest-activity-icon">
+							<span class="glyphicon glyphicon-pencil"></span>
+						</div>
+						<div class="col-xs-11 latest-activity-text">
 			<span class="latest-activity-ago">
 															3 days ago
 														</span>
 
-			<div class="clearfix"></div>
-			<div>
+							<div class="clearfix"></div>
+							<div>
 															<span class="latest-activity-photo pull-left">
 																<a href="assets/img/test.jpeg">
 																	<img src="assets/img/test.jpeg" class=""
-																		 alt="User Name" height="30" width="30">
+																	     alt="User Name" height="30" width="30">
 																</a>
 															</span>
 
@@ -128,27 +128,27 @@
 																	Testing life versus Fuckingship
 																</a>
 															</span>
-			</div>
-		</div>
-	</div>
-</li>
+							</div>
+						</div>
+					</div>
+				</li>
 
-<li class="latest-activity">
-	<div class="row">
-		<div class="col-xs-1 latest-activity-icon">
-			<span class="glyphicon glyphicon-file"></span>
-		</div>
-		<div class="col-xs-11 latest-activity-text">
+				<li class="latest-activity">
+					<div class="row">
+						<div class="col-xs-1 latest-activity-icon">
+							<span class="glyphicon glyphicon-file"></span>
+						</div>
+						<div class="col-xs-11 latest-activity-text">
 														<span class="latest-activity-ago">
 															2 weeks ago
 														</span>
 
-			<div class="clearfix"></div>
-			<div>
+							<div class="clearfix"></div>
+							<div>
 															<span class="latest-activity-photo pull-left">
 																<a href="assets/img/test.jpeg">
 																	<img src="assets/img/test.jpeg" class=""
-																		 alt="User Name" height="30" width="30">
+																	     alt="User Name" height="30" width="30">
 																</a>
 															</span>
 
@@ -160,27 +160,27 @@
 																	Contact to me
 																</a>
 															</span>
-			</div>
-		</div>
-	</div>
-</li>
+							</div>
+						</div>
+					</div>
+				</li>
 
-<li class="latest-activity">
-	<div class="row">
-		<div class="col-xs-1 latest-activity-icon">
-			<span class="glyphicon glyphicon-comment"></span>
-		</div>
-		<div class="col-xs-11 latest-activity-text">
+				<li class="latest-activity">
+					<div class="row">
+						<div class="col-xs-1 latest-activity-icon">
+							<span class="glyphicon glyphicon-comment"></span>
+						</div>
+						<div class="col-xs-11 latest-activity-text">
 														<span class="latest-activity-ago">
 															1 hour ago
 														</span>
 
-			<div class="clearfix"></div>
-			<div>
+							<div class="clearfix"></div>
+							<div>
 															<span class="latest-activity-photo pull-left">
 																<a href="assets/img/mustafa.jpeg">
 																	<img src="assets/img/mustafa.jpeg" class=""
-																		 alt="User Name" height="30" width="30">
+																	     alt="User Name" height="30" width="30">
 																</a>
 															</span>
 
@@ -192,27 +192,27 @@
 																	Nice blog bro..
 																</a>
 															</span>
-			</div>
-		</div>
-	</div>
-</li>
+							</div>
+						</div>
+					</div>
+				</li>
 
-<li class="latest-activity">
-	<div class="row">
-		<div class="col-xs-1 latest-activity-icon">
-			<span class="glyphicon glyphicon-pencil"></span>
-		</div>
-		<div class="col-xs-11 latest-activity-text">
+				<li class="latest-activity">
+					<div class="row">
+						<div class="col-xs-1 latest-activity-icon">
+							<span class="glyphicon glyphicon-pencil"></span>
+						</div>
+						<div class="col-xs-11 latest-activity-text">
 														<span class="latest-activity-ago">
 															3 days ago
 														</span>
 
-			<div class="clearfix"></div>
-			<div>
+							<div class="clearfix"></div>
+							<div>
 															<span class="latest-activity-photo pull-left">
 																<a href="assets/img/test.jpeg">
 																	<img src="assets/img/test.jpeg" class=""
-																		 alt="User Name" height="30" width="30">
+																	     alt="User Name" height="30" width="30">
 																</a>
 															</span>
 
@@ -224,27 +224,27 @@
 																	Testing life versus Fuckingship
 																</a>
 															</span>
-			</div>
-		</div>
-	</div>
-</li>
+							</div>
+						</div>
+					</div>
+				</li>
 
-<li class="latest-activity">
-	<div class="row">
-		<div class="col-xs-1 latest-activity-icon">
-			<span class="glyphicon glyphicon-file"></span>
-		</div>
-		<div class="col-xs-11 latest-activity-text">
+				<li class="latest-activity">
+					<div class="row">
+						<div class="col-xs-1 latest-activity-icon">
+							<span class="glyphicon glyphicon-file"></span>
+						</div>
+						<div class="col-xs-11 latest-activity-text">
 														<span class="latest-activity-ago">
 															2 weeks ago
 														</span>
 
-			<div class="clearfix"></div>
-			<div>
+							<div class="clearfix"></div>
+							<div>
 															<span class="latest-activity-photo pull-left">
 																<a href="assets/img/test.jpeg">
 																	<img src="assets/img/test.jpeg" class=""
-																		 alt="User Name" height="30" width="30">
+																	     alt="User Name" height="30" width="30">
 																</a>
 															</span>
 
@@ -256,27 +256,27 @@
 																	Contact to me
 																</a>
 															</span>
-			</div>
-		</div>
-	</div>
-</li>
+							</div>
+						</div>
+					</div>
+				</li>
 
-<li class="latest-activity">
-	<div class="row">
-		<div class="col-xs-1 latest-activity-icon">
-			<span class="glyphicon glyphicon-comment"></span>
-		</div>
-		<div class="col-xs-11 latest-activity-text">
+				<li class="latest-activity">
+					<div class="row">
+						<div class="col-xs-1 latest-activity-icon">
+							<span class="glyphicon glyphicon-comment"></span>
+						</div>
+						<div class="col-xs-11 latest-activity-text">
 														<span class="latest-activity-ago">
 															1 hour ago
 														</span>
 
-			<div class="clearfix"></div>
-			<div>
+							<div class="clearfix"></div>
+							<div>
 															<span class="latest-activity-photo pull-left">
 																<a href="assets/img/mustafa.jpeg">
 																	<img src="assets/img/mustafa.jpeg" class=""
-																		 alt="User Name" height="30" width="30">
+																	     alt="User Name" height="30" width="30">
 																</a>
 															</span>
 
@@ -288,27 +288,27 @@
 																	Nice blog bro..
 																</a>
 															</span>
-			</div>
-		</div>
-	</div>
-</li>
+							</div>
+						</div>
+					</div>
+				</li>
 
-<li class="latest-activity">
-	<div class="row">
-		<div class="col-xs-1 latest-activity-icon">
-			<span class="glyphicon glyphicon-pencil"></span>
-		</div>
-		<div class="col-xs-11 latest-activity-text">
+				<li class="latest-activity">
+					<div class="row">
+						<div class="col-xs-1 latest-activity-icon">
+							<span class="glyphicon glyphicon-pencil"></span>
+						</div>
+						<div class="col-xs-11 latest-activity-text">
 														<span class="latest-activity-ago">
 															3 days ago
 														</span>
 
-			<div class="clearfix"></div>
-			<div>
+							<div class="clearfix"></div>
+							<div>
 															<span class="latest-activity-photo pull-left">
 																<a href="assets/img/test.jpeg">
 																	<img src="assets/img/test.jpeg" class=""
-																		 alt="User Name" height="30" width="30">
+																	     alt="User Name" height="30" width="30">
 																</a>
 															</span>
 
@@ -320,27 +320,27 @@
 																	Testing life versus Fuckingship
 																</a>
 															</span>
-			</div>
-		</div>
-	</div>
-</li>
+							</div>
+						</div>
+					</div>
+				</li>
 
-<li class="latest-activity">
-	<div class="row">
-		<div class="col-xs-1 latest-activity-icon">
-			<span class="glyphicon glyphicon-file"></span>
-		</div>
-		<div class="col-xs-11 latest-activity-text">
+				<li class="latest-activity">
+					<div class="row">
+						<div class="col-xs-1 latest-activity-icon">
+							<span class="glyphicon glyphicon-file"></span>
+						</div>
+						<div class="col-xs-11 latest-activity-text">
 														<span class="latest-activity-ago">
 															2 weeks ago
 														</span>
 
-			<div class="clearfix"></div>
-			<div>
+							<div class="clearfix"></div>
+							<div>
 															<span class="latest-activity-photo pull-left">
 																<a href="assets/img/test.jpeg">
 																	<img src="assets/img/test.jpeg" class=""
-																		 alt="User Name" height="30" width="30">
+																	     alt="User Name" height="30" width="30">
 																</a>
 															</span>
 
@@ -352,27 +352,27 @@
 																	Contact to me
 																</a>
 															</span>
-			</div>
-		</div>
-	</div>
-</li>
+							</div>
+						</div>
+					</div>
+				</li>
 
-<li class="latest-activity">
-	<div class="row">
-		<div class="col-xs-1 latest-activity-icon">
-			<span class="glyphicon glyphicon-comment"></span>
-		</div>
-		<div class="col-xs-11 latest-activity-text">
+				<li class="latest-activity">
+					<div class="row">
+						<div class="col-xs-1 latest-activity-icon">
+							<span class="glyphicon glyphicon-comment"></span>
+						</div>
+						<div class="col-xs-11 latest-activity-text">
 														<span class="latest-activity-ago">
 															1 hour ago
 														</span>
 
-			<div class="clearfix"></div>
-			<div>
+							<div class="clearfix"></div>
+							<div>
 															<span class="latest-activity-photo pull-left">
 																<a href="assets/img/mustafa.jpeg">
 																	<img src="assets/img/mustafa.jpeg" class=""
-																		 alt="User Name" height="30" width="30">
+																	     alt="User Name" height="30" width="30">
 																</a>
 															</span>
 
@@ -384,15 +384,15 @@
 																	Nice blog bro..
 																</a>
 															</span>
-			</div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+
+			</ul>
 		</div>
 	</div>
-</li>
-
-
-</ul>
-</div>
-</div>
 </div>
 </div>
 </div>
