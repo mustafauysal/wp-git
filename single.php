@@ -188,7 +188,9 @@
 	<div class="row no-padding-left all-revisions">
 	<div class="col-xs-12">
 
-		<?php if(!empty($revisions = wp_github_post_revisions())):?>
+		<?php
+		$revisions = wp_github_post_revisions();
+		if(!empty($revisions)):?>
 			<?php foreach($revisions as $rev_group => $revisions_by_date):?>
 				<div class="revision-group">
 					<div class="revision-group-header">
