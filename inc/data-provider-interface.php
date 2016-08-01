@@ -20,4 +20,5 @@ interface WP_Github_Data_Provider_Interface
 	public function latest_posts();
 	public function contribution_data();
 	public function posts_page();
+	public function latest_feed();
 }
