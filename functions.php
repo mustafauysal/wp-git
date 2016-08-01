@@ -91,7 +91,14 @@ function wp_github_unset_comment_fields( $fields ) {
 
 
 function wp_github_excerpt( $post_id = null, $limit ) {
-	$excerpt = explode( ' ', get_the_excerpt( $post_id ), $limit );
+	$excerpt_str = get_the_excerpt( $post_id );
+	if ( empty( $excerpt_str ) && ! empty( $post_id ) ) {
+		$post = get_post( $post_id );
+		$excerpt_str = $post->post_content;
+	}
+
+	$excerpt = explode( ' ',$excerpt_str , $limit );
+
 	if ( count( $excerpt ) >= $limit ) {
 		array_pop( $excerpt );
 		$excerpt = implode( " ", $excerpt ) . '...';
