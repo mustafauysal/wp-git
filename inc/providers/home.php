@@ -169,7 +169,7 @@ class WP_Github_Home_Data_Provider implements WP_Github_Data_Provider_Interface{
 
 		foreach ( $latest_comments as $comment ) {
 			$item = array(
-				'icon' => 'glyphicons-comments',
+				'icon' => 'glyphicon-comment',
 				'time_ago' => sprintf( _x( '%s ago', '%s = human-readable time difference', 'wp-github' ), human_time_diff( strtotime( $comment->comment_date ), current_time( 'timestamp' ) ) ),
 			);
 
