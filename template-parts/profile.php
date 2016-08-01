@@ -7,14 +7,7 @@
  */
 
 ?>
-<?php
-
-//$data_provider = wp_github_prepare_data( is_author() );
-
-
-?>
-
-<div class="col-xs-3">
+<div class="col-md-3  col-sm-3">
 	<a href="<?php echo esc_url( wp_github_data( 'profile_url' ) ); ?>">
 		<img src="<?php echo esc_url( wp_github_data( 'avatar_url' ) ); ?>" class="img-responsive img-rounded" height="220" width="220">
 	</a>

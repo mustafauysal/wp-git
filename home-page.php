@@ -2,7 +2,7 @@
 <div class="row">
 <?php get_template_part( 'template-parts/profile' ); ?>
 
-<div class="col-xs-9">
+<div class="col-sm-9 col-md-9">
 <ul class="nav nav-tabs">
 	<li class="active">
 		<a href="#summary" data-toggle="tab">
