@@ -65,7 +65,7 @@ class WP_Github_Home_Data_Provider implements WP_Github_Data_Provider_Interface{
 
 	public function post_count(){
 		global $wpdb;
-		$post_types   = "'" . implode( "','", apply_filters( 'wp_github_post_types', array( 'post', 'page', 'revision' ) ) ) . "'";
+		$post_types = "'" . implode( "','", apply_filters( 'wp_github_count_post_type', array( 'post' ) ) ) . "'";
 		return $wpdb->get_var( $wpdb->prepare( "select count(ID) from $wpdb->posts where post_status=%s and post_type in($post_types)",'publish') );
 	}
 
