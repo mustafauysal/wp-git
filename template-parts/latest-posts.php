@@ -27,7 +27,7 @@
 									<div class="clearfix"></div>
 
 									<span class="blog-description">
-										<?php echo wp_github_excerpt( null, 5 ); ?>
+										<?php echo wp_github_excerpt( $latest_post->ID, 5 ); ?>
 									</span>
 
 								</div>

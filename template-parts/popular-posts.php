@@ -29,7 +29,6 @@
 									<div class="clearfix"></div>
 									<span class="blog-description">
 										<?php echo wp_github_excerpt( $starred_post->ID, 5 ); ?>
-										Everyone has been a...
 									</span>
 								</div>
 
