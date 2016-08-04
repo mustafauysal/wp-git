@@ -18,18 +18,20 @@ options = {
 	item: template
 };
 
+if (typeof(List) != "undefined") {
 
-userList = new List('posts', options);
+		userList = new List('posts', options);
 
-userList.add(posts,function(){
+	userList.add(posts,function(){
 
-	$('.all-posts-one_blog_permalink_real').each(function(){
-		href = $(this).find('.all-posts-one_blog_permalink').html();
+		$('.all-posts-one_blog_permalink_real').each(function(){
+			href = $(this).find('.all-posts-one_blog_permalink').html();
 
 
-		$(this).attr('href',href);
+			$(this).attr('href',href);
+		});
 	});
-});
+
 
 dropdown = false;
 
@@ -82,4 +84,6 @@ calendar.init({
 		filled: wp_github_vars.cell.filled
 	}
 });
+}
+
 });

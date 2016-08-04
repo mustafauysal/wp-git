@@ -15,9 +15,12 @@ function wp_github_scripts() {
 	wp_enqueue_style( 'wp-github-cal-heatmap', get_template_directory_uri() . '/assets/css/cal-heatmap.css' );
 
 	wp_enqueue_script( 'wp-github-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), false, true );
-	wp_enqueue_script( 'wp-github-list', get_template_directory_uri() . '/assets/js/list.min.js', array('jquery'), false, true );
-	wp_enqueue_script( 'wp-github-d3', get_template_directory_uri() . '/assets/js/d3.v3.min.js', array(), false, true );
-	wp_enqueue_script( 'wp-github-cal-heatmap', get_template_directory_uri() . '/assets/js/cal-heatmap.min.js', array(), false, true );
+	if ( is_archive() || is_home() ) {
+		wp_enqueue_script( 'wp-github-list', get_template_directory_uri() . '/assets/js/list.min.js', array( 'jquery' ), false, true );
+		wp_enqueue_script( 'wp-github-d3', get_template_directory_uri() . '/assets/js/d3.v3.min.js', array(), false, true );
+		wp_enqueue_script( 'wp-github-cal-heatmap', get_template_directory_uri() . '/assets/js/cal-heatmap.min.js', array(), false, true );
+	}
+
 	wp_enqueue_script( 'wp-github-index', get_template_directory_uri() . '/assets/js/index.js', array(), false, true );
 	wp_localize_script( 'wp-github-index', 'wp_github_vars', array(
 			'data' => wp_github_data('contribution_data'),
@@ -30,7 +33,7 @@ function wp_github_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	if ( is_single() ) {
+	if ( is_single() || is_page() ) {
 		wp_enqueue_script( 'wp-github-post', get_template_directory_uri() . '/assets/js/post.js', array(), false, true );
 		wp_enqueue_style( 'wp-github-post', get_template_directory_uri() . '/assets/css/post.css' );
 

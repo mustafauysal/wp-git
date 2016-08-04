@@ -12,9 +12,12 @@
 .post-owner-username{
 	font-size: 20px;
 }
-.post-title{
-	font-size: 20px;
-	font-weight: bold;
+
+.post-title, h1.post-title {
+    font-size: 20px;
+    font-weight: bold;
+    martin: 0!important;
+    padding: 0!important;;
 }
 .post-left-info{
 	margin-top: -3px;

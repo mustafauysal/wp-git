@@ -11,24 +11,29 @@ class WP_Github_Data_Provider {
 	private $data;
 
 
-	public static function factory( $is_author ) {
+	public static function factory() {
 		static $instance = false;
 		if ( ! $instance ) {
-			$instance = new self( $is_author );
+			$instance = new self();
 		}
 
 		return $instance;
 	}
 
-	function __construct( $is_author = null ) {
-		if ( true === $is_author ) {
+	function __construct() {
+		if ( is_author() || is_single() || is_page() ) {
 			$this->is_author = true;
-			$this->author    = get_queried_object();
+			$queried_object = get_queried_object();
+			if ( $queried_object instanceof WP_User ) {
+				$this->author = get_queried_object();
+			}else{
+				$this->author = new WP_User($queried_object->post_author);
+			}
+
 			$this->provider = new WP_Github_Profile_Data_Provider( $this->author );
 		}else{
 			$this->provider = new WP_Github_Home_Data_Provider();
 		}
-
 	}
 
 	public function __get( $method ) {
@@ -47,6 +52,6 @@ function wp_github_prepare_data( $is_author ) {
 
 function wp_github_data( $provider_method ) {
 
-	$provider = WP_Github_Data_Provider::factory( is_author() );
+	$provider = WP_Github_Data_Provider::factory();
 	return $provider->$provider_method;
 }
