@@ -14,76 +14,74 @@ template="<li class='all-posts-one'>\
 </div></a></li>";
 
 options = {
-	valueNames: [ 'all_posts_one_blog_name', 'all_posts_one_blog_description','all_posts_one_blog_ago','all_posts_one_category','star_count' ],
+	valueNames: [ 'all_posts_one_blog_name', 'all-posts-one_blog_permalink', 'all_posts_one_blog_description','all_posts_one_blog_ago','all_posts_one_category','star_count' ],
 	item: template
 };
 
-if (typeof(List) != "undefined") {
+	if (typeof(List) != "undefined") {
 
 		userList = new List('posts', options);
 
-	userList.add(posts,function(){
+		userList.add(posts, function () {
 
-		$('.all-posts-one_blog_permalink_real').each(function(){
-			href = $(this).find('.all-posts-one_blog_permalink').html();
-
-
-			$(this).attr('href',href);
-		});
-	});
-
-
-dropdown = false;
-
-$(function(){
-	$('.filter-by-categories-dropdown .dropdown-menu li').on('click',function(){		
-
-		var a = $(this).find('a');
-
-		var cat = a.html();
-
-		if('All Categories' == cat){
-			userList.filter();
-			userList.search();		
-			
-		}else{		
-
-			userList.filter(function(item) {					
-				if (item.values().all_posts_one_category == cat) {
-					return true;
-				} else {
-					return false;
-				}
-				
+			$('.all-posts-one_blog_permalink_real').each(function () {
+				href = $(this).find('.all-posts-one_blog_permalink').html();
+				$(this).attr('href', href);
 			});
-		}
-		$('.filter-by-categories-dropdown .dropdown-toggle').html(cat);
+		});
 
-		$('.filter-by-categories-dropdown .dropdown-toggle').append(' <span class="caret"></span>');
-	});	
-});
 
-var calendar = new CalHeatMap();
-calendar.init({
-	displayLegend: true,
-	tooltip: true,
-	data: wp_github_vars.data,
-	domain: "month",
-	range: 10,
-	cellSize:10,
-	start : new Date(new Date().getFullYear(), 0,1),
-	label: {
-		position: "top"
-	},
-	legendCellSize: 10,
-	legendCellPadding: 3,
-	legendHorizontalPosition:'right',
-	itemName: wp_github_vars.item_name,
-	cellLabel: {
-		empty: "{date}",
-		filled: wp_github_vars.cell.filled
+		dropdown = false;
+
+		$(function () {
+			$('.filter-by-categories-dropdown .dropdown-menu li').on('click', function () {
+
+				var a = $(this).find('a');
+
+				var cat = a.html();
+
+				if ('All Categories' == cat) {
+					userList.filter();
+					userList.search();
+
+				} else {
+
+					userList.filter(function (item) {
+						if (item.values().all_posts_one_category == cat) {
+							return true;
+						} else {
+							return false;
+						}
+
+					});
+				}
+				$('.filter-by-categories-dropdown .dropdown-toggle').html(cat);
+
+				$('.filter-by-categories-dropdown .dropdown-toggle').append(' <span class="caret"></span>');
+			});
+		});
+
+		var calendar = new CalHeatMap();
+		calendar.init({
+			displayLegend           : true,
+			tooltip                 : true,
+			data                    : wp_github_vars.data,
+			domain                  : "month",
+			range                   : 10,
+			cellSize                : 10,
+			start                   : new Date(new Date().getFullYear(), 0, 1),
+			label                   : {
+				position: "top"
+			},
+			legendCellSize          : 10,
+			legendCellPadding       : 3,
+			legendHorizontalPosition: 'right',
+			itemName                : wp_github_vars.item_name,
+			cellLabel               : {
+				empty : "{date}",
+				filled: wp_github_vars.cell.filled
+			}
+		});
 	}
-});
-}
 
 });
