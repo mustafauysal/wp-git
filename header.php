@@ -22,9 +22,9 @@
 				</div>
 
 				<div class="col-xs-5 col-md-5 navbar-header">
-					<form class="navbar-form" role="search" action="search.html" method="post">
+					<form class="navbar-form" role="search" action="/" method="get">
 						<div class="input-group add-on">
-							<input type="text" class="form-control" placeholder="Search blog or page" name="q" id="q" autocomplete="off">
+							<input type="text" class="form-control" placeholder="Search blog or page" name="s" value="<?php the_search_query(); ?>"  id="s" autocomplete="off">
 							<div class="input-group-btn">
 								<button class="btn btn-default" type="submit">
 									<i class="glyphicon glyphicon-search"></i>
