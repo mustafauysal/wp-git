@@ -39,6 +39,9 @@ function wp_github_scripts() {
 
 	}
 
+	if(is_search()){
+		wp_enqueue_style( 'wp-github-search', get_template_directory_uri() . '/assets/css/search.css' );
+	}
 
 
 }
@@ -220,6 +223,19 @@ add_theme_support( 'custom-logo', array(
 	'width'      => 220,
 ) );
 
+function wp_github_search_widget() {
+	register_sidebar( array(
+		'name'          => 'Search sidebar',
+		'id'            => 'search_sidebar',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'wp_github_search_widget' );
+
 
 /**
  * Customizer additions.
@@ -234,3 +250,4 @@ require get_template_directory() . '/inc/profile-fields.php';
 
 require get_template_directory() . '/inc/data-provider.php';
 
+require get_template_directory() . '/inc/pagination.php';

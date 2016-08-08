@@ -21,6 +21,7 @@
 					<a class="navbar-brand" href="<?php echo home_url();?>"><?php echo get_bloginfo('name');?></a>
 				</div>
 
+				<?php if ( ! is_search() ): ?>
 				<div class="col-xs-5 col-md-5 navbar-header">
 					<form class="navbar-form" role="search" action="/" method="get">
 						<div class="input-group add-on">
@@ -33,6 +34,7 @@
 						</div>
 					</form>
 				</div>
+				<?php endif; ?>
 
 				<div class="col-xs-4 col-md-4 pull-right collapse navbar-collapse">
 					<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'items_wrap' => '<ul class="nav navbar-collapse navbar-nav navbar-right">%3$s'  ) ); ?>
