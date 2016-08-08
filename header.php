@@ -15,17 +15,26 @@
 
 <div id="wrap">
 	<header class="navbar navbar-static-top" role="navigation">
+
 		<div class="container">
 			<div class="col-xs-12 no-padding-left no-padding-right">
-				<div class="col-xs-12 col-md-3 no-padding-left navbar-header">
+
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only"><?php _e( 'Toggle navigation', 'wp-github' ); ?></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<div class="col-xs-6 col-md-3 no-padding-left navbar-header">
 					<a class="navbar-brand" href="<?php echo home_url();?>"><?php echo get_bloginfo('name');?></a>
 				</div>
 
 				<?php if ( ! is_search() ): ?>
-				<div class="col-xs-5 col-md-5 navbar-header">
+				<div class="col-xs-12 col-md-5 navbar-header">
 					<form class="navbar-form" role="search" action="/" method="get">
-						<div class="input-group add-on">
-							<input type="text" class="form-control" placeholder="Search blog or page" name="s" value="<?php the_search_query(); ?>"  id="s" autocomplete="off">
+						<div class="input-group add-on" id="header-search">
+							<input type="text" class="form-control" placeholder="<?php _e('Search...','wp-github'); ?>" name="s" value="<?php the_search_query(); ?>"  id="s" autocomplete="off">
 							<div class="input-group-btn">
 								<button class="btn btn-default" type="submit">
 									<i class="glyphicon glyphicon-search"></i>
@@ -36,9 +45,11 @@
 				</div>
 				<?php endif; ?>
 
-				<div class="col-xs-4 col-md-4 pull-right collapse navbar-collapse">
-					<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'items_wrap' => '<ul class="nav navbar-collapse navbar-nav navbar-right">%3$s'  ) ); ?>
+				<div class="col-xs-12 col-md-4  collapse navbar-collapse">
+					<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'items_wrap' => '<ul id="headmenu" class="nav navbar-collapse navbar-nav navbar-right">%3$s' ) ); ?>
 				</div>
+
+
 			</div>
 		</div>
 	</header>

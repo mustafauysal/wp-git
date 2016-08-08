@@ -7,11 +7,14 @@
  */
 
 ?>
-<div class="col-md-3  col-sm-3">
-	<a href="<?php echo esc_url( wp_github_data( 'profile_url' ) ); ?>">
-		<img src="<?php echo esc_url( wp_github_data( 'avatar_url' ) ); ?>" class="img-responsive img-rounded" height="220" width="220">
-	</a>
+<div class="col-md-3  col-xs-12">
+	<div class="col-xs-6 col-md-12">
+		<a href="<?php echo esc_url( wp_github_data( 'profile_url' ) ); ?>">
+			<img src="<?php echo esc_url( wp_github_data( 'avatar_url' ) ); ?>" class="img-responsive img-rounded" height="220" width="220">
+		</a>
+	</div>
 
+	<div class="col-xs-6 col-md-12">
 	<h1 class="user-names">
 		<?php
 		$profile_name = wp_github_data( 'profile_name' );
@@ -87,6 +90,8 @@
 
 		</ul>
 	</div>
+
+</div>
 
 	<div class="user-stats">
 		<a class="user-stat">

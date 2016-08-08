@@ -9,7 +9,7 @@ function wp_github_star_it_btn( ) {
 	$star_count = wp_github_get_starred_count( get_the_ID() );
 	$is_starred = wp_github_has_starred_post( get_the_ID() );
 	$output = '';
-	$output .= '<div class="col-xs-2">';
+	$output .= '<div class="col-xs-4 col-md-2">';
 	$output .= '<div class="post-action-star pull-right '. ($is_starred === true ? 'unstar':'').'" data-post-id="' . esc_attr( get_the_ID() ) . '" data-user-id="' . esc_attr( $user_ID ) . '" data-ip-address="' . esc_attr( $ip_address ) . '">';
 
 			if ( $is_starred ) {

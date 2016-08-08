@@ -5,7 +5,7 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 	<!-- Post Owner Username / Post Title -->
-	<div class="col-xs-10 post-meta-info">
+	<div class="col-xs-8 col-md-10 post-meta-info">
 		<span class="glyphicon glyphicon-pencil pull-left"></span>
 
 		<div class="post-left-info pull-left">

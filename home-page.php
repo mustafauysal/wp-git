@@ -2,27 +2,27 @@
 <div class="row">
 <?php get_template_part( 'template-parts/profile' ); ?>
 
-<div class="col-sm-9 col-md-9">
-<ul class="nav nav-tabs">
-	<li class="active">
-		<a href="#summary" data-toggle="tab">
-			<span class="glyphicon glyphicon-stats"></span>
-			<?php _e( 'Summary', 'wp-github' ); ?>
-		</a>
-	</li>
-	<li>
-		<a href="#posts" data-toggle="tab">
-			<span class="glyphicon glyphicon-list-alt"></span>
-			<?php _e( 'Posts', 'wp-github' ); ?>
-		</a>
-	</li>
-	<li>
-		<a href="#latest-feed" data-toggle="tab">
-			<span class="glyphicon glyphicon-fire"></span>
-			<?php _e( 'Latest Feed', 'wp-github' ); ?>
-		</a>
-	</li>
-</ul>
+<div class="col-xs-12 col-md-9">
+	<ul class="nav nav-tabs ">
+		<li class="active">
+			<a href="#summary" data-toggle="tab">
+				<span class="glyphicon glyphicon-stats"></span>
+				<?php _e( 'Summary', 'wp-github' ); ?>
+			</a>
+		</li>
+		<li>
+			<a href="#posts" data-toggle="tab">
+				<span class="glyphicon glyphicon-list-alt"></span>
+				<?php _e( 'Posts', 'wp-github' ); ?>
+			</a>
+		</li>
+		<li>
+			<a href="#latest-feed" data-toggle="tab">
+				<span class="glyphicon glyphicon-fire"></span>
+				<?php _e( 'Latest Feed', 'wp-github' ); ?>
+			</a>
+		</li>
+	</ul>
 <div class="tab-content">
 <div class="tab-pane active" id="summary">
 
@@ -31,7 +31,7 @@
 		<?php get_template_part( 'template-parts/latest', 'posts' ); ?>
 	</div>
 
-	<div class="row">
+	<div class="row hidden-xs">
 		<div class="col-xs-12">
 			<div class="summary-box calendar-activity">
 
