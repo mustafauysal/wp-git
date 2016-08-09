@@ -410,6 +410,7 @@
     margin-bottom: 20px;
 }
 .social-share{
+    padding-top: 30px;
     list-style: none;
     float: left;
     margin-left: -1px;
@@ -426,10 +427,6 @@
     text-align: center;
     width: 20px;
 }
-.first-share{
-    margin-top: 30px !important;
-}
-
 
 .comment-form-author{
 	text-align: center;

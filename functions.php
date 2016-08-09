@@ -7,7 +7,6 @@ function wp_github_scripts() {
 
 	wp_enqueue_script( 'jquery' );
 
-	wp_enqueue_style( 'wp-github-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'wp-github-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
 	wp_enqueue_style( 'wp-github-fontawesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
 	wp_enqueue_style( 'wp-github-shared', get_template_directory_uri() . '/assets/css/shared.css' );
@@ -42,6 +41,8 @@ function wp_github_scripts() {
 	if(is_search()){
 		wp_enqueue_style( 'wp-github-search', get_template_directory_uri() . '/assets/css/search.css' );
 	}
+
+	wp_enqueue_style( 'wp-github-style', get_stylesheet_uri() );
 
 
 }

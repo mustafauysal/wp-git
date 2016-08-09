@@ -32,7 +32,7 @@
 
 	<div class="container">
 	<div class="row">
-	<div class="col-xs-10 tab-content">
+	<div class="col-xs-12 col-md-10  tab-content">
 
 	<div class="tab-content">
 	<!-- Post Excerpt + Permalink -->
@@ -60,17 +60,29 @@
 
 				<div class="col-xs-4">
 					<span class="glyphicon glyphicon-time"></span>
-					<span class="post-basic-stat-count"><?php echo wp_github_get_post_revision_count();?></span> <span class="post-basic-stat-text"><?php _e('versions','wp-github');?></span>
+					<span class="post-basic-stat-count"><?php echo wp_github_get_post_revision_count();?></span>
+					<a href="#revisions" data-toggle="tab"><span class="post-basic-stat-text">
+						<?php _e('versions','wp-github');?></span>
+					</a>
+
 				</div>
 
 				<div class="col-xs-4">
 					<span class="glyphicon glyphicon-comment"></span>
-					<span class="post-basic-stat-count"><?php echo get_comments_number();?></span> <span class="post-basic-stat-text"><?php _e('comments','wp-github');?></span>
+					<span class="post-basic-stat-count"><?php echo get_comments_number();?></span>
+					<a href="#comments" data-toggle="tab">
+						<span class="post-basic-stat-text"><?php _e('comments','wp-github');?></span>
+					</a>
+
 				</div>
 
 				<div class="col-xs-4">
 					<span class="glyphicon glyphicon-align-left"></span>
-					<span class="post-basic-stat-count"><?php echo wp_github_word_count();?></span> <span class="post-basic-stat-text"><?php _e('words','wp-github');?></span>
+					<span class="post-basic-stat-count"><?php echo wp_github_word_count();?></span>
+					<a href="#post" data-toggle="tab">
+						<span class="post-basic-stat-text"><?php _e('words','wp-github');?></span>
+					</a>
+
 				</div>
 
 			</div>
@@ -88,7 +100,7 @@
 
 				<div class="row post-owner-ago">
 
-					<div class="col-xs-4 pull-left post-owner-ago-content">
+					<div class="col-xs-8 pull-left post-owner-ago-content">
 
 						<a href="assets/img/test.jpeg" class="post-owner-img pull-left">
 							<img src="<?php echo wp_github_get_author_gravatar_url( array('size' => 20)); ?>" class="" alt="User Name" height="20" width="20">
@@ -140,11 +152,11 @@
 					?>
 					<div class="any-comment">
 
-						<div class="col-xs-1 no-padding-left any-comment-image">
+						<div class="col-xs-2 col-sm-1  no-padding-left any-comment-image">
 							<img class="img-rounded" alt="<?php echo get_the_author();?>" src="<?php echo wp_github_get_gravatar_url( $comment->comment_author_email, 80 ); ?>" width="40">
 						</div>
 
-						<div class="col-xs-11 no-padding-right any-comment-right no-padding-left">
+						<div class="col-xs-10 col-sm-11 no-padding-right any-comment-right no-padding-left">
 							<div class="any-comment-header">
 
 								<a href="#" class="bold any-comment-username"><?php echo $comment->comment_author; ?> </a> <?php echo human_time_diff( strtotime($comment->comment_date_gmt), current_time( 'timestamp' ) ) . ' ago'; ?>
@@ -170,14 +182,12 @@
 					'title_reply'          => "",
 					'label_submit'         => __( 'Comment' ),
 					'fields'               => array(
-
 						'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" />',
 						'email'  => '<label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" /></p>',
 					),
-					'comment_field'        => '<textarea name="comment" class="form-group col-xs-12 leave-comment" rows="5" placeholder="Leave a comment"></textarea>',
+					'comment_field'        => '<textarea name="comment" class="form-group col-xs-12 leave-comment" rows="5" placeholder="'.__('Leave a comment','wp-github').'"></textarea>',
 					'comment_notes_after'  => '<button type="submit" class="btn btn-success pull-right"> <span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;Comment </button>',
 					'id_submit'            => 'comment_submit',
-
 				);
 				comment_form( $arg ); ?>
 
@@ -202,11 +212,11 @@
 					<div class="any-revision">
 						<div class="row">
 							<div class="col-xs-12">
-								<div class="col-xs-1 no-padding-left any-revision-image">
+								<div class="col-xs-3 col-sm-1 no-padding-left any-revision-image">
 									<img class="img-rounded img-revision" alt="Said Özcan" src="<?php echo wp_github_get_author_gravatar_url(array('size'=>40));?>" width="40">
 								</div>
 
-								<div class="col-xs-9 no-padding-left any-revision-right-group">
+								<div class="col-xs-7 col-sm-9 no-padding-left any-revision-right-group">
 									<div class="any-revision-message no-padding-left">
 										<?php echo $revision->post_title;?>
 									</div>
@@ -219,15 +229,14 @@
 									</div>
 								</div>
 
-								<div class="col-xs-2 pull-right no-padding-right">
+								<div class="col-xs-2 col-sm-2 pull-right no-padding-right">
 									<div class="post-owner-latest-update pull-right">
 										<a href="<?php echo  get_permalink().'?rev='.$last_rev->ID.'&to='.$revision->ID;?>">
-																				<span class="commit">
-																					#<?php echo wp_github_get_post_hash($revision->post_date);?>
-																				</span>
+											<span class="commit">#<?php echo wp_github_get_post_hash($revision->post_date);?></span>
 										</a>
 									</div>
 								</div>
+
 							</div>
 						</div>
 					<div class="clearfix"></div>
@@ -243,8 +252,8 @@
 	</div>
 </div>
 </div>
-	<div class="col-xs-2 blog-tab-pane tabbable tabs-right no-padding-left">
-		<ul class="nav nav-tabs blog-tabs">
+	<div class="col-xs-12 col-md-2 blog-tab-pane tabbable tabs-right no-padding-left">
+		<ul class="nav nav-tabs  blog-tabs visible-lg" >
 			<li class="active">
 				<a href="#post" data-toggle="tab"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;&nbsp;Post</a>
 			</li>
@@ -298,6 +307,7 @@
 
 		</ul>
 	</div>
+
 </div>
 </div>
 	</div>
