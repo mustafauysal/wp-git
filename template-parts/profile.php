@@ -95,15 +95,15 @@
 
 	<div class="user-stats">
 		<a class="user-stat">
-			<?php echo sprintf( __( '<strong class="user-stat-count">%s</strong> posts', 'wp-github' ), intval( wp_github_data( 'post_count' ) ) ); ?>
+			<?php echo sprintf( __( '<strong class="user-stat-count">%s</strong> posts', 'wp-git' ), intval( wp_github_data( 'post_count' ) ) ); ?>
 		</a>
 
 		<a class="user-stat">
-			<?php echo sprintf( __( '<strong class="user-stat-count">%s</strong> comments', 'wp-github' ), intval( wp_github_data( 'comment_count' ) ) ); ?>
+			<?php echo sprintf( __( '<strong class="user-stat-count">%s</strong> comments', 'wp-git' ), intval( wp_github_data( 'comment_count' ) ) ); ?>
 		</a>
 
 		<a class="user-stat">
-			<?php echo sprintf( __( '<strong class="user-stat-count">%s</strong> stars gotten', 'wp-github' ), intval( wp_github_data( 'star_count' ) ) ); ?>
+			<?php echo sprintf( __( '<strong class="user-stat-count">%s</strong> stars gotten', 'wp-git' ), intval( wp_github_data( 'star_count' ) ) ); ?>
 		</a>
 	</div>
 </div>

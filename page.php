@@ -53,7 +53,7 @@
 							<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
 								<?php echo get_the_author();?>
 							</a>
-							<?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-github' ), human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
+							<?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-git' ), human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
 						</div>
 					</div>
 					<div class="col-xs-4 post-owner-latest-update pull-right">
@@ -169,7 +169,7 @@
 										<a href=""><?php
 										$user_info = get_userdata($revision->post_author);
 										echo $user_info->display_name;
-										?></a> authored <?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-github' ), human_time_diff( strtotime($revision->post_date), current_time( 'timestamp' ) ) ); ?>
+										?></a> authored <?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-git' ), human_time_diff( strtotime($revision->post_date), current_time( 'timestamp' ) ) ); ?>
 
 									</div>
 								</div>

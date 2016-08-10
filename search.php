@@ -20,7 +20,7 @@
 						</div>
 						<div class="col-xs-2 pull-right">
 							<button class="btn btn-success search-button" type="submit">
-								<i class="glyphicon glyphicon-search"></i> <?php _e('Search','wp-github');?>
+								<i class="glyphicon glyphicon-search"></i> <?php _e('Search','wp-git');?>
 							</button>
 						</div>
 					</form>
@@ -47,7 +47,7 @@
 		<?php if ( have_posts() ) : ?>
 
 		<div class="col-xs-9 search-result-heading pull-left">
-			<h4><?php echo sprintf(__("We've found %s results for your search",'wp-github'),number_format($wp_query->found_posts));?></h4>
+			<h4><?php echo sprintf(__("We've found %s results for your search",'wp-git'),number_format($wp_query->found_posts));?></h4>
 		</div>
 
 		<div class="clearfix"></div>
@@ -76,7 +76,7 @@
 								<div class="clearfix">
 								</div>
 												<span class="all_posts_one_blog_ago">
-													<?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-github' ), human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
+													<?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-git' ), human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
 												</span>
 							</div>
 							<div class="col-xs-3 blog-star_count">

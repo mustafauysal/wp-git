@@ -7,24 +7,24 @@ function wp_github_scripts() {
 
 	wp_enqueue_script( 'jquery' );
 
-	wp_enqueue_style( 'wp-github-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
-	wp_enqueue_style( 'wp-github-fontawesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
-	wp_enqueue_style( 'wp-github-shared', get_template_directory_uri() . '/assets/css/shared.css' );
-	wp_enqueue_style( 'wp-github-index', get_template_directory_uri() . '/assets/css/index.css' );
-	wp_enqueue_style( 'wp-github-cal-heatmap', get_template_directory_uri() . '/assets/css/cal-heatmap.css' );
+	wp_enqueue_style( 'wp-git-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
+	wp_enqueue_style( 'wp-git-fontawesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
+	wp_enqueue_style( 'wp-git-shared', get_template_directory_uri() . '/assets/css/shared.css' );
+	wp_enqueue_style( 'wp-git-index', get_template_directory_uri() . '/assets/css/index.css' );
+	wp_enqueue_style( 'wp-git-cal-heatmap', get_template_directory_uri() . '/assets/css/cal-heatmap.css' );
 
-	wp_enqueue_script( 'wp-github-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), false, true );
+	wp_enqueue_script( 'wp-git-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), false, true );
 	if ( is_archive() || is_home() ) {
-		wp_enqueue_script( 'wp-github-list', get_template_directory_uri() . '/assets/js/list.min.js', array( 'jquery' ), false, true );
-		wp_enqueue_script( 'wp-github-d3', get_template_directory_uri() . '/assets/js/d3.v3.min.js', array(), false, true );
-		wp_enqueue_script( 'wp-github-cal-heatmap', get_template_directory_uri() . '/assets/js/cal-heatmap.min.js', array(), false, true );
+		wp_enqueue_script( 'wp-git-list', get_template_directory_uri() . '/assets/js/list.min.js', array( 'jquery' ), false, true );
+		wp_enqueue_script( 'wp-git-d3', get_template_directory_uri() . '/assets/js/d3.v3.min.js', array(), false, true );
+		wp_enqueue_script( 'wp-git-cal-heatmap', get_template_directory_uri() . '/assets/js/cal-heatmap.min.js', array(), false, true );
 	}
 
-	wp_enqueue_script( 'wp-github-index', get_template_directory_uri() . '/assets/js/index.js', array(), false, true );
-	wp_localize_script( 'wp-github-index', 'wp_github_vars', array(
+	wp_enqueue_script( 'wp-git-index', get_template_directory_uri() . '/assets/js/index.js', array(), false, true );
+	wp_localize_script( 'wp-git-index', 'wp_github_vars', array(
 			'data' => wp_github_data('contribution_data'),
-			'item_name' => array(__('blog post','wp-github'),__('blog posts','wp-github')),
-			'cell' => array('filled' => __("{count} blog posts {name} a {date}","wp-github")  )
+			'item_name' => array(__('blog post','wp-git'),__('blog posts','wp-git')),
+			'cell' => array('filled' => __("{count} blog posts {name} a {date}","wp-git")  )
 		)
 	);
 
@@ -33,16 +33,16 @@ function wp_github_scripts() {
 	}
 
 	if ( is_single() || is_page() ) {
-		wp_enqueue_script( 'wp-github-post', get_template_directory_uri() . '/assets/js/post.js', array(), false, true );
-		wp_enqueue_style( 'wp-github-post', get_template_directory_uri() . '/assets/css/post.css' );
+		wp_enqueue_script( 'wp-git-post', get_template_directory_uri() . '/assets/js/post.js', array(), false, true );
+		wp_enqueue_style( 'wp-git-post', get_template_directory_uri() . '/assets/css/post.css' );
 
 	}
 
 	if(is_search()){
-		wp_enqueue_style( 'wp-github-search', get_template_directory_uri() . '/assets/css/search.css' );
+		wp_enqueue_style( 'wp-git-search', get_template_directory_uri() . '/assets/css/search.css' );
 	}
 
-	wp_enqueue_style( 'wp-github-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'wp-git-style', get_stylesheet_uri() );
 
 
 }
@@ -202,15 +202,15 @@ function wp_github_compare_revision($post_id, $revision_id, $to = false ) {
 		return $diff;
 	}
 
-	return __( "the content unchanged between these revisions. Other part of post data might be changed.", 'wp-github' );
+	return __( "the content unchanged between these revisions. Other part of post data might be changed.", 'wp-git' );
 }
 
 
 function wp_github_register_menus() {
 	register_nav_menus(
 		array(
-			'header-menu' => __( 'Header Menu', 'wp-github' ),
-			'footer-menu' => __( 'Footer Menu', 'wp-github' ),
+			'header-menu' => __( 'Header Menu', 'wp-git' ),
+			'footer-menu' => __( 'Footer Menu', 'wp-git' ),
 		)
 	);
 }

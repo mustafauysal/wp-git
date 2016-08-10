@@ -14,11 +14,11 @@ function wp_github_star_it_btn( ) {
 
 			if ( $is_starred ) {
 				$output .= '<div class="btn post-action-star-left-button  pull-left">';
-					$output .= '<span class="glyphicon glyphicon-star"></span> <span id="span_status">' . __( 'Unstar', 'wp-github' ) . '</span>';
+					$output .= '<span class="glyphicon glyphicon-star"></span> <span id="span_status">' . __( 'Unstar', 'wp-git' ) . '</span>';
 				$output .= '</div>';
 			} else {
 				$output .= '<div class="btn post-action-star-left-button pull-left">';
-					$output .= '<span class="glyphicon glyphicon-star"></span> <span id="span_status">' . __( 'Star', 'wp-github' ) . '</span>';
+					$output .= '<span class="glyphicon glyphicon-star"></span> <span id="span_status">' . __( 'Star', 'wp-git' ) . '</span>';
 				$output .= '</div>';
 			}
 
@@ -72,8 +72,8 @@ function wp_github_get_starred_count( $post_id ) {
 }
 
 function wp_github_stargaze_front_end_js() {
-	wp_enqueue_script( 'wp-github-stargaze', get_template_directory_uri() . '/assets/js/stargaze.js', array( 'jquery' ) );
-	wp_localize_script( 'wp-github-stargaze', 'wp_github_stargaze_vars',
+	wp_enqueue_script( 'wp-git-stargaze', get_template_directory_uri() . '/assets/js/stargaze.js', array( 'jquery' ) );
+	wp_localize_script( 'wp-git-stargaze', 'wp_github_stargaze_vars',
 		array(
 			'ajaxurl' => admin_url( 'admin-ajax.php' ),
 			'nonce' => wp_create_nonce('star_it_nonce'),

@@ -3,7 +3,7 @@
 	<div class="summary-box">
 
 		<div class="summary-box-header">
-			<h3 class="box-title"><?php _e( 'Popular Posts', 'wp-github' ); ?></h3>
+			<h3 class="box-title"><?php _e( 'Popular Posts', 'wp-git' ); ?></h3>
 		</div>
 
 		<div class="summary-box-content	">

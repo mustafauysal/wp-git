@@ -7,19 +7,19 @@
 		<li class="active">
 			<a href="#summary" data-toggle="tab">
 				<span class="glyphicon glyphicon-stats"></span>
-				<?php _e( 'Summary', 'wp-github' ); ?>
+				<?php _e( 'Summary', 'wp-git' ); ?>
 			</a>
 		</li>
 		<li>
 			<a href="#posts" data-toggle="tab">
 				<span class="glyphicon glyphicon-list-alt"></span>
-				<?php _e( 'Posts', 'wp-github' ); ?>
+				<?php _e( 'Posts', 'wp-git' ); ?>
 			</a>
 		</li>
 		<li>
 			<a href="#latest-feed" data-toggle="tab">
 				<span class="glyphicon glyphicon-fire"></span>
-				<?php _e( 'Latest Feed', 'wp-github' ); ?>
+				<?php _e( 'Latest Feed', 'wp-git' ); ?>
 			</a>
 		</li>
 	</ul>
@@ -36,7 +36,7 @@
 			<div class="summary-box calendar-activity">
 
 				<div class="summary-box-header">
-					<h3 class="box-title"><?php _e( 'Calendar Activity', 'wp-github' ); ?></h3>
+					<h3 class="box-title"><?php _e( 'Calendar Activity', 'wp-git' ); ?></h3>
 				</div>
 				<div id="summary-box-wrapper">
 					<div class="summary-box-content" id="cal-heatmap">
@@ -59,12 +59,12 @@
 
 						<div class="col-xs-10">
 							<input class="form-control filter-blogs search" name="filter" id="filter" type="text"
-							       placeholder="<?php _e( 'Filter Blogs', 'wp-github' ); ?>" />
+							       placeholder="<?php _e( 'Filter Blogs', 'wp-git' ); ?>" />
 						</div>
 
 						<div class="col-xs-2">
 							<button type="button"
-							        class="btn btn-info filter-blogs-button search"><?php _e( 'Search', 'wp-github' ); ?></button>
+							        class="btn btn-info filter-blogs-button search"><?php _e( 'Search', 'wp-git' ); ?></button>
 						</div>
 					</div>
 				</div>
@@ -73,7 +73,7 @@
 
 					<div class="btn-group">
 						<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-							<?php _e( 'All Categories', 'wp-github' ); ?><span class="caret"></span>
+							<?php _e( 'All Categories', 'wp-git' ); ?><span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="#">All Categories</a></li>

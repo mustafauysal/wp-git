@@ -1,2 +1,2 @@
-wp-github
+wp-git
 =========

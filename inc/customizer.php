@@ -2,7 +2,7 @@
 /**
  *  Theme Customizer.
  *
- * @package wp-github
+ * @package wp-git
  */
 
 /**
@@ -17,7 +17,7 @@ function wp_github_customize_register( $wp_customize ) {
 
 
 //	$wp_customize->add_section( 'wp_github_homepage_settings' , array(
-//		'title'      => __( 'Homepage Settings', 'wp-github' ),
+//		'title'      => __( 'Homepage Settings', 'wp-git' ),
 //		'priority'   => 30,
 //		'capability' => 'edit_theme_options',
 //
@@ -47,7 +47,7 @@ function wp_github_customize_register( $wp_customize ) {
 		'type'        => 'text',
 		'priority'    => 10,
 		'section'     => 'wp_github_home',
-		'description' => __( 'Display name for homepage', 'wp-github' ),
+		'description' => __( 'Display name for homepage', 'wp-git' ),
 	) );
 
 	$wp_customize->add_setting( 'wp_github_homepage_username', array(
@@ -62,7 +62,7 @@ function wp_github_customize_register( $wp_customize ) {
 		'type'        => 'text',
 		'priority'    => 10,
 		'section'     => 'wp_github_home',
-		'description' => __( 'Username for homepage', 'wp-github' ),
+		'description' => __( 'Username for homepage', 'wp-git' ),
 	) );
 
 	$wp_customize->add_setting( 'wp_github_homepage_bio', array(
@@ -77,7 +77,7 @@ function wp_github_customize_register( $wp_customize ) {
 		'type'        => 'text',
 		'priority'    => 10,
 		'section'     => 'wp_github_home',
-		'description' => __( 'Bio', 'wp-github' ),
+		'description' => __( 'Bio', 'wp-git' ),
 	) );
 
 	$wp_customize->add_setting( 'wp_github_homepage_company', array(
@@ -92,7 +92,7 @@ function wp_github_customize_register( $wp_customize ) {
 		'type'        => 'text',
 		'priority'    => 10,
 		'section'     => 'wp_github_home',
-		'description' => __( 'Company', 'wp-github' ),
+		'description' => __( 'Company', 'wp-git' ),
 	) );
 
 	$wp_customize->add_setting( 'wp_github_homepage_location', array(
@@ -107,7 +107,7 @@ function wp_github_customize_register( $wp_customize ) {
 		'type'        => 'text',
 		'priority'    => 10,
 		'section'     => 'wp_github_home',
-		'description' => __( 'Location', 'wp-github' ),
+		'description' => __( 'Location', 'wp-git' ),
 	) );
 
 	$wp_customize->add_setting( 'wp_github_homepage_email', array(
@@ -122,7 +122,7 @@ function wp_github_customize_register( $wp_customize ) {
 		'type'        => 'email',
 		'priority'    => 10,
 		'section'     => 'wp_github_home',
-		'description' => __( 'Email', 'wp-github' ),
+		'description' => __( 'Email', 'wp-git' ),
 	) );
 
 	$wp_customize->add_setting( 'wp_github_homepage_url', array(
@@ -137,7 +137,7 @@ function wp_github_customize_register( $wp_customize ) {
 		'type'        => 'url',
 		'priority'    => 10,
 		'section'     => 'wp_github_home',
-		'description' => __( 'URL', 'wp-github' ),
+		'description' => __( 'URL', 'wp-git' ),
 	) );
 
 	$wp_customize->add_setting( 'wp_github_homepage_date', array(
@@ -152,7 +152,7 @@ function wp_github_customize_register( $wp_customize ) {
 		'type'        => 'date',
 		'priority'    => 10,
 		'section'     => 'wp_github_home',
-		'description' => __( 'Start date', 'wp-github' ),
+		'description' => __( 'Start date', 'wp-git' ),
 	) );
 
 

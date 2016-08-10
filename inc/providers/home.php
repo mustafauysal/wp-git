@@ -170,7 +170,7 @@ class WP_Github_Home_Data_Provider implements WP_Github_Data_Provider_Interface{
 		foreach ( $latest_comments as $comment ) {
 			$item = array(
 				'icon' => 'glyphicon-comment',
-				'time_ago' => sprintf( _x( '%s ago', '%s = human-readable time difference', 'wp-github' ), human_time_diff( strtotime( $comment->comment_date ), current_time( 'timestamp' ) ) ),
+				'time_ago' => sprintf( _x( '%s ago', '%s = human-readable time difference', 'wp-git' ), human_time_diff( strtotime( $comment->comment_date ), current_time( 'timestamp' ) ) ),
 			);
 
 			if ( $comment->user_id > 0 ) {
@@ -190,7 +190,7 @@ class WP_Github_Home_Data_Provider implements WP_Github_Data_Provider_Interface{
 			$user_profile_url = get_author_posts_url($post_item->post_author);
 			$item = array(
 				'icon' => 'glyphicon-pencil',
-				'time_ago' => sprintf( _x( '%s ago', '%s = human-readable time difference', 'wp-github' ), human_time_diff( strtotime( $post_item->post_date ), current_time( 'timestamp' ) ) ),
+				'time_ago' => sprintf( _x( '%s ago', '%s = human-readable time difference', 'wp-git' ), human_time_diff( strtotime( $post_item->post_date ), current_time( 'timestamp' ) ) ),
 				'avatar' => '<a href="'.$user_profile_url.'"><img src="'.wp_github_get_author_gravatar_url(array('author_id' => $post_item->post_author)).'" height="30" width="30"></a>',
 				'description' => '<a href="'.$user_profile_url.'">'. get_the_author_meta( 'display_name', $post_item->post_author ).'</a> wrote a blog post: <a href="'.get_the_permalink($post_item->ID).'">'.get_the_title($post_item->ID).'</a>'
 			);

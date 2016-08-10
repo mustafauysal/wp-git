@@ -62,7 +62,7 @@
 					<span class="glyphicon glyphicon-time"></span>
 					<span class="post-basic-stat-count"><?php echo wp_github_get_post_revision_count();?></span>
 					<a href="#revisions" data-toggle="tab"><span class="post-basic-stat-text">
-						<?php _e('versions','wp-github');?></span>
+						<?php _e('versions','wp-git');?></span>
 					</a>
 
 				</div>
@@ -71,7 +71,7 @@
 					<span class="glyphicon glyphicon-comment"></span>
 					<span class="post-basic-stat-count"><?php echo get_comments_number();?></span>
 					<a href="#comments" data-toggle="tab">
-						<span class="post-basic-stat-text"><?php _e('comments','wp-github');?></span>
+						<span class="post-basic-stat-text"><?php _e('comments','wp-git');?></span>
 					</a>
 
 				</div>
@@ -80,7 +80,7 @@
 					<span class="glyphicon glyphicon-align-left"></span>
 					<span class="post-basic-stat-count"><?php echo wp_github_word_count();?></span>
 					<a href="#post" data-toggle="tab">
-						<span class="post-basic-stat-text"><?php _e('words','wp-github');?></span>
+						<span class="post-basic-stat-text"><?php _e('words','wp-git');?></span>
 					</a>
 
 				</div>
@@ -110,7 +110,7 @@
 							<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
 								<?php echo get_the_author();?>
 							</a>
-							<?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-github' ), human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
+							<?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-git' ), human_time_diff( get_the_modified_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
 						</div>
 					</div>
 					<div class="col-xs-4 post-owner-latest-update pull-right">
@@ -185,7 +185,7 @@
 						'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" />',
 						'email'  => '<label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" /></p>',
 					),
-					'comment_field'        => '<textarea name="comment" class="form-group col-xs-12 leave-comment" rows="5" placeholder="'.__('Leave a comment','wp-github').'"></textarea>',
+					'comment_field'        => '<textarea name="comment" class="form-group col-xs-12 leave-comment" rows="5" placeholder="'.__('Leave a comment','wp-git').'"></textarea>',
 					'comment_notes_after'  => '<button type="submit" class="btn btn-success pull-right"> <span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;Comment </button>',
 					'id_submit'            => 'comment_submit',
 				);
@@ -224,7 +224,7 @@
 										<a href=""><?php
 										$user_info = get_userdata($revision->post_author);
 										echo $user_info->display_name;
-										?></a> authored <?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-github' ), human_time_diff( strtotime($revision->post_date), current_time( 'timestamp' ) ) ); ?>
+										?></a> authored <?php printf( _x( '%s ago', '%s = human-readable time difference', 'wp-git' ), human_time_diff( strtotime($revision->post_date), current_time( 'timestamp' ) ) ); ?>
 
 									</div>
 								</div>

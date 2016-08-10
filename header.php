@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Wp-Github Theme</title>
+	<title>wp-git Theme</title>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -20,7 +20,7 @@
 			<div class="col-xs-12 no-padding-left no-padding-right">
 
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only"><?php _e( 'Toggle navigation', 'wp-github' ); ?></span>
+					<span class="sr-only"><?php _e( 'Toggle navigation', 'wp-git' ); ?></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -34,7 +34,7 @@
 				<div class="col-xs-12 col-md-5 navbar-header">
 					<form class="navbar-form" role="search" action="/" method="get">
 						<div class="input-group add-on" id="header-search">
-							<input type="text" class="form-control" placeholder="<?php _e('Search...','wp-github'); ?>" name="s" value="<?php the_search_query(); ?>"  id="s" autocomplete="off">
+							<input type="text" class="form-control" placeholder="<?php _e('Search...','wp-git'); ?>" name="s" value="<?php the_search_query(); ?>"  id="s" autocomplete="off">
 							<div class="input-group-btn">
 								<button class="btn btn-default" type="submit">
 									<i class="glyphicon glyphicon-search"></i>
