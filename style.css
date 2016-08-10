@@ -26,7 +26,9 @@ Domain Path: /languages/
 #commentform input{
 	border: 1px solid #eee;
 }
-
+.post-action-star{
+	min-width: 90px;
+}
 @media (max-width: 990px) {
 	.social-share{
 		padding-top: 0;
