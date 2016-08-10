@@ -1,11 +1,12 @@
 /*
 Theme Name: wp-git
-Theme URI: http://wp-git.com
+Theme URI: http://github.com/mustafauysal/wp-git
 Author: s,mustafauysal
-Author URI: http://wp-git.com
+Author URI: http://uysalmustafa.com
 Description: Super duper WordPress theme for geeks.
 Version: 1.0
-License: GNU General Public License
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wp-git
 Domain Path: /languages/
 */
@@ -33,8 +34,6 @@ Domain Path: /languages/
 		margin: 0 5px 0 0;
 	}
 
-	/*.any-revision-right-group{*/
-		/*margin-left: 20px !important;*/
-	/*}*/
+
 
 }
