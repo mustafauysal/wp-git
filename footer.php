@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-6 col-md-4 ">
-				2014 <a href="http://github.com/path/to/repo">wp-git-Theme</a>
+				<?php echo date( 'Y' ); ?> <a href="https://github.com/mustafauysal/wp-git">WP-Git-Theme</a>
 			</div>
 
 			<div class="col-xs-6 col-md-4 footer-center footer-brand-logo">

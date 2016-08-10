@@ -1,5 +1,5 @@
 /*
-Theme Name: wp-git
+Theme Name: WP-Git
 Theme URI: http://github.com/mustafauysal/wp-git
 Author: s,mustafauysal
 Author URI: http://uysalmustafa.com
@@ -28,6 +28,9 @@ Domain Path: /languages/
 }
 .post-action-star{
 	min-width: 90px;
+}
+.post-action-star.unstar{
+	min-width: 110px;
 }
 @media (max-width: 990px) {
 	.social-share{

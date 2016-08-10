@@ -5,7 +5,7 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 	<!-- Post Owner Username / Post Title -->
-	<div class="col-xs-10 post-meta-info">
+	<div class="col-xs-8 col-md-10 post-meta-info">
 		<span class="glyphicon glyphicon-pencil pull-left"></span>
 
 		<div class="post-left-info pull-left">
@@ -45,8 +45,8 @@
 
 					<div class="col-xs-4 pull-left post-owner-ago-content">
 
-						<a href="assets/img/test.jpeg" class="post-owner-img pull-left">
-							<img src="<?php echo wp_git_get_author_gravatar_url( array('size' => 20)); ?>" class="" alt="User Name" height="20" width="20">
+						<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>" class="post-owner-img pull-left">
+							<img src="<?php echo wp_git_get_author_gravatar_url( array('size' => 20)); ?>" class="" height="20" width="20">
 						</a>
 
 						<div class="post-owner-ago-text pull-left">
@@ -161,7 +161,7 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="col-xs-1 no-padding-left any-revision-image">
-									<img class="img-rounded img-revision" alt="Said Özcan" src="<?php echo wp_git_get_author_gravatar_url(array('size'=>40));?>" width="40">
+									<img class="img-rounded img-revision" src="<?php echo wp_git_get_author_gravatar_url(array('size'=>40));?>" width="40">
 								</div>
 
 								<div class="col-xs-9 no-padding-left any-revision-right-group">

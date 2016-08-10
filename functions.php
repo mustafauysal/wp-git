@@ -23,8 +23,8 @@ function wp_git_scripts() {
 	wp_enqueue_script( 'wp-git-index', get_template_directory_uri() . '/assets/js/index.js', array(), false, true );
 	wp_localize_script( 'wp-git-index', 'wp_git_vars', array(
 			'data' => wp_git_data('contribution_data'),
-			'item_name' => array(__('blog post','wp-git'),__('blog posts','wp-git')),
-			'cell' => array('filled' => __("{count} blog posts {name} a {date}","wp-git")  )
+			'item_name' => array(__('contribution','wp-git'),__('contributions','wp-git')),
+			'cell' => array('filled' => __("{count} contributions {name} a {date}","wp-git")  )
 		)
 	);
 

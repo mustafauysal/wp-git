@@ -102,7 +102,7 @@
 			</div>
 		</div>
 		<?php else:?>
-					Ooops! there is nothing...
+					<?php _e('Ooops! there is nothing...','wp-git');?>
 		<?php endif?>
 	</div>
 

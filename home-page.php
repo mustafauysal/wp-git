@@ -36,7 +36,7 @@
 			<div class="summary-box calendar-activity">
 
 				<div class="summary-box-header">
-					<h3 class="box-title"><?php _e( 'Calendar Activity', 'wp-git' ); ?></h3>
+					<h3 class="box-title"><?php _e( 'Activity Calendar', 'wp-git' ); ?></h3>
 				</div>
 				<div id="summary-box-wrapper">
 					<div class="summary-box-content" id="cal-heatmap">
