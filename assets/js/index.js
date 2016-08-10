@@ -4,12 +4,11 @@ template="<li class='all-posts-one'>\
 <a href='' class='all-posts-one_blog_permalink_real'>\
 <div class='all-posts-one_blog_permalink hide'></div>\
 <div class='row'>\
-<div class='col-xs-1 pull-left pencil-icon'><span class='glyphicon glyphicon-pencil'></span></div>\
-<div class='col-xs-8 pull-left'><span class='all_posts_one_blog_name'></span>\
+<div class='col-xs-1 col-sm-1 pull-left pencil-icon'><span class='glyphicon glyphicon-pencil'></span></div>\
+<div class='col-xs-6 col-sm-8 '><span class='all_posts_one_blog_name'></span>\
 <div class='clearfix'></div><span class='all_posts_one_blog_description'></span>\
-<div class='clearfix'></div>\
 <span class='all_posts_one_blog_ago'></span></div>\
-<div class='col-xs-3 blog-star_count'>\
+<div class='col-xs-5 col-sm-3 blog-star_count'>\
 <span class='all_posts_one_category'></span><span class='glyphicon glyphicon-star'></span> <span class='star_count'></span></div>\
 </div></a></li>";
 

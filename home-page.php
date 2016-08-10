@@ -53,38 +53,54 @@
 		<div class="col-xs-12">
 			<div class="row filter-form">
 
-				<div class="col-xs-6">
+				<div class="col-xs-12 col-sm-6">
 
 					<div class="row">
 
-						<div class="col-xs-10">
-							<input class="form-control filter-blogs search" name="filter" id="filter" type="text"
-							       placeholder="<?php _e( 'Filter Blogs', 'wp-git' ); ?>" />
+						<div class="col-xs-12 col-sm-8">
+							<input class="form-control filter-blogs search" name="filter" id="filter" type="text" placeholder="<?php _e( 'Filter Posts', 'wp-git' ); ?>" />
 						</div>
 
-						<div class="col-xs-2">
-							<button type="button"
-							        class="btn btn-info filter-blogs-button search"><?php _e( 'Search', 'wp-git' ); ?></button>
+						<div class="col-xs-6 col-sm-2">
+							<button type="button" class="btn btn-info filter-blogs-button search"><?php _e( 'Search', 'wp-git' ); ?></button>
 						</div>
+
+						<div class="col-xs-6 col-sm-2  filter-by-categories-dropdown">
+
+							<div class="btn-group">
+								<button type="button" class="btn btn-info dropdown-toggle category-filter-btn" data-toggle="dropdown">
+									<?php _e( 'All Categories', 'wp-git' ); ?><span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#"><?php _e( 'All Categories', 'wp-git' ); ?></a></li>
+									<?php
+									$available_cats = array();
+									$cat_posts = wp_github_data('posts_page');
+									if ( $cat_posts->have_posts() ) {
+										while ( $cat_posts->have_posts() ) {
+											$cat_posts->the_post();
+											$category = get_the_category();
+											if(!in_array( $category[0]->cat_name,$available_cats)){
+												$available_cats[] = $category[0]->cat_name;
+											}
+										}
+										foreach($available_cats as $cat_name){
+											echo '<li><a href="#">'.$category[0]->cat_name.'</a></li>';
+										}
+									}
+									?>
+								</ul>
+							</div>
+						</div>
+
 					</div>
+
+
+
 				</div>
 
-				<div class="col-xs-2 filter-by-categories-dropdown">
 
-					<div class="btn-group">
-						<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-							<?php _e( 'All Categories', 'wp-git' ); ?><span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">All Categories</a></li>
-							<?php $categories = get_categories();
-							foreach ( $categories as $category ):
-								?>
-								<li><a href="#"><?php echo $category->name; ?></a></li>
-							<?php endforeach; ?>
-						</ul>
-					</div>
-				</div>
+
 			</div>
 		</div>
 	</div>

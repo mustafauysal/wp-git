@@ -34,6 +34,22 @@ Domain Path: /languages/
 		margin: 0 5px 0 0;
 	}
 
+	.nav>li>a{
+		padding: 5px 5px;
+	}
+	.filter-blogs-button,.category-filter-btn{
+		margin:10px 0 0 0;
+		width: 100%;
+	}
+	.all-posts-one .blog-star_count {
+		margin-top: 5px;
+		width: 120px;
+		overflow: hidden;
+	}
+	.navbar-brand{
+		font-size: 20px;
+		overflow: hidden;
+	}
 
 
 }

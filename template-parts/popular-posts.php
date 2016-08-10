@@ -1,6 +1,6 @@
-<div class="col-xs-6">
+<div class="col-xs-12 col-sm-6">
 
-	<div class="summary-box">
+<div class="summary-box">
 
 		<div class="summary-box-header">
 			<h3 class="box-title"><?php _e( 'Popular Posts', 'wp-git' ); ?></h3>
