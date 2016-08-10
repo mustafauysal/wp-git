@@ -125,15 +125,18 @@
 					'title_reply'          => "",
 					'label_submit'         => __( 'Comment' ),
 					'fields'               => array(
-
 						'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" />',
-						'email'  => '<label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" /></p>',
+						'email'  => '<label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" /></p>
+						<button type="submit" class="btn btn-success pull-right"> <span class="glyphicon glyphicon-comment"></span> '.__('Comment','wp-git').'</button>',
 					),
-					'comment_field'        => '<textarea name="comment" class="form-group col-xs-12 leave-comment" rows="5" placeholder="Leave a comment"></textarea>',
-					'comment_notes_after'  => '<button type="submit" class="btn btn-success pull-right"> <span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;Comment </button>',
+					'comment_field'        => '<textarea name="comment" class="form-group col-xs-12 leave-comment" rows="5" placeholder="'.__('Leave a comment','wp-git').'"></textarea>',
 					'id_submit'            => 'comment_submit',
-
 				);
+
+				if(is_user_logged_in()){
+					$arg['comment_notes_after'] = '<button type="submit" class="btn btn-success pull-right"> <span class="glyphicon glyphicon-comment"></span> '.__('Comment','wp-git').'</button>';
+				}
+
 				comment_form( $arg ); ?>
 
 			</div>

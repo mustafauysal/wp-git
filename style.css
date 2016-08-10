@@ -23,6 +23,9 @@ Domain Path: /languages/
 .navbar-toggle .icon-bar {
 	background-color: black;
 }
+#commentform input{
+	border: 1px solid #eee;
+}
 
 @media (max-width: 990px) {
 	.social-share{
