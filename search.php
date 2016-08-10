@@ -71,7 +71,7 @@
 								<div class="clearfix">
 								</div>
 												<span class="all_posts_one_blog_description">
-													<?php echo wp_github_excerpt( get_the_ID(), 5 ); ?>
+													<?php echo wp_git_excerpt( get_the_ID(), 5 ); ?>
 												</span>
 								<div class="clearfix">
 								</div>
@@ -88,7 +88,7 @@
 												</span>
 
 												<span class="star_count">
-													<?php echo wp_github_get_starred_count( get_the_ID() ); ?>
+													<?php echo wp_git_get_starred_count( get_the_ID() ); ?>
 												</span>
 							</div>
 						</div>
@@ -98,7 +98,7 @@
 			</ul>
 			<?php endwhile;?>
 			<div class="text-center">
-						<?php wp_github_pagination();?>
+						<?php wp_git_pagination();?>
 			</div>
 		</div>
 		<?php else:?>

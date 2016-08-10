@@ -9,7 +9,7 @@
 		<div class="summary-box-content	">
 
 				<ul class="blogs row">
-					<?php $latest_posts = wp_github_data('latest_posts'); ?>
+					<?php $latest_posts = wp_git_data('latest_posts'); ?>
 					<?php if ( false !== $latest_posts ): ?>
 					<?php foreach($latest_posts as $latest_post):?>
 					<li class="blog col-xs-12">
@@ -27,13 +27,13 @@
 									<div class="clearfix"></div>
 
 									<span class="blog-description">
-										<?php echo wp_github_excerpt( $latest_post->ID, 5 ); ?>
+										<?php echo wp_git_excerpt( $latest_post->ID, 5 ); ?>
 									</span>
 
 								</div>
 
 								<div class="col-xs-3 pull-right blog-star_count">
-									<?php echo wp_github_get_starred_count( $latest_post->ID ); ?>
+									<?php echo wp_git_get_starred_count( $latest_post->ID ); ?>
 									<span class="glyphicon glyphicon-star"></span>
 								</div>
 							</div>

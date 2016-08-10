@@ -22,7 +22,7 @@
 	</div>
 
 	<!-- Star / Unstar Post -->
-	<?php echo wp_github_star_it_btn();?>
+	<?php echo wp_git_star_it_btn();?>
 
 
 
@@ -40,7 +40,7 @@
 
 		<div class="col-xs-12">
 			<div class="post-excerpt-info">
-				<span class="post-excerpt"><?php echo wp_github_custom_excerpt( 25 ); ?></span>
+				<span class="post-excerpt"><?php echo wp_git_custom_excerpt( 25 ); ?></span>
 										<span class="post-permalink">
 											<a href="<?php the_permalink(); ?>">
 												<?php the_permalink(); ?>
@@ -60,7 +60,7 @@
 
 				<div class="col-xs-4">
 					<span class="glyphicon glyphicon-time"></span>
-					<span class="post-basic-stat-count"><?php echo wp_github_get_post_revision_count();?></span>
+					<span class="post-basic-stat-count"><?php echo wp_git_get_post_revision_count();?></span>
 					<a href="#revisions" data-toggle="tab"><span class="post-basic-stat-text">
 						<?php _e('versions','wp-git');?></span>
 					</a>
@@ -78,7 +78,7 @@
 
 				<div class="col-xs-4">
 					<span class="glyphicon glyphicon-align-left"></span>
-					<span class="post-basic-stat-count"><?php echo wp_github_word_count();?></span>
+					<span class="post-basic-stat-count"><?php echo wp_git_word_count();?></span>
 					<a href="#post" data-toggle="tab">
 						<span class="post-basic-stat-text"><?php _e('words','wp-git');?></span>
 					</a>
@@ -103,7 +103,7 @@
 					<div class="col-xs-8 pull-left post-owner-ago-content">
 
 						<a href="assets/img/test.jpeg" class="post-owner-img pull-left">
-							<img src="<?php echo wp_github_get_author_gravatar_url( array('size' => 20)); ?>" class="" alt="User Name" height="20" width="20">
+							<img src="<?php echo wp_git_get_author_gravatar_url( array('size' => 20)); ?>" class="" alt="User Name" height="20" width="20">
 						</a>
 
 						<div class="post-owner-ago-text pull-left">
@@ -114,14 +114,14 @@
 						</div>
 					</div>
 					<div class="col-xs-4 post-owner-latest-update pull-right">
-					<?php $last_rev = wp_github_get_latest_revision(get_the_ID());
+					<?php $last_rev = wp_git_get_latest_revision(get_the_ID());
 					$diff_url = get_permalink().'?rev='.$last_rev->ID;
 					?>
 
 						<a href="<?php echo esc_url($diff_url);?>">
 							latest update
 							<span class="commit">
-							<?php echo wp_github_get_post_hash(get_the_date());?>
+							<?php echo wp_git_get_post_hash(get_the_date());?>
 							</span>
 						</a>
 					</div>
@@ -130,7 +130,7 @@
 
 				<div class="row post-content">
 					<?php if(isset($_REQUEST['rev']) && intval($_REQUEST['rev'])>0):?>
-					<?php echo wp_github_compare_revision(get_the_ID(),$_REQUEST['rev'],$_REQUEST['to']);?>
+					<?php echo wp_git_compare_revision(get_the_ID(),$_REQUEST['rev'],$_REQUEST['to']);?>
 					<?php else:?>
 					<?php the_content(); ?>
 					<?php endif;?>
@@ -153,7 +153,7 @@
 					<div class="any-comment">
 
 						<div class="col-xs-2 col-sm-1  no-padding-left any-comment-image">
-							<img class="img-rounded" alt="<?php echo get_the_author();?>" src="<?php echo wp_github_get_gravatar_url( $comment->comment_author_email, 80 ); ?>" width="40">
+							<img class="img-rounded" alt="<?php echo get_the_author();?>" src="<?php echo wp_git_get_gravatar_url( $comment->comment_author_email, 80 ); ?>" width="40">
 						</div>
 
 						<div class="col-xs-10 col-sm-11 no-padding-right any-comment-right no-padding-left">
@@ -199,7 +199,7 @@
 	<div class="col-xs-12">
 
 		<?php
-		$revisions = wp_github_post_revisions();
+		$revisions = wp_git_post_revisions();
 		if(!empty($revisions)):?>
 			<?php foreach($revisions as $rev_group => $revisions_by_date):?>
 				<div class="revision-group">
@@ -213,7 +213,7 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="col-xs-3 col-sm-1 no-padding-left any-revision-image">
-									<img class="img-rounded img-revision" alt="Said Özcan" src="<?php echo wp_github_get_author_gravatar_url(array('size'=>40));?>" width="40">
+									<img class="img-rounded img-revision" alt="Said Özcan" src="<?php echo wp_git_get_author_gravatar_url(array('size'=>40));?>" width="40">
 								</div>
 
 								<div class="col-xs-7 col-sm-9 no-padding-left any-revision-right-group">
@@ -232,7 +232,7 @@
 								<div class="col-xs-2 col-sm-2 pull-right no-padding-right">
 									<div class="post-owner-latest-update pull-right">
 										<a href="<?php echo  get_permalink().'?rev='.$last_rev->ID.'&to='.$revision->ID;?>">
-											<span class="commit">#<?php echo wp_github_get_post_hash($revision->post_date);?></span>
+											<span class="commit">#<?php echo wp_git_get_post_hash($revision->post_date);?></span>
 										</a>
 									</div>
 								</div>

@@ -75,7 +75,7 @@
 									<li><a href="#"><?php _e( 'All Categories', 'wp-git' ); ?></a></li>
 									<?php
 									$available_cats = array();
-									$cat_posts = wp_github_data('posts_page');
+									$cat_posts = wp_git_data('posts_page');
 									if ( $cat_posts->have_posts() ) {
 										while ( $cat_posts->have_posts() ) {
 											$cat_posts->the_post();

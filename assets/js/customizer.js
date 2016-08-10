@@ -20,82 +20,78 @@
 		} );
 	} );
 
-	wp.customize( 'wp_github_homepage_profile_name', function( value ) {
+	wp.customize( 'wp_git_homepage_profile_name', function( value ) {
 		value.bind( function( to ) {
 			$( '.user-fullname' ).text( to );
 		} );
 	} );
 
-	wp.customize( 'wp_github_homepage_username', function( value ) {
+	wp.customize( 'wp_git_homepage_username', function( value ) {
 		value.bind( function( to ) {
 			$( '.user-username' ).text( to );
 		} );
 	} );
 
-	wp.customize( 'wp_github_homepage_bio', function( value ) {
+	wp.customize( 'wp_git_homepage_bio', function( value ) {
 		value.bind( function( to ) {
 			$( '.user-bio' ).text( to );
 		} );
 	} );
 
-	wp.customize( 'wp_github_homepage_bio', function( value ) {
+	wp.customize( 'wp_git_homepage_bio', function( value ) {
 		value.bind( function( to ) {
 			$( '.user-bio' ).text( to );
 		} );
 	} );
 
-	wp.customize('wp_github_homepage_company', function (value) {
+	wp.customize('wp_git_homepage_company', function (value) {
 		value.bind(function (to) {
-			$('.wp_github_company').text(to);
+			$('.wp_git_company').text(to);
 		});
 	});
 
-	wp.customize('wp_github_homepage_location', function (value) {
+	wp.customize('wp_git_homepage_location', function (value) {
 		value.bind(function (to) {
-			$('.wp_github_location').text(to);
+			$('.wp_git_location').text(to);
 		});
 	});
 
-	wp.customize('wp_github_homepage_email', function (value) {
-		value.bind(function (to) {
-			if(to == ''){
-				$('.wp_github_email').parent('li').hide();
-			}else{
-				$('.wp_github_email').parent('li').show();
-			}
-
-			$('.wp_github_email').text(to);
-			$('.wp_github_email').attr('href', 'mailto:' + to);
-		});
-	});
-
-	wp.customize('wp_github_homepage_url', function (value) {
+	wp.customize('wp_git_homepage_email', function (value) {
 		value.bind(function (to) {
 			if(to == ''){
-				$('.wp_github_url').parent('li').hide();
+				$('.wp_git_email').parent('li').hide();
 			}else{
-				$('.wp_github_url').parent('li').show();
+				$('.wp_git_email').parent('li').show();
 			}
 
-			$('.wp_github_url').text(to);
-			$('.wp_github_url').attr('href', to);
+			$('.wp_git_email').text(to);
+			$('.wp_git_email').attr('href', 'mailto:' + to);
 		});
 	});
 
-	wp.customize('wp_github_homepage_date', function (value) {
+	wp.customize('wp_git_homepage_url', function (value) {
 		value.bind(function (to) {
 			if(to == ''){
-				$('.wp_github_date').parent('li').hide();
+				$('.wp_git_url').parent('li').hide();
 			}else{
-				$('.wp_github_date').parent('li').show();
+				$('.wp_git_url').parent('li').show();
 			}
-			$('.wp_github_date').text(to);
+
+			$('.wp_git_url').text(to);
+			$('.wp_git_url').attr('href', to);
 		});
 	});
 
-
-
-
+	wp.customize('wp_git_homepage_date', function (value) {
+		value.bind(function (to) {
+			if(to == ''){
+				$('.wp_git_date').parent('li').hide();
+			}else{
+				$('.wp_git_date').parent('li').show();
+			}
+			$('.wp_git_date').text(to);
+		});
+	});
 
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {

@@ -1,7 +1,7 @@
 <script>
 	posts = [
 <?php
-$latest_posts = wp_github_data('posts_page');
+$latest_posts = wp_git_data('posts_page');
 if ( $latest_posts->have_posts() ) {
 	while ( $latest_posts->have_posts() ) {
 		$latest_posts->the_post();
@@ -12,7 +12,7 @@ if ( $latest_posts->have_posts() ) {
 			echo '"all_posts_one_blog_description":"'. get_the_excerpt().'",';
 			echo '"all_posts_one_blog_ago":"'.human_time_diff( get_the_time('U'), current_time('timestamp') ).'",';
 			echo '"all_posts_one_category":"'.$category[0]->cat_name.'",';
-			echo '"star_count":"'.wp_github_get_starred_count(get_the_ID()).'"';
+			echo '"star_count":"'.wp_git_get_starred_count(get_the_ID()).'"';
 		echo '},';
 	}
 }

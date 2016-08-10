@@ -50,6 +50,8 @@ Domain Path: /languages/
 		font-size: 20px;
 		overflow: hidden;
 	}
-
+	img{
+		max-width: 100%;
+	}
 
 }

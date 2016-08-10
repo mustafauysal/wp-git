@@ -1,6 +1,6 @@
 <?php
 
-function wp_github_pagination() {
+function wp_git_pagination() {
 
 	if( is_singular() )
 		return;

@@ -5,7 +5,7 @@
 			<ul class="latest-activities">
 
 			<?php
-			$activities = wp_github_data( 'latest_feed' );
+			$activities = wp_git_data( 'latest_feed' );
 			foreach ( $activities as $activity ):?>
 				<li class="latest-activity">
 					<div class="row">

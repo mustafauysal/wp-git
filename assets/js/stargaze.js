@@ -15,8 +15,8 @@ jQuery(document).ready( function($) {
 			item_id: post_id,
 			user_id: user_id,
 			ip_address: ip_address,
-			is_logged: wp_github_stargaze_vars.is_logged,
-			star_it_nonce: wp_github_stargaze_vars.nonce
+			is_logged: wp_git_stargaze_vars.is_logged,
+			star_it_nonce: wp_git_stargaze_vars.nonce
 		};
 
 
@@ -39,7 +39,7 @@ jQuery(document).ready( function($) {
 		}
 
 
-		$.post(wp_github_stargaze_vars.ajaxurl, post_data, function(response) {
+		$.post(wp_git_stargaze_vars.ajaxurl, post_data, function(response) {
 			if(response == 'ok') {
 				count_element.html(_cur);
 			} else {

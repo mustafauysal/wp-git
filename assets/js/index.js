@@ -64,7 +64,7 @@ options = {
 		calendar.init({
 			displayLegend           : true,
 			tooltip                 : true,
-			data                    : wp_github_vars.data,
+			data                    : wp_git_vars.data,
 			domain                  : "month",
 			range                   : 10,
 			cellSize                : 10,
@@ -75,10 +75,10 @@ options = {
 			legendCellSize          : 10,
 			legendCellPadding       : 3,
 			legendHorizontalPosition: 'right',
-			itemName                : wp_github_vars.item_name,
+			itemName                : wp_git_vars.item_name,
 			cellLabel               : {
 				empty : "{date}",
-				filled: wp_github_vars.cell.filled
+				filled: wp_git_vars.cell.filled
 			}
 		});
 	}

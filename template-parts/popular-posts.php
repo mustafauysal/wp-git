@@ -11,7 +11,7 @@
 			<ul class="blogs row">
 
 			<?php
-			$popular_posts =  wp_github_data('popular_posts');
+			$popular_posts =  wp_git_data('popular_posts');
 			?>
 				<?php if ( false !== $popular_posts ): ?>
 					<?php foreach($popular_posts as $starred_post):?>
@@ -28,12 +28,12 @@
 
 									<div class="clearfix"></div>
 									<span class="blog-description">
-										<?php echo wp_github_excerpt( $starred_post->ID, 5 ); ?>
+										<?php echo wp_git_excerpt( $starred_post->ID, 5 ); ?>
 									</span>
 								</div>
 
 								<div class="col-xs-3 pull-right blog-star_count">
-									<?php echo wp_github_get_starred_count($starred_post->ID);?>
+									<?php echo wp_git_get_starred_count($starred_post->ID);?>
 									<span class="glyphicon glyphicon-star"></span>
 								</div>
 							</div>

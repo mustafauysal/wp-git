@@ -3,7 +3,7 @@
 /**
  * Enqueue scripts and styles.
  */
-function wp_github_scripts() {
+function wp_git_scripts() {
 
 	wp_enqueue_script( 'jquery' );
 
@@ -21,8 +21,8 @@ function wp_github_scripts() {
 	}
 
 	wp_enqueue_script( 'wp-git-index', get_template_directory_uri() . '/assets/js/index.js', array(), false, true );
-	wp_localize_script( 'wp-git-index', 'wp_github_vars', array(
-			'data' => wp_github_data('contribution_data'),
+	wp_localize_script( 'wp-git-index', 'wp_git_vars', array(
+			'data' => wp_git_data('contribution_data'),
 			'item_name' => array(__('blog post','wp-git'),__('blog posts','wp-git')),
 			'cell' => array('filled' => __("{count} blog posts {name} a {date}","wp-git")  )
 		)
@@ -47,17 +47,17 @@ function wp_github_scripts() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'wp_github_scripts' );
+add_action( 'wp_enqueue_scripts', 'wp_git_scripts' );
 
 
 
-function wp_github_get_gravatar_url( $email, $size ) {
+function wp_git_get_gravatar_url( $email, $size ) {
 	$hash = md5( strtolower( trim( $email ) ) ) . '?s=' . $size;
 
 	return 'http://gravatar.com/avatar/' . $hash;
 }
 
-function wp_github_get_author_gravatar_url( $args = array() ) {
+function wp_git_get_author_gravatar_url( $args = array() ) {
 	global $post;
 
 	$params = wp_parse_args( $args, array(
@@ -72,7 +72,7 @@ function wp_github_get_author_gravatar_url( $args = array() ) {
 }
 
 
-function wp_github_custom_excerpt( $limit ) {
+function wp_git_custom_excerpt( $limit ) {
 	$excerpt = explode( ' ', get_the_excerpt(), $limit );
 	if ( count( $excerpt ) >= $limit ) {
 		array_pop( $excerpt );
@@ -86,8 +86,8 @@ function wp_github_custom_excerpt( $limit ) {
 	return $excerpt;
 }
 
-add_filter( 'comment_form_default_fields', 'wp_github_unset_comment_fields' );
-function wp_github_unset_comment_fields( $fields ) {
+add_filter( 'comment_form_default_fields', 'wp_git_unset_comment_fields' );
+function wp_git_unset_comment_fields( $fields ) {
 	if ( isset( $fields['url'] ) ) {
 		unset( $fields['url'] );
 	}
@@ -97,7 +97,7 @@ function wp_github_unset_comment_fields( $fields ) {
 }
 
 
-function wp_github_excerpt( $post_id = null, $limit ) {
+function wp_git_excerpt( $post_id = null, $limit ) {
 	$excerpt_str = get_the_excerpt( $post_id );
 	if ( empty( $excerpt_str ) && ! empty( $post_id ) ) {
 		$post = get_post( $post_id );
@@ -119,7 +119,7 @@ function wp_github_excerpt( $post_id = null, $limit ) {
 }
 
 
-function wp_github_get_post_revision_count() {
+function wp_git_get_post_revision_count() {
 	global $post, $wpdb;
 	if ( is_single() ) {
 		$result = $wpdb->get_results( $wpdb->prepare( "select id from $wpdb->posts where post_parent=%d and post_type=%s", get_the_ID(), 'revision' ) );
@@ -130,7 +130,7 @@ function wp_github_get_post_revision_count() {
 	return 0;
 }
 
-function wp_github_word_count() {
+function wp_git_word_count() {
 	global $post;
 	$content    = get_post_field( 'post_content', $post->ID );
 	$word_count = str_word_count( strip_tags( $content ) );
@@ -138,7 +138,7 @@ function wp_github_word_count() {
 	return $word_count;
 }
 
-function wp_github_post_revisions() {
+function wp_git_post_revisions() {
 	if ( is_single() ) {
 		global $post;
 
@@ -155,11 +155,11 @@ function wp_github_post_revisions() {
 	return false;
 }
 
-function wp_github_get_post_hash( $context ) {
+function wp_git_get_post_hash( $context ) {
 	return substr( sha1( $context ), 0, 7 );
 }
 
-function wp_github_get_latest_revision( $post_id ) {
+function wp_git_get_latest_revision( $post_id ) {
 	$revisions = wp_get_post_revisions( $post_id );
 
 	if ( is_array( $revisions ) && ! empty( $revisions ) ) {
@@ -169,7 +169,7 @@ function wp_github_get_latest_revision( $post_id ) {
 	return false;
 }
 
-function wp_github_compare_revision($post_id, $revision_id, $to = false ) {
+function wp_git_compare_revision($post_id, $revision_id, $to = false ) {
 	$revision_id = absint( $revision_id );
 	if ( false !== $to ) {
 		$to = absint( $to );
@@ -206,7 +206,7 @@ function wp_github_compare_revision($post_id, $revision_id, $to = false ) {
 }
 
 
-function wp_github_register_menus() {
+function wp_git_register_menus() {
 	register_nav_menus(
 		array(
 			'header-menu' => __( 'Header Menu', 'wp-git' ),
@@ -214,7 +214,7 @@ function wp_github_register_menus() {
 		)
 	);
 }
-add_action( 'init', 'wp_github_register_menus' );
+add_action( 'init', 'wp_git_register_menus' );
 
 
 
@@ -224,7 +224,7 @@ add_theme_support( 'custom-logo', array(
 	'width'      => 220,
 ) );
 
-function wp_github_search_widget() {
+function wp_git_search_widget() {
 	register_sidebar( array(
 		'name'          => 'Search sidebar',
 		'id'            => 'search_sidebar',
@@ -235,7 +235,7 @@ function wp_github_search_widget() {
 	) );
 
 }
-add_action( 'widgets_init', 'wp_github_search_widget' );
+add_action( 'widgets_init', 'wp_git_search_widget' );
 
 
 /**
