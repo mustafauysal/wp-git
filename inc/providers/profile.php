@@ -39,8 +39,12 @@ class wp_git_Profile_Data_Provider implements wp_git_Data_Provider_Interface{
 		return get_the_author_meta( 'wp_git_location', $this->author->data->ID );
 	}
 
-	public function profile_email(){
-		return $this->author->data->user_email;
+	public function profile_email() {
+		if ( "true" == get_the_author_meta( 'wp_git_show_email', $this->author->data->ID ) ) {
+			return $this->author->data->user_email;
+		}
+
+		return null;
 	}
 
 	public function profile_website_url(){
