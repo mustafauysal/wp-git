@@ -20,6 +20,10 @@ Domain Path: /languages/
 	width: 100%;
 }
 
+img{
+	max-width: 100%;
+}
+
 .navbar-toggle .icon-bar {
 	background-color: black;
 }
@@ -57,9 +61,6 @@ Domain Path: /languages/
 	.navbar-brand{
 		font-size: 20px;
 		overflow: hidden;
-	}
-	img{
-		max-width: 100%;
 	}
 
 }
