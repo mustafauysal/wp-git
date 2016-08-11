@@ -22,7 +22,6 @@ jQuery(document).ready( function($) {
 
 		if(!$(this).hasClass('unstar')){
 
-			_cur = _cur+1;
 
 			$(this).addClass('unstar');
 
@@ -30,7 +29,6 @@ jQuery(document).ready( function($) {
 
 		}else{
 
-			_cur = _cur-1;
 
 			$(this).removeClass('unstar');
 
@@ -40,11 +38,7 @@ jQuery(document).ready( function($) {
 
 
 		$.post(wp_git_stargaze_vars.ajaxurl, post_data, function(response) {
-			if(response == 'ok') {
-				count_element.html(_cur);
-			} else {
-				console.log(response);
-			}
+			count_element.html(response.count);
 		});
 		return false;
 

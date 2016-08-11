@@ -123,9 +123,9 @@ function wp_git_star_it() {
 		$value = $_POST['is_logged'] ? $_POST['user_id'] : $_POST['ip_address'];
 
 		if ( wp_git_mark_post_as_starred( $_POST['item_id'], $value ) ) {
-			echo 'ok';
+			echo json_encode( array( 'status' => 'ok', 'count' => get_post_meta( $_POST['item_id'], 'wp_git_starred_count', true ) ) );
 		} else {
-			echo 'fail';
+			echo json_encode( array( 'status' => 'fail', 'count' => get_post_meta( $_POST['item_id'], 'wp_git_starred_count', true ) ) );
 		}
 	}
 	die();
