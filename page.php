@@ -161,7 +161,7 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="col-xs-1 no-padding-left any-revision-image">
-									<img class="img-rounded img-revision" src="<?php echo wp_git_get_author_gravatar_url(array('size'=>40));?>" width="40">
+									<img class="img-rounded img-revision" src="<?php echo wp_git_get_author_gravatar_url(array('size'=>40,'post_author' => $revision->post_author));?>" width="40">
 								</div>
 
 								<div class="col-xs-9 no-padding-left any-revision-right-group">
