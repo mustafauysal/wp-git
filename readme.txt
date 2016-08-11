@@ -9,11 +9,11 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Super duper WordPress theme for geeks.
+WP-Git is a WordPress theme for GitHub lovers.
 
 == Description ==
 
-This theme looks like github.
+WP-Git is a WordPress theme for GitHub lovers. It offers similar features with WordPress way.
 
 == Installation ==
 

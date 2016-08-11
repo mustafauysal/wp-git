@@ -2,6 +2,9 @@
 
 **Demo:** [http://wpgit.uysalmustafa.com/](http://wpgit.uysalmustafa.com/)
 
+Requires at least: 4.5
+
+
 ## Origin Story
 A few years ago my colleague [@s](https://github.com/s) and I wanted to build WordPress theme which looks like Github. We planned as  weekend project but it took more than 2+ years. (Apology folks)
 
