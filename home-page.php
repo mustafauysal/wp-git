@@ -83,8 +83,8 @@
 											$available_cats[] = $category[0]->cat_name;
 										}
 										$unique_cats = array_unique($available_cats);
-										foreach($available_cats as $cat_name){
-											echo '<li><a href="#">'.$category[0]->cat_name.'</a></li>';
+										foreach($unique_cats as $cat_name){
+											echo '<li><a href="#">'.$cat_name.'</a></li>';
 										}
 									}
 									?>
