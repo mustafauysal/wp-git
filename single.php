@@ -260,13 +260,13 @@
 	<div class="col-xs-12 col-md-2 blog-tab-pane tabbable tabs-right no-padding-left">
 		<ul class="nav nav-tabs  blog-tabs visible-lg" >
 			<li class="active">
-				<a href="#post" data-toggle="tab"><span class="glyphicon glyphicon-pencil"></span><?php _e('Post','wp-git');?></a>
+				<a href="#post" data-toggle="tab"><span class="glyphicon glyphicon-pencil"></span><?php _e('  Post','wp-git');?></a>
 			</li>
 			<li>
-				<a href="#comments" data-toggle="tab"><span class="glyphicon glyphicon-comment"></span><?php _e('Comments','wp-git');?></a>
+				<a href="#comments" data-toggle="tab"><span class="glyphicon glyphicon-comment"></span><?php _e('  Comments','wp-git');?></a>
 			</li>
 			<li>
-				<a href="#revisions" data-toggle="tab"><span class="glyphicon glyphicon-time"></span><?php _e('Revisions','wp-git')?></a>
+				<a href="#revisions" data-toggle="tab"><span class="glyphicon glyphicon-time"></span><?php _e('  Revisions','wp-git')?></a>
 			</li>
 		</ul>
 
