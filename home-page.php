@@ -80,10 +80,9 @@
 										while ( $cat_posts->have_posts() ) {
 											$cat_posts->the_post();
 											$category = get_the_category();
-											if(!in_array( $category[0]->cat_name,$available_cats)){
-												$available_cats[] = $category[0]->cat_name;
-											}
+											$available_cats[] = $category[0]->cat_name;
 										}
+										$unique_cats = array_unique($available_cats);
 										foreach($available_cats as $cat_name){
 											echo '<li><a href="#">'.$category[0]->cat_name.'</a></li>';
 										}
