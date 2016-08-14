@@ -1,12 +1,8 @@
 <?php
 
 class WP_Git_Home_Data_Provider implements WP_Git_Data_Provider_Interface{
-	private $post;
 
-	function __construct(  ) {
-
-
-	}
+	function __construct(){ }
 
 	public function profile_url(){
 		return home_url('/');

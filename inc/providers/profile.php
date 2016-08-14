@@ -1,7 +1,6 @@
 <?php
 
 class WP_Git_Profile_Data_Provider implements WP_Git_Data_Provider_Interface{
-	private $post;
 	private $author;
 
 	function __construct( WP_User $author ) {

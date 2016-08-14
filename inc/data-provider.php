@@ -8,7 +8,6 @@ class WP_Git_Data_Provider {
 	private $is_author;
 	private $author;
 	private $provider;
-	private $data;
 
 
 	public static function factory() {
