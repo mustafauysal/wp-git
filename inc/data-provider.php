@@ -3,7 +3,7 @@
 require_once 'data-provider-interface.php';
 require_once 'providers/home.php';
 require_once 'providers/profile.php';
-class wp_git_Data_Provider {
+class WP_Git_Data_Provider {
 
 	private $is_author;
 	private $author;
@@ -30,9 +30,9 @@ class wp_git_Data_Provider {
 				$this->author = new WP_User($queried_object->post_author);
 			}
 
-			$this->provider = new wp_git_Profile_Data_Provider( $this->author );
+			$this->provider = new WP_Git_Profile_Data_Provider( $this->author );
 		}else{
-			$this->provider = new wp_git_Home_Data_Provider();
+			$this->provider = new WP_Git_Home_Data_Provider();
 		}
 	}
 
@@ -47,11 +47,11 @@ class wp_git_Data_Provider {
 
 
 function wp_git_prepare_data( $is_author ) {
-	return wp_git_Data_Provider::factory( $is_author );
+	return WP_Git_Data_Provider::factory( $is_author );
 }
 
 function wp_git_data( $provider_method ) {
 
-	$provider = wp_git_Data_Provider::factory();
+	$provider = WP_Git_Data_Provider::factory();
 	return $provider->$provider_method;
 }

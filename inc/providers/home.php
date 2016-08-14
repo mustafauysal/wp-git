@@ -1,6 +1,6 @@
 <?php
 
-class wp_git_Home_Data_Provider implements wp_git_Data_Provider_Interface{
+class WP_Git_Home_Data_Provider implements WP_Git_Data_Provider_Interface{
 	private $post;
 
 	function __construct(  ) {

@@ -1,7 +1,7 @@
 <?php
 
 
-interface wp_git_Data_Provider_Interface
+interface WP_Git_Data_Provider_Interface
 {
 	public function profile_url();
 	public function avatar_url();
