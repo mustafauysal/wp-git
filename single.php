@@ -40,7 +40,7 @@
 
 		<div class="col-xs-12">
 			<div class="post-excerpt-info">
-				<span class="post-excerpt"><?php echo wp_git_custom_excerpt( 25 ); ?></span>
+				<span class="post-excerpt"><?php echo wp_git_excerpt(get_the_ID(), 25 ); ?></span>
 										<span class="post-permalink">
 											<a href="<?php the_permalink(); ?>">
 												<?php the_permalink(); ?>

@@ -96,21 +96,6 @@ function wp_git_get_author_gravatar_url( $args = array() ) {
 	return 'http://gravatar.com/avatar/' . $hash;
 }
 
-
-function wp_git_custom_excerpt( $limit ) {
-	$excerpt = explode( ' ', get_the_excerpt(), $limit );
-	if ( count( $excerpt ) >= $limit ) {
-		array_pop( $excerpt );
-		$excerpt = implode( " ", $excerpt ) . '...';
-	}
-	else {
-		$excerpt = implode( " ", $excerpt );
-	}
-	$excerpt = preg_replace( '`[[^]]*]`', '', $excerpt );
-
-	return $excerpt;
-}
-
 add_filter( 'comment_form_default_fields', 'wp_git_unset_comment_fields' );
 function wp_git_unset_comment_fields( $fields ) {
 	if ( isset( $fields['url'] ) ) {
@@ -140,7 +125,7 @@ function wp_git_excerpt( $post_id = null, $limit ) {
 	}
 	$excerpt = preg_replace( '`\[[^\]]*\]`', '', $excerpt );
 
-	return $excerpt;
+	return wp_strip_all_tags( $excerpt );
 }
 
 
