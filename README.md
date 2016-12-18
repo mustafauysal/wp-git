@@ -1,6 +1,5 @@
 # WP-Git
 
-**Demo:** [http://wpgit.uysalmustafa.com/](http://wpgit.uysalmustafa.com/)
 
 Requires at least: 4.5
 
@@ -14,39 +13,39 @@ A few years ago my colleague [@s](https://github.com/s) and I wanted to build Wo
 ## Features
 
 ### A home page you like
-![Homepage like Github](http://wpgit.uysalmustafa.com/wp-content/uploads/2016/08/screenshot-1.png)
-![Mobile friendly](http://wpgit.uysalmustafa.com/wp-content/uploads/2016/08/screenshot-2.png)
+![Homepage like Github](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-1.png)
+![Mobile friendly](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-2.png)
 
 ### Author Template 
-![mustafa](http://wpgit.uysalmustafa.com/wp-content/uploads/2016/08/screenshot-3-e1470941620773.png) ![said](http://wpgit.uysalmustafa.com/wp-content/uploads/2016/08/screenshot-4-e1470941652591.png)
+![mustafa](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-3.png) ![said](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-4.pngg)
 
 ### Activity Calendar
-![Activity Calendar](http://wpgit.uysalmustafa.com/wp-content/uploads/2016/08/screenshot-5.png)
+![Activity Calendar](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-5.png)
 
 You can use `wp_git_post_types` filter to add custom post type support, theme counts `'post', 'page', 'revision'` as default.
 
 ### Inline Search
-![Inline Search](http://wpgit.uysalmustafa.com/wp-content/uploads/2016/08/screenshot-6.gif)
+![Inline Search](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-6.gif)
 
 ### Activity Feed
-![Activity Feed](http://wpgit.uysalmustafa.com/wp-content/uploads/2016/08/screenshot-7.png)
+![Activity Feed](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-7.png)
 
 ### Hello Stargazers
-![Stargazears](http://wpgit.uysalmustafa.com/wp-content/uploads/2016/08/screenshot-8.gif)
+![Stargazears](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-8.gif)
 
 Starring posts easy, don't need extra plugin. Logged in? or not, doesn't matter.
 
 ### Simple Comments
-![Comments](http://wpgit.uysalmustafa.com/wp-content/uploads/2016/08/screenshot-9.png)
+![Comments](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-9.png)
 
 ### Revisions
-![Revisions](http://wpgit.uysalmustafa.com/wp-content/uploads/2016/08/screenshot-10.png)
+![Revisions](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-10.png)
 
 ### Diff Comparison like a Boss
-![Revisions](http://wpgit.uysalmustafa.com/wp-content/uploads/2016/08/screenshot-11.png)
+![Revisions](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-11.png)
 
 ### Customizer
-![Customizer](http://wpgit.uysalmustafa.com/wp-content/uploads/2016/08/screenshot-12.gif)
+![Customizer](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-12.gif)
 
 Homepage supports customizer.
 
