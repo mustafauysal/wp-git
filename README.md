@@ -17,7 +17,7 @@ A few years ago my colleague [@s](https://github.com/s) and I wanted to build Wo
 ![Mobile friendly](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-2.png)
 
 ### Author Template 
-![mustafa](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-3.png) ![said](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-4.pngg)
+![mustafa](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-3.png) ![said](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-4.png)
 
 ### Activity Calendar
 ![Activity Calendar](https://raw.githubusercontent.com/mustafauysal/wp-git/master/assets/screenshots/screenshot-5.png)
